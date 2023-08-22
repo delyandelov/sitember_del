@@ -9,6 +9,12 @@ use Filament\Pages\SettingsPage;
 
 class MainSettings extends SettingsPage
 {
+    protected static ?string $navigationGroup = 'Управление';
+
+    protected static ?string $navigationLabel = 'Настройки';
+
+    protected static ?string $title = 'Настройки';
+
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = GeneralSettings::class;
