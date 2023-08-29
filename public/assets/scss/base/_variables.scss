@@ -1,0 +1,25 @@
+// text
+$bodyFont: "Open Sans", sans-serif;
+$bodyText: #28313D;
+$headerFont: "Roboto Mono", monospace;
+$headerColor: #1B2129;
+
+// template colors
+$primary: #fcd03c;
+$secondary: #F78E69;
+$teritary: #a9b971;
+$accent: #86a1bb;
+$lightgray: #F8F8FF;
+$white: #fff;
+
+// effects
+$shadow: 3px 3px 0 $accent;
+$shadow-primary: 3px 3px 0 $primary;
+$border: 1px solid $headerColor;
+
+//units
+$margin-xs: 4px;
+$margin-s: 8px;
+$margin-m: 16px;
+$margin-l: 24px;
+$margin-xl: 40px;

@@ -29,33 +29,43 @@ class MainSettings extends SettingsPage
                     ->required(),
                 TextInput::make('company')
                     ->label('Company name')
+                    ->translateLabel()
                     ->required(),
                 TextInput::make('country')
-                    ->label('Country'),
+                    ->label('Country')
+                    ->translateLabel(),
                 TextInput::make('city')
-                    ->label('Град'),
+                    ->label('Град')
+                    ->translateLabel(),
                 TextInput::make('address')
-                    ->label('Address'),
+                    ->label('Address')
+                    ->translateLabel(),
                 TextInput::make('phone')
                     ->label('Phone')
+                    ->translateLabel()
                     ->required(),
                 TextInput::make('email')
                     ->label('Email')
+                    ->translateLabel()
                     ->required(),
                 TextInput::make('facebook')
                     ->label('Facebook profile')
+                    ->translateLabel()
                     ->url()
                     ->required(),
                 TextInput::make('linkedin')
                     ->label('LinkedIn profile')
+                    ->translateLabel()
                     ->url()
                     ->required(),
                 TextInput::make('instagram')
                     ->label('Instagram profile')
+                    ->translateLabel()
                     ->url()
                     ->required(),
                 TextInput::make('twitter')
                     ->label('Twitter profile')
+                    ->translateLabel()
                     ->url()
                     ->required(),
             ]);

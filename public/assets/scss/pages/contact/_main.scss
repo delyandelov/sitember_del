@@ -1,0 +1,103 @@
+// contact page main content
+.contact {
+    padding: 60px 0;
+
+    &_map {
+        height: 480px;
+        border: $border;
+        box-shadow: $shadow;
+        border-radius: 2px;
+        overflow: hidden;
+        backface-visibility: hidden;
+        margin-bottom: 40px;
+    }
+
+    &_info {
+        gap: 20px 0;
+
+        &-item {
+            &_header {
+                margin-bottom: 10px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:first-of-type {
+                .wrapper:first-of-type {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                .wrapper {
+                    gap: 5px 0;
+                }
+            }
+
+            .link--underline {
+                letter-spacing: 0.4px;
+                font-weight: 700;
+                position: relative;
+                display: inline-block;
+                font-size: 14px;
+                margin-top: 10px;
+
+                &:after {
+                    content: '';
+                    width: 0;
+                    height: 1px;
+                    background: $bodyText;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 0;
+                    transition: width .4s ease-in-out;
+                }
+
+                &:hover, &:focus {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+@media screen and (min-width: 767.98px) {
+    .contact {
+        padding: 100px 0;
+
+        &_info {
+            gap: 40px;
+
+            &-item {
+                width: calc(50% - 20px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .contact {
+        padding: 120px 0 80px;
+
+        &_map {
+            flex-grow: 1;
+            margin-bottom: 0;
+            margin-right: 60px;
+        }
+
+        &_info {
+            gap: 40px;
+            justify-content: space-between;
+
+            &-item {
+                width: unset;
+            }
+        }
+    }
+}

@@ -4,9 +4,12 @@
 @include('components.includes.head')
 
 <body>
+    @include('components.includes.header')
+
     {{ $slot }}
 
-    @vite('resources/js/app.js')
+    @include('components.includes.footer')
+
 </body>
 
 </html>

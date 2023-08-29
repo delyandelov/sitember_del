@@ -35,7 +35,7 @@ return [
     'notifications' => [
 
         'saved' => [
-            'title' => 'Saved',
+            'title' => 'Запазено',
         ],
 
     ],
@@ -43,7 +43,7 @@ return [
     'actions' => [
 
         'back' => [
-            'label' => 'back',
+            'label' => 'назад',
         ],
 
     ],
