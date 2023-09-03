@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PostResource\Pages;
 use App\Models\Post;
-use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
@@ -44,7 +44,7 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
-                Card::make()->schema([
+                Section::make()->schema([
                     TextInput::make('title')
                         ->label('Заглавие')
                         ->required()

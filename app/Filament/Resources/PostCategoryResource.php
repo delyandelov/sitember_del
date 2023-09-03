@@ -8,7 +8,7 @@ use App\Filament\Resources\PostCategoryResource\Pages\ListPostCategories;
 use App\Filament\Resources\PostCategoryResource\RelationManagers\PostsRelationManager;
 use App\Models\PostCategory;
 use Closure;
-use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Concerns\Translatable;
@@ -28,7 +28,7 @@ class PostCategoryResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
     protected static ?string $modelLabel = 'блог категория';
-    
+
     protected static ?string $pluralModelLabel = 'блог категории';
 
     protected static ?string $navigationGroup = 'Блог';
@@ -39,7 +39,7 @@ class PostCategoryResource extends Resource
     {
         return $form
             ->schema([
-                Card::make()->schema([
+                Section::make()->schema([
                     TextInput::make('title')
                         ->label('Заглавие')
                         ->reactive()

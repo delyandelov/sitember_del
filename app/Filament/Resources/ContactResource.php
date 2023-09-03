@@ -2,14 +2,14 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ContactResource\Pages;
-use App\Models\Contact;
-use Filament\Forms\Components\Card;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Contact;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
+use App\Filament\Resources\ContactResource\Pages;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class ContactResource extends Resource
@@ -20,7 +20,7 @@ class ContactResource extends Resource
 
     protected static ?string $pluralModelLabel = 'запитвания';
 
-    protected static ?string $navigationGroup = 'Управление';
+    protected static ?string $navigationGroup = 'Клиенти';
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-oval-left-ellipsis';
 
@@ -30,7 +30,7 @@ class ContactResource extends Resource
     {
         return $form
             ->schema([
-                Card::make()->schema([
+                Section::make()->schema([
                     TextInput::make('name')
                         ->label('Име'),
                     TextInput::make('email')
