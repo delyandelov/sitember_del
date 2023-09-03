@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class="header_nav-list_item">
-                    <a class="nav-item nav-link" href="{{ route('about') }}" data-page="about" data-single="true">
+                    <a class="nav-item nav-link" href="{{ route('about') }}" data-page="about" data-single="true" wire:navigate>
                         <span class="nav-item_text">За Нас</span>
                     </a>
                 </li>
@@ -33,6 +33,7 @@
                         aria-expanded="false"
                         aria-controls="servicesMenu"
                         data-page="services"
+                        wire:navigate
                     >
                         <span class="nav-item_text">
                             Услуги
@@ -136,17 +137,17 @@
                     </div>
                 </li>
                 <li class="header_nav-list_item">
-                    <a class="nav-item nav-link" href="{{ route('plans') }}" data-page="prices" data-single="true">
+                    <a class="nav-item nav-link" href="{{ route('plans') }}" data-page="plans" data-single="true" wire:navigate>
                         <span class="nav-item_text">Цени</span>
                     </a>
                 </li>
                 <li class="header_nav-list_item">
-                    <a class="nav-item nav-link" href="{{ route('projects') }}" data-page="prices" data-single="true">
+                    <a class="nav-item nav-link" href="{{ route('projects') }}" data-page="projects" data-single="true" wire:navigate>
                         <span class="nav-item_text">Проекти</span>
                     </a>
                 </li>
                 <li class="header_nav-list_item">
-                    <a class="nav-item nav-link" href="{{ route('contact') }}" data-page="contact" data-single="true">
+                    <a class="nav-item nav-link" href="{{ route('contact') }}" data-page="contact" data-single="true" wire:navigate>
                         <span class="nav-item_text">Контакти</span>
                     </a>
                 </li>

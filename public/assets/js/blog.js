@@ -13,10 +13,10 @@
 "use strict";
 
 import initFilter from "./modules/filter";
-import {initDestroySwiper} from "./modules/slider";
+import { initDestroySwiper } from "./modules/slider";
 import initProgressbar from "./modules/progress";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('livewire:navigated', () => {
     initFilter('.blog_posts', '.blog_filters-item', {
         itemSelector: '.blog_posts-item'
     });

@@ -11,7 +11,7 @@ import drawAccordion from "./modules/accordion";
 import { validate } from "./modules/forms";
 import setYTFrame from "./modules/video";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("livewire:navigated", () => {
     preventDefault();
     svg4everybody();
     const lazyload = new LazyLoad({

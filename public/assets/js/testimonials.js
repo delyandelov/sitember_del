@@ -1,7 +1,7 @@
 "use strict";
 
-import {initSwiperSlider} from "./modules/slider";
-import {setEdgePadding} from "./modules/helpers"
+import { initSwiperSlider } from "./modules/slider";
+import { setEdgePadding } from "./modules/helpers"
 
 document.addEventListener('DOMContentLoaded', () => {
     initSwiperSlider('.testimonials_slider', '.testimonials_controls', {

@@ -1,11 +1,11 @@
 "use strict";
 
-import {initSwiperSlider} from "./modules/slider";
+import { initSwiperSlider } from "./modules/slider";
 
 document.addEventListener('DOMContentLoaded', () => {
     initSwiperSlider('.chart_slider', '.chart_slider', {
         effect: "coverflow",
-        centeredSlides: false ,
+        centeredSlides: false,
         autoplay: true,
         speed: 700,
         slidesPerView: 2,

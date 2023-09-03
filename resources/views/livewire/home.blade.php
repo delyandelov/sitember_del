@@ -650,11 +650,4 @@
         </section>
         <!-- feedback section end -->
     </main>
-
-    @push('headScripts')
-            <!-- loaded only on the index page-->
-        <script src="{{ asset('assets/js/projects.min.js') }}"></script>
-        <script src="{{ asset('assets/js/testimonials.min.js') }}"></script>
-    @endpush
-
 </div>
