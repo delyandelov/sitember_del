@@ -606,9 +606,9 @@
                                 <input
                                     class="field required"
                                     type="text"
-                                    data-type="email"
-                                    id="feedbackEmail"
-                                    name="feedbackEmail"
+                                    data-type="phone"
+                                    id="feedbackPhone"
+                                    name="feedbackPhone"
                                     placeholder="Телефон"
                                 />
                             </div>
