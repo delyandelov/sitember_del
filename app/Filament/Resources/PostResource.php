@@ -10,7 +10,7 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
-use Filament\Resources\Concerns\Translatable;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
@@ -26,8 +26,6 @@ use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class PostResource extends Resource
 {
-    use Translatable;
-
     protected static ?string $model = Post::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
@@ -48,11 +46,12 @@ class PostResource extends Resource
                     TextInput::make('title')
                         ->label('Заглавие')
                         ->required()
-                        ->reactive()
-                        ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
+                        ->autofocus()
+                        ->live(onBlur: true)
+                        ->unique(ignoreRecord: true)
+                        ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
                     TextInput::make('slug')
-                        ->label('Слъг')
-                        ->disabled()
+                        ->disabledOn('edit')
                         ->required(),
                     TinyEditor::make('content')
                         ->label('Съдържание')
@@ -169,8 +168,8 @@ class PostResource extends Resource
             ]);
     }
 
-    public static function getTranslatableLocales(): array
+    public static function getNavigationBadge(): ?string
     {
-        return ['en', 'bg'];
+        return static::$model::count();
     }
 }

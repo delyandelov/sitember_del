@@ -2,18 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use Filament\Tables;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use App\Models\Testimonial;
-use Filament\Resources\Resource;
+use App\Filament\Resources\ProjectResource\Pages;
+use App\Models\Project;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\TestimonialResource\Pages;
-use App\Filament\Resources\TestimonialResource\RelationManagers;
+use Filament\Forms\Form;
+use Filament\Forms\Set;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
+use Illuminate\Support\Str;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class ProjectResource extends Resource
@@ -36,13 +34,21 @@ class ProjectResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('company_name')
-                        ->label('Име'),
+                        ->label('Име')
+                        ->required()
+                        ->autofocus()
+                        ->live(onBlur: true)
+                        ->unique(ignoreRecord: true)
+                        ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    TextInput::make('slug')
+                        ->disabledOn('edit')
+                        ->required(),
                     TextInput::make('type')
                         ->label('Тип'),
                     TinyEditor::make('description')
                         ->label('Описание')
-			->columnSpan('full'),
-		]),
+                        ->columnSpan('full'),
+                ]),
             ]);
     }
 
@@ -63,6 +69,7 @@ class ProjectResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->label('Описание')
+                    ->html()
                     ->limit(500)
                     ->searchable(),
             ])
@@ -71,6 +78,7 @@ class ProjectResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -92,9 +100,14 @@ class ProjectResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTestimonials::route('/'),
-            'create' => Pages\CreateTestimonial::route('/create'),
-            'edit' => Pages\EditTestimonial::route('/{record}/edit'),
+            'index' => Pages\ListProjects::route('/'),
+            'create' => Pages\CreateProject::route('/create'),
+            'edit' => Pages\EditProject::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::count();
     }
 }

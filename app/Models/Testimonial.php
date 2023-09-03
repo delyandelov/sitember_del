@@ -7,22 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Testimonial extends Model
 {
-	use HasFactory;
+    use HasFactory;
 
-	protected $table = 'testimonials';
+    protected $table = 'testimonials';
 
-    	protected $fillable = [
-        	'name',
-        	'position',
-        	'description',
-    	];
+    protected $fillable = [
+        'name',
+        'position',
+        'description',
+    ];
 
-    	/**
-     	* The attributes that should be cast to native types.
-     	*
-     	* @var array
-     	*/
-    	protected $casts = [
-        	'id' => 'integer',
-    	];
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }

@@ -2,19 +2,15 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use App\Models\Home;
-use Filament\Tables;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\HomeResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\HomeResource\RelationManagers;
+use App\Models\Home;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class HomeResource extends Resource
@@ -23,13 +19,13 @@ class HomeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-home';
 
-    protected static ?string $modelLabel = 'Home';
+    protected static ?string $modelLabel = 'Начална страница';
 
-    protected static ?string $pluralModelLabel = 'Home';
+    protected static ?string $pluralModelLabel = 'Начална страница';
 
     protected static ?string $navigationGroup = 'Съдържание';
 
-    protected static ?string $navigationLabel = 'Home';
+    protected static ?string $navigationLabel = 'Начална страница';
 
     public static function form(Form $form): Form
     {
@@ -49,7 +45,7 @@ class HomeResource extends Resource
                         ->image()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth('50'),
-                        // ->imageResizeTargetHeight('auto'),
+                    // ->imageResizeTargetHeight('auto'),
                 ]),
                 Section::make()->schema([
                     TextInput::make('section_title1')
@@ -62,7 +58,7 @@ class HomeResource extends Resource
                         ->image()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth('50'),
-                        // ->imageResizeTargetHeight('auto'),
+                    // ->imageResizeTargetHeight('auto'),
                 ]),
                 Section::make()->schema([
                     TextInput::make('section_title2')
@@ -78,7 +74,7 @@ class HomeResource extends Resource
                         ->image()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth('50'),
-                        // ->imageResizeTargetHeight('auto'),
+                    // ->imageResizeTargetHeight('auto'),
                 ]),
                 Section::make()->schema([
                     TextInput::make('section_title3')
@@ -96,7 +92,7 @@ class HomeResource extends Resource
                         ->image()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth('50'),
-                        // ->imageResizeTargetHeight('auto'),
+                    // ->imageResizeTargetHeight('auto'),
                 ]),
                 Section::make()->schema([
                     TextInput::make('section_title4')
@@ -117,7 +113,7 @@ class HomeResource extends Resource
                         ->image()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth('50'),
-                        // ->imageResizeTargetHeight('auto'),
+                    // ->imageResizeTargetHeight('auto'),
                 ]),
             ]);
     }

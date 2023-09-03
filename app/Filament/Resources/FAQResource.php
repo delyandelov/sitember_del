@@ -2,17 +2,13 @@
 
 namespace App\Filament\Resources;
 
-use App\Models\FAQ;
-use Filament\Forms;
-use Filament\Tables;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Section;
-use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\FAQResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\FAQResource\RelationManagers;
+use App\Models\FAQ;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class FAQResource extends Resource
@@ -92,5 +88,10 @@ class FAQResource extends Resource
             'create' => Pages\CreateFAQ::route('/create'),
             'edit' => Pages\EditFAQ::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::count();
     }
 }

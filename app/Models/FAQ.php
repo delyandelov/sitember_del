@@ -7,27 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class FAQ extends Model
 {
-	use HasFactory;
+    use HasFactory;
 
-	protected $table = 'faqs';
+    protected $table = 'faqs';
 
-    	/**
-     	* The attributes that are mass assignable.
-     	*
-     	* @var array
-     	*/
-	protected $fillable = [
-		'question',
-		'answer',
-	];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'question',
+        'answer',
+    ];
 
-	
-    	/**
-     	* The attributes that should be cast to native types.
-     	*
-     	* @var array
-     	*/
-    	protected $casts = [
-	    'id' => 'integer',
-	];
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }

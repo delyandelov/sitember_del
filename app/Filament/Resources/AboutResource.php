@@ -2,24 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Tables;
-use App\Models\About;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Card;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\TextInput;
-use Filament\Resources\Concerns\Translatable;
 use App\Filament\Resources\AboutResource\Pages;
-use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+use App\Models\About;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class AboutResource extends Resource
 {
-    use Translatable;
-
     protected static ?string $model = About::class;
 
     protected static ?string $modelLabel = 'За нас';
@@ -134,10 +130,5 @@ class AboutResource extends Resource
             'create' => Pages\CreateAbout::route('/create'),
             'edit' => Pages\EditAbout::route('/{record}/edit'),
         ];
-    }
-
-    public static function getTranslatableLocales(): array
-    {
-        return ['en', 'bg'];
     }
 }

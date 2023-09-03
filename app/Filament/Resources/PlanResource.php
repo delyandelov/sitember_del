@@ -2,18 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
+use App\Filament\Resources\PlanResource\Pages;
 use App\Models\Plan;
-use Filament\Tables;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\PlanResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\PlanResource\RelationManagers;
+use Filament\Forms\Form;
+use Filament\Forms\Set;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
+use Illuminate\Support\Str;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class PlanResource extends Resource
@@ -36,14 +34,22 @@ class PlanResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('name')
-                        ->label('Име'),
+                        ->label('Име')
+                        ->required()
+                        ->autofocus()
+                        ->live(onBlur: true)
+                        ->unique(ignoreRecord: true)
+                        ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    TextInput::make('slug')
+                        ->disabledOn('edit')
+                        ->required(),
                     TextInput::make('position')
                         ->label('Длъжност'),
                     TinyEditor::make('description')
                         ->label('Описание')
-			            ->columnSpan('full'),
-		        ]),
-        ]);
+                        ->columnSpan('full'),
+                ]),
+            ]);
     }
 
     public static function table(Table $table): Table
@@ -63,6 +69,7 @@ class PlanResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->label('Описание')
+                    ->html()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('important_features')
                     ->label('Отличителни характеристики')
@@ -76,6 +83,7 @@ class PlanResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -101,5 +109,10 @@ class PlanResource extends Resource
             'create' => Pages\CreatePlan::route('/create'),
             'edit' => Pages\EditPlan::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::count();
     }
 }

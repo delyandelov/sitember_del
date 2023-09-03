@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Plan extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'plans';
 
     /**
@@ -18,6 +18,7 @@ class Plan extends Model
      */
     protected $fillable = [
         'name',
+        'slug',
         'price',
         'description',
         'important_features',
@@ -32,5 +33,4 @@ class Plan extends Model
     protected $casts = [
         'id' => 'integer',
     ];
-
 }

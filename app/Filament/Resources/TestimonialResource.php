@@ -2,18 +2,14 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use Filament\Tables;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
+use App\Filament\Resources\TestimonialResource\Pages;
 use App\Models\Testimonial;
-use Filament\Resources\Resource;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\TestimonialResource\Pages;
-use App\Filament\Resources\TestimonialResource\RelationManagers;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class TestimonialResource extends Resource
@@ -41,9 +37,9 @@ class TestimonialResource extends Resource
                         ->label('Длъжност'),
                     TinyEditor::make('description')
                         ->label('Описание')
-			            ->columnSpan('full'),
-		        ]),
-        ]);
+                        ->columnSpan('full'),
+                ]),
+            ]);
     }
 
     public static function table(Table $table): Table
@@ -101,5 +97,10 @@ class TestimonialResource extends Resource
             'create' => Pages\CreateTestimonial::route('/create'),
             'edit' => Pages\EditTestimonial::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::count();
     }
 }

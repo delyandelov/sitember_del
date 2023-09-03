@@ -7,22 +7,19 @@ use App\Filament\Resources\PostCategoryResource\Pages\EditPostCategory;
 use App\Filament\Resources\PostCategoryResource\Pages\ListPostCategories;
 use App\Filament\Resources\PostCategoryResource\RelationManagers\PostsRelationManager;
 use App\Models\PostCategory;
-use Closure;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
-use Filament\Resources\Concerns\Translatable;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
-use Filament\Tables\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+use Filament\Tables\Table;
 use Illuminate\Support\Str;
 
 class PostCategoryResource extends Resource
 {
-    use Translatable;
-
     protected static ?string $model = PostCategory::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
@@ -42,14 +39,14 @@ class PostCategoryResource extends Resource
                 Section::make()->schema([
                     TextInput::make('title')
                         ->label('Заглавие')
-                        ->reactive()
-                        ->afterStateUpdated(function (\Filament\Forms\Set $set, $state) {
-                            $set('slug', Str::slug($state));
-                        }),
-                    TextInput::make('slug')
-                        ->label('Слъг')
                         ->required()
-                        ->disabled(),
+                        ->autofocus()
+                        ->live(onBlur: true)
+                        ->unique(ignoreRecord: true)
+                        ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    TextInput::make('slug')
+                        ->disabledOn('edit')
+                        ->required(),
                     SpatieMediaLibraryFileUpload::make('media')
                         ->label('Медия')
                         ->collection('postcategories')
@@ -72,18 +69,18 @@ class PostCategoryResource extends Resource
                     ->collection('postcategories')
                     ->label('Медия'),
                 Tables\Columns\TextColumn::make('title')
-                ->label('Име на категория')
-                ->limit(20)
-                ->sortable()
-                ->searchable(),
+                    ->label('Име на категория')
+                    ->limit(20)
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('posts_count')
                     ->label('Брой публикации')
                     ->counts('posts'),
                 Tables\Columns\TextColumn::make('created_at')
-                ->label('Създадена')
-                ->dateTime('d-M-Y')
-                ->sortable()
-                ->searchable(),
+                    ->label('Създадена')
+                    ->dateTime('d-M-Y')
+                    ->sortable()
+                    ->searchable(),
             ])
             ->filters([
                 //
@@ -113,8 +110,8 @@ class PostCategoryResource extends Resource
         ];
     }
 
-    public static function getTranslatableLocales(): array
+    public static function getNavigationBadge(): ?string
     {
-        return ['en', 'bg'];
+        return static::$model::count();
     }
 }

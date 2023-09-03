@@ -3,19 +3,14 @@
 namespace App\Filament\Resources\AboutResource\Pages;
 
 use App\Filament\Resources\AboutResource;
-use Filament\Pages\Actions;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateAbout extends CreateRecord
 {
-    use CreateRecord\Concerns\Translatable;
-
     protected static string $resource = AboutResource::class;
 
-    protected function getHeaderActions(): array
+    protected function getRedirectUrl(): string
     {
-        return [
-            Actions\LocaleSwitcher::make(),
-        ];
+        return $this->getResource()::getUrl('index');
     }
 }
