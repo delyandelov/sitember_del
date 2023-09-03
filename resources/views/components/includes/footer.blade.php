@@ -9,13 +9,13 @@
             </a>
             <ul class="footer_top-nav d-flex flex-wrap">
                 <li class="footer_top-nav_link">
-                    <a class="link h5" href="blog.html">
+                    <a class="link h5" href="{{ route('blog') }}" wire:navigate>
                          Новини
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </a>
                 </li>
                 <li class="footer_top-nav_link">
-                    <a class="link h5" href="faq.html">
+                    <a class="link h5" href="{{ route('faq') }}" wire:navigate>
                          Често задавани въпроси
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </a>

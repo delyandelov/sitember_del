@@ -16,7 +16,7 @@
      <!-- Javascript -->
      <script src="{{ asset('assets/js/common.min.js') }}"></script>
      <script src="{{ asset('assets/js/common_navigated.min.js') }}" defer></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
      <!-- loaded only on the index page-->
      <script src="{{ asset('assets/js/projects.min.js') }}"></script>

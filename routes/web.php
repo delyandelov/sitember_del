@@ -1,7 +1,9 @@
 <?php
 
 use App\Livewire\About;
+use App\Livewire\Blog;
 use App\Livewire\Contact;
+use App\Livewire\FAQ;
 use App\Livewire\Home;
 use App\Livewire\Plans;
 use App\Livewire\Project;
@@ -29,3 +31,5 @@ Route::get('/prices', Plans::class)->name('plans');
 Route::get('/projects', Projects::class)->name('projects');
 Route::get('/project/{project}', Project::class)->name('project');
 Route::get('/contact', Contact::class)->name('contact');
+Route::get('/FAQ', FAQ::class)->name('faq');
+Route::get('/blog', Blog::class)->name('blog');
