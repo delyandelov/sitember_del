@@ -4,10 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class Project extends Component
+class ProjectsComponent extends Component
 {
     public function render()
     {
-        return view('livewire.project');
+        return view('livewire.projects-component');
     }
 }

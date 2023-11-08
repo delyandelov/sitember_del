@@ -117,22 +117,32 @@
                             porttitor tincidunt. Donec iaculis lacus vitae velit finibus ullamcorper
                         </p>
                     </div>
-                    <form class="feedback_main-form form d-flex flex-column" action="form.php" method="post" data-type="feedback">
-                        <input class="field required" type="text" id="feedbackName" name="feedbackName" placeholder="Name" />
+                    @if (Session::has('message'))
+                        <div class="btn--neon mb-4" role="alert">
+                            {{ Session::get('message') }}
+                        </div>
+                    @endif
+                    <form class="feedback_main-form form d-flex flex-column" wire:submit='sendMessage'>
+                        @csrf
+                        @method('POST')
+                        <input class="field required" type="text" placeholder="Name" wire:model='name'/>
+                        @error('name')<p class="text-red-500">{{ $message }}</p>@enderror
                         <input
                             class="field required"
                             type="text"
                             data-type="email"
-                            id="feedbackEmail"
                             name="feedbackEmail"
                             placeholder="E-mail"
+                            wire:model='email'
                         />
+                        @error('email')<p class="text-red-500">{{ $message }}</p>@enderror
                         <textarea
                             class="field required"
                             name="feedbackMessage"
-                            id="feedbackMessage"
                             placeholder="Type your message here…"
+                            wire:model='comment'
                         ></textarea>
+                        @error('comment')<p class="text-red-500">{{ $message }}</p>@enderror
                         <button class="btn btn--neon" type="submit">Send</button>
                     </form>
                 </div>

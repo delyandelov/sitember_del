@@ -599,37 +599,43 @@
                             свържем с Вас, за да обсъдим стратегията за дигиталното Ви присъствие и продукти.
                         </p>
                     </div>
-                    <form class="feedback_main-form form d-flex flex-column" action="form.php" method="post" data-type="feedback">
-                        <input class="field required" type="text" id="feedbackName" name="feedbackName" placeholder="Име и Фамилия" />
+                    @if (Session::has('message'))
+                        <div class="btn--neon mb-4" role="alert">
+                            {{ Session::get('message') }}
+                        </div>
+                    @endif
+                    <form class="feedback_main-form form d-flex flex-column" wire:submit='sendMessage'>
+                        <input class="field required" type="text" name="feedbackName" placeholder="Name" wire:model='name'/>
+                        @error('name')<p class="text-red-500">{{ $message }}</p>@enderror
                         <div class="flex-sm-row d-flex flex-lg-nowrap">
                             <div class="col-6">
                                 <input
                                     class="field required"
                                     type="text"
-                                    data-type="phone"
-                                    id="feedbackPhone"
                                     name="feedbackPhone"
-                                    placeholder="Телефон"
+                                    placeholder="Phone"
+                                    wire:model='phone'
                                 />
                             </div>
                             <div class="col-6">
                                 <input
                                     class="field required"
                                     type="text"
-                                    data-type="email"
-                                    id="feedbackEmail"
                                     name="feedbackEmail"
-                                    placeholder="Имейл"
+                                    placeholder="Email"
+                                    wire:model='email'
                                 />
+                            @error('email')<p class="text-red-500">{{ $message }}</p>@enderror
                             </div>
                         </div>
                         <textarea
                             class="field required"
                             name="feedbackMessage"
-                            id="feedbackMessage"
-                            placeholder="С какво да съдействаме?"
+                            placeholder="How we can help you?"
+                            wire:model='comment'
                         ></textarea>
-                        <button class="btn btn--neon" type="submit">Изпрати</button>
+                        @error('comment')<p class="text-red-500">{{ $message }}</p>@enderror
+                        <button class="btn btn--neon" type="submit">Send</button>
                     </form>
                 </div>
                 <div class="feedback_media">

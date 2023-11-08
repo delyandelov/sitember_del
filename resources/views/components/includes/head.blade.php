@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/libs.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
 
-    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
-
-
+    {{-- @vite('resources/css/app.css') --}}
 
      <!-- Javascript -->
      <script src="{{ asset('assets/js/common.min.js') }}"></script>
@@ -21,5 +19,7 @@
      <!-- loaded only on the index page-->
      <script src="{{ asset('assets/js/projects.min.js') }}"></script>
      <script src="{{ asset('assets/js/testimonials.min.js') }}"></script>
+
+     {{-- @vite('resources/js/app.js') --}}
 
 </head>

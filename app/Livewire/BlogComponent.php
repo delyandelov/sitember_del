@@ -4,10 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class FAQ extends Component
+class BlogComponent extends Component
 {
     public function render()
     {
-        return view('livewire.f-a-q');
+        return view('livewire.blog-component');
     }
 }

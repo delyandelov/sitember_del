@@ -31,14 +31,10 @@ class ContactResource extends Resource
         return $form
             ->schema([
                 Section::make()->schema([
-                    TextInput::make('name')
-                        ->label('Име'),
-                    TextInput::make('email')
-                        ->label('Имейл'),
-                    TextInput::make('subject')
-                        ->label('Тема'),
+                    TextInput::make('name'),
+                    TextInput::make('email'),
+                    TextInput::make('phone'),
                     TinyEditor::make('comment')
-                        ->label('Запитване')
                         ->columnSpan('full'),
                 ]),
             ]);
@@ -48,28 +44,16 @@ class ContactResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('id')
-                    ->label('No')
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('name')
-                    ->label('Име')
-                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
-                    ->label('Имейл')
-                    ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('subject')
-                    ->label('Tema')
-                    ->sortable()
+                Tables\Columns\TextColumn::make('phone')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('comment')
-                    ->label('Запитване')
-                    ->limit(30)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Получено на')
-                    ->dateTime('d-M-Y')
                     ->sortable()
                     ->searchable(),
             ])

@@ -1,15 +1,15 @@
 <?php
 
-use App\Livewire\About;
-use App\Livewire\Blog;
-use App\Livewire\Contact;
-use App\Livewire\FAQ;
-use App\Livewire\Home;
-use App\Livewire\Plans;
-use App\Livewire\Project;
-use App\Livewire\Projects;
-use App\Livewire\Service;
-use App\Livewire\Services;
+use App\Livewire\AboutComponent;
+use App\Livewire\BlogComponent;
+use App\Livewire\ContactComponent;
+use App\Livewire\FAQComponent;
+use App\Livewire\HomeComponent;
+use App\Livewire\PlansComponent;
+use App\Livewire\ProjectComponent;
+use App\Livewire\ProjectsComponent;
+use App\Livewire\ServiceComponent;
+use App\Livewire\ServicesComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,13 +23,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Home::class);
-Route::get('/about', About::class)->name('about');
-Route::get('/services', Services::class)->name('services');
-Route::get('/service/{service}', Service::class)->name('service');
-Route::get('/prices', Plans::class)->name('plans');
-Route::get('/projects', Projects::class)->name('projects');
-Route::get('/project/{project}', Project::class)->name('project');
-Route::get('/contact', Contact::class)->name('contact');
-Route::get('/FAQ', FAQ::class)->name('faq');
-Route::get('/blog', Blog::class)->name('blog');
+Route::get('/', HomeComponent::class);
+Route::get('/about', AboutComponent::class)->name('about');
+Route::get('/services', ServicesComponent::class)->name('services');
+Route::get('/service/{service}', ServiceComponent::class)->name('service');
+Route::get('/prices', PlansComponent::class)->name('plans');
+Route::get('/projects', ProjectsComponent::class)->name('projects');
+Route::get('/project/{project}', ProjectComponent::class)->name('project');
+Route::get('/contact', ContactComponent::class)->name('contact');
+Route::get('/FAQ', FAQComponent::class)->name('faq');
+Route::get('/blog', BlogComponent::class)->name('blog');
