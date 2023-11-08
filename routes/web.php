@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeComponent::class);
 Route::get('/about', AboutComponent::class)->name('about');
 Route::get('/services', ServicesComponent::class)->name('services');
-Route::get('/service/{service}', ServiceComponent::class)->name('service');
+Route::get('/services/{service}', ServiceComponent::class)->name('service');
 Route::get('/prices', PlansComponent::class)->name('plans');
 Route::get('/projects', ProjectsComponent::class)->name('projects');
 Route::get('/project/{project}', ProjectComponent::class)->name('project');

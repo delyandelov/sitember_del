@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\HomeResource\Pages;
 use App\Models\Home;
 use Filament\Forms\Components\Section;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -32,88 +31,10 @@ class HomeResource extends Resource
         return $form
             ->schema([
                 Section::make()->schema([
-                    TextInput::make('slogan')
-                        ->label('Слоган')
+                    TextInput::make('aboutus_title')
                         ->required(),
-                    TinyEditor::make('intro')
-                        ->label('Въведение под слогана')
+                    TinyEditor::make('aboutus_content')
                         ->required(),
-                    SpatieMediaLibraryFileUpload::make('media_head')
-                        ->label('Медия')
-                        ->collection('head')
-                        ->multiple()
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('50'),
-                    // ->imageResizeTargetHeight('auto'),
-                ]),
-                Section::make()->schema([
-                    TextInput::make('section_title1')
-                        ->label('Заглавие на секция 1')
-                        ->required(),
-                    SpatieMediaLibraryFileUpload::make('media_head')
-                        ->label('Медия')
-                        ->collection('head')
-                        ->multiple()
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('50'),
-                    // ->imageResizeTargetHeight('auto'),
-                ]),
-                Section::make()->schema([
-                    TextInput::make('section_title2')
-                        ->label('Заглавие на секция 2')
-                        ->required(),
-                    TinyEditor::make('short_info1')
-                        ->label('Кратко Инфо 1')
-                        ->required(),
-                    SpatieMediaLibraryFileUpload::make('media_head')
-                        ->label('Медия')
-                        ->collection('head')
-                        ->multiple()
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('50'),
-                    // ->imageResizeTargetHeight('auto'),
-                ]),
-                Section::make()->schema([
-                    TextInput::make('section_title3')
-                        ->label('Заглавие на секция 3')
-                        ->required(),
-                ]),
-                Section::make()->schema([
-                    TinyEditor::make('short_info2')
-                        ->label('Кратко Инфо 2')
-                        ->required(),
-                    SpatieMediaLibraryFileUpload::make('media_head')
-                        ->label('Медия')
-                        ->collection('head')
-                        ->multiple()
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('50'),
-                    // ->imageResizeTargetHeight('auto'),
-                ]),
-                Section::make()->schema([
-                    TextInput::make('section_title4')
-                        ->label('Заглавие на секция 4')
-                        ->required(),
-                ]),
-                Section::make()->schema([
-                    TextInput::make('section_title5')
-                        ->label('Заглавие на секция 5')
-                        ->required(),
-                    TinyEditor::make('short_info3')
-                        ->label('Кратко Инфо 3')
-                        ->required(),
-                    SpatieMediaLibraryFileUpload::make('media_head')
-                        ->label('Медия')
-                        ->collection('head')
-                        ->multiple()
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('50'),
-                    // ->imageResizeTargetHeight('auto'),
                 ]),
             ]);
     }
@@ -125,11 +46,9 @@ class HomeResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label('No')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('slogan')
-                    ->label('Слоган')
+                Tables\Columns\TextColumn::make('aboutus_title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Създадена на')
                     ->dateTime('d-M-Y'),
             ])
             ->filters([

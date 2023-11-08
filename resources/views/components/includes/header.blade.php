@@ -18,7 +18,7 @@
                 </li>
                 <li class="header_nav-list_item">
                     <a class="nav-item nav-link" href="{{ route('about') }}" data-page="about" data-single="true" wire:navigate>
-                        <span class="nav-item_text">За Нас</span>
+                        <span class="nav-item_text">About Us</span>
                     </a>
                 </li>
                 <li class="header_nav-list_item dropdown">
@@ -36,7 +36,7 @@
                         wire:navigate
                     >
                         <span class="nav-item_text">
-                            Услуги
+                            Services
                             <i class="icon-circle icon"></i>
                         </span>
                         <i class="icon-arrow-left icon arrow-rotate"></i>
@@ -138,25 +138,25 @@
                 </li>
                 <li class="header_nav-list_item">
                     <a class="nav-item nav-link" href="{{ route('plans') }}" data-page="plans" data-single="true" wire:navigate>
-                        <span class="nav-item_text">Цени</span>
+                        <span class="nav-item_text">Prices</span>
                     </a>
                 </li>
                 <li class="header_nav-list_item">
                     <a class="nav-item nav-link" href="{{ route('projects') }}" data-page="projects" data-single="true" wire:navigate>
-                        <span class="nav-item_text">Проекти</span>
+                        <span class="nav-item_text">Projects</span>
                     </a>
                 </li>
                 <li class="header_nav-list_item">
                     <a class="nav-item nav-link" href="{{ route('contact') }}" data-page="contact" data-single="true" wire:navigate>
-                        <span class="nav-item_text">Контакти</span>
+                        <span class="nav-item_text">Contact Us</span>
                     </a>
                 </li>
                 <li class="header_nav-list_btn">
-                    <a class="btn signUpTrigger" href="#">Получи оферта</a>
+                    <a class="btn signUpTrigger" href="#">Get An Offer</a>
                 </li>
             </ul>
         </nav>
-        <a class="header_btn btn btn--neon signUpTrigger" href="#">Получи оферта</a>
+        <a class="header_btn btn btn--neon signUpTrigger" href="#">Get An Offer</a>
         <button
             class="header_trigger"
             id="headerTrigger"

@@ -17,4 +17,9 @@ class Service extends Model
         'short_description',
         'long_description',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

@@ -37,7 +37,7 @@ class HomePolicy
      */
     public function create()
     {
-        return false;
+        return true;
     }
 
     /**

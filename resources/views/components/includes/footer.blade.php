@@ -10,19 +10,19 @@
             <ul class="footer_top-nav d-flex flex-wrap">
                 <li class="footer_top-nav_link">
                     <a class="link h5" href="{{ route('blog') }}" wire:navigate>
-                         Новини
+                         News
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </a>
                 </li>
                 <li class="footer_top-nav_link">
                     <a class="link h5" href="{{ route('faq') }}" wire:navigate>
-                         Често задавани въпроси
+                         F.A.Q.
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </a>
                 </li>
                 <li class="footer_top-nav_link">
                     <a class="link h5" href="#">
-                        Условия за ползване
+                        Terms And Conditions
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </a>
                 </li>

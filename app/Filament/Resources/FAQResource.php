@@ -5,11 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\FAQResource\Pages;
 use App\Models\FAQ;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class FAQResource extends Resource
 {
@@ -30,10 +30,8 @@ class FAQResource extends Resource
         return $form
             ->schema([
                 Section::make()->schema([
-                    TinyEditor::make('question')
-                        ->label('Въпрос'),
-                    TinyEditor::make('answer')
-                        ->label('Отговор')
+                    TextInput::make('question'),
+                    TextInput::make('answer')
                         ->columnSpan('full'),
                 ]),
             ]);
@@ -47,13 +45,10 @@ class FAQResource extends Resource
                     ->label('No')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('question')
-                    ->label('Въпрос')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('answer')
-                    ->label('Отговор')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Получено на')
                     ->dateTime('d-M-Y')
                     ->sortable()
                     ->searchable(),

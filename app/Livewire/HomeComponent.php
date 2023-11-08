@@ -3,6 +3,10 @@
 namespace App\Livewire;
 
 use App\Models\Contact;
+use App\Models\FAQ;
+use App\Models\Home;
+use App\Models\Service;
+use App\Models\Slider;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
@@ -35,6 +39,11 @@ class HomeComponent extends Component
 
     public function render()
     {
-        return view('livewire.home-component');
+        return view('livewire.home-component', [
+            'hero' => Slider::first(),
+            'services' => Service::all(),
+            'home' => Home::first(),
+            'faqs' => FAQ::all(),
+        ]);
     }
 }

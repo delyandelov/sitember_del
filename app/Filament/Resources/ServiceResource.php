@@ -63,14 +63,10 @@ class ServiceResource extends Resource
                     ->label('Име')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('short_description')
-                    ->label('Кратко описание')
-                    ->html()
-                    ->limit(500)
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('long_description')
-                    ->label('Описание')
-                    ->html()
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Създадена на')
+                    ->dateTime('d.m.Y')
+                    ->sortable()
                     ->searchable(),
             ])
             ->filters([
