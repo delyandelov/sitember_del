@@ -4,7 +4,7 @@ namespace App\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class AboutPolicy
+class ContactPagePolicy
 {
     use HandlesAuthorization;
 
@@ -23,7 +23,7 @@ class AboutPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\ContactPage  $contact_page
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function view()
@@ -46,7 +46,7 @@ class AboutPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\ContactPage  $contact_page
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function update()
@@ -58,19 +58,19 @@ class AboutPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\ContactPage  $contact_page
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function delete()
     {
-        return false;
+        return true;
     }
 
     /**
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\ContactPage  $contact_page
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function restore()
@@ -82,7 +82,7 @@ class AboutPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\ContactPage  $contact_page
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function forceDelete()

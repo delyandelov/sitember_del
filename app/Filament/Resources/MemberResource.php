@@ -3,47 +3,53 @@
 namespace App\Filament\Resources;
 
 use Filament\Tables;
+use App\Models\Member;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use App\Models\Testimonial;
 use Filament\Resources\Resource;
-use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use App\Filament\Resources\TestimonialResource\Pages;
+use App\Filament\Resources\MemberResource\Pages;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
-class TestimonialResource extends Resource
+class MemberResource extends Resource
 {
-    protected static ?string $model = Testimonial::class;
+    protected static ?string $model = Member::class;
 
-    protected static ?string $navigationIcon = 'heroicon-m-hand-thumb-up';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Management';
+    protected static ?string $navigationGroup = 'Content';
 
-    protected static ?string $navigationLabel = 'Testimonials';
+    protected static ?string $navigationLabel = 'SitemBeer Team';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make()->schema([
-                    TextInput::make('name')
-                        ->label('Name'),
-                    TextInput::make('position')
-                        ->label('Position'),
-                    TinyEditor::make('description')
-                        ->label('Description')
-                        ->columnSpan('full'),
-                    SpatieMediaLibraryFileUpload::make('Photo')
-                        ->collection('testimonial_photo')
-                        ->image()
-                        // ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('422')
-                        ->imageResizeTargetHeight('475')
-                        ->columnSpan('full'),
-                ]),
+                Group::make()
+                    ->schema([
+                        TextInput::make('name')
+                            ->required()
+                            ->unique(ignoreRecord: true),
+                        TextInput::make('email')
+                            ->email()
+                            ->required(),
+                        TextInput::make('position')
+                            ->required(),
+                    ])->columns(3),
+                TinyEditor::make('description')
+                    ->columnSpan('full')
+                    ->required(),
+                SpatieMediaLibraryFileUpload::make('Member Photo')
+                    ->collection('member')
+                    ->image()
+                    // ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('422')
+                    ->imageResizeTargetHeight('475')
+                    ->columnSpan('full'),
             ]);
     }
 
@@ -54,18 +60,12 @@ class TestimonialResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label('No')
                     ->sortable(),
-                SpatieMediaLibraryImageColumn::make('Photo')
-                    ->collection('testimonial_photo'),
+                SpatieMediaLibraryImageColumn::make('Member\'s Photo')
+                    ->collection('member'),
                 Tables\Columns\TextColumn::make('name')
-                    ->label('Name')
-                    ->sortable()
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('position')
-                    ->label('Position')
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Created at')
                     ->dateTime('d-M-Y')
                     ->sortable()
                     ->searchable(),
@@ -75,6 +75,7 @@ class TestimonialResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -96,9 +97,9 @@ class TestimonialResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTestimonials::route('/'),
-            'create' => Pages\CreateTestimonial::route('/create'),
-            'edit' => Pages\EditTestimonial::route('/{record}/edit'),
+            'index' => Pages\ListMembers::route('/'),
+            'create' => Pages\CreateMember::route('/create'),
+            'edit' => Pages\EditMember::route('/{record}/edit'),
         ];
     }
 

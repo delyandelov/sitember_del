@@ -10,20 +10,17 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class FAQResource extends Resource
 {
     protected static ?string $model = FAQ::class;
 
-    protected static ?string $modelLabel = 'Ч.З.В.';
-
-    protected static ?string $pluralModelLabel = 'Ч.З.В.';
-
-    protected static ?string $navigationGroup = 'Управление';
+    protected static ?string $navigationGroup = 'Management';
 
     protected static ?string $navigationIcon = 'heroicon-o-question-mark-circle';
 
-    protected static ?string $navigationLabel = 'ЧЗВ';
+    protected static ?string $navigationLabel = 'FAQ';
 
     public static function form(Form $form): Form
     {
@@ -31,7 +28,7 @@ class FAQResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('question'),
-                    TextInput::make('answer')
+                    TinyEditor::make('answer')
                         ->columnSpan('full'),
                 ]),
             ]);
@@ -45,8 +42,6 @@ class FAQResource extends Resource
                     ->label('No')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('question')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('answer')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime('d-M-Y')

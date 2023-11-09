@@ -20,13 +20,9 @@ class PlanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-s-currency-dollar';
 
-    protected static ?string $modelLabel = 'План';
+    protected static ?string $navigationGroup = 'Management';
 
-    protected static ?string $pluralModelLabel = 'Планове';
-
-    protected static ?string $navigationGroup = 'Управление';
-
-    protected static ?string $navigationLabel = 'Планове';
+    protected static ?string $navigationLabel = 'Plans';
 
     public static function form(Form $form): Form
     {

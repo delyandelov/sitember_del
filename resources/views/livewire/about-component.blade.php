@@ -5,20 +5,20 @@
             <div class="container section">
                 <ul class="breadcrumbs d-flex flex-wrap mb-xl">
                     <li class="breadcrumbs_item">
-                        <a class="link" href="/">Начало</a>
+                        <a class="link" href="/">Home</a>
                     </li>
 
                     <li class="breadcrumbs_item current">
-                        <span id="currentpage">За Нас</span>
+                        <span id="currentpage">About Us</span>
                     </li>
                 </ul>
 
                 <div class="title-wrapper">
                     <span class="tw-height h4">
-                        <span class="text">Кои сме ние?</span>
+                        <span class="text">{{ $about->heading }}</span>
                     </span>
                     <h4 class="about_main-title type" data-text="Кои сме ние?">
-                        Кои сме ние?
+                        {{ $about->heading }}
                     </h4>
                 </div>
 
@@ -68,23 +68,15 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="page_header">
-                            <h2 class="page_header-title type" data-text="About Us">About Us</h2>
+                            <h2 class="page_header-title type" data-text="About Us">{{ $about->title }}</h2>
                             <span class="tw-height h2">
-                                <span class="text">About Us</span>
+                                <span class="text">{{ $about->title }}</span>
                             </span>
 
-                            <h5 class="page_header-subtitle">Taking your business to new markets is easier than ever</h5>
+                            <h5 class="page_header-subtitle">{{ $about->subtitle }}</h5>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <p>
+                            {!! $about->content !!}
                         </p>
                     </div>
                     <div class="col-6">
@@ -97,6 +89,7 @@
             </div>
         </div>
 
+        {{-- TODO: WE MUST DECIDE IF THESE NUMBERS SHOULD BE ON THE ABOUT PAGE
         <div class="services">
             <div class="container section">
                 <div class="services_content d-lg-flex align-items-center">
@@ -121,6 +114,7 @@
                 </div>
             </div>
         </div>
+        --}}
     </main>
     <!-- about page content end -->
     {{-- @push('headScripts')

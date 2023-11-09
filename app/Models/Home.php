@@ -17,7 +17,16 @@ class Home extends Model
      * @var array
      */
     protected $fillable = [
+        'services_title',
         'aboutus_title',
         'aboutus_content',
+        'aboutus_button_text',
+        'projects_title',
+        'projects_button_text',
+        'other_button_text',
+        'join_content',
+        'testimonials_title',
+        'askus_title',
+        'askus_content',
     ];
 }

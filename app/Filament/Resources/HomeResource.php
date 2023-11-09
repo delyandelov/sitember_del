@@ -18,22 +18,47 @@ class HomeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-home';
 
-    protected static ?string $modelLabel = 'Начална страница';
+    protected static ?string $navigationGroup = 'Content';
 
-    protected static ?string $pluralModelLabel = 'Начална страница';
-
-    protected static ?string $navigationGroup = 'Съдържание';
-
-    protected static ?string $navigationLabel = 'Начална страница';
+    protected static ?string $navigationLabel = 'Home Page';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Section::make()->schema([
+                    TextInput::make('services_title')
+                        ->label('Services Title')
+                        ->required(),
                     TextInput::make('aboutus_title')
+                        ->label('About Us Title')
                         ->required(),
                     TinyEditor::make('aboutus_content')
+                        ->label('About Us Content')
+                        ->required(),
+                    TextInput::make('aboutus_button_text')
+                        ->label('About Us Button Text')
+                        ->required(),
+                    TextInput::make('projects_title')
+                        ->label('Projects Title')
+                        ->required(),
+                    TextInput::make('projects_button_text')
+                        ->label('Projects Button Text')
+                        ->required(),
+                    TextInput::make('other_button_text')
+                        ->label('Other Questions Button Text')
+                        ->required(),
+                    TinyEditor::make('join_content')
+                        ->label('Join Content')
+                        ->required(),
+                    TextInput::make('testimonials_title')
+                        ->label('Testimonials Title')
+                        ->required(),
+                    TextInput::make('askus_title')
+                        ->label('Ask Us Title')
+                        ->required(),
+                    TinyEditor::make('askus_content')
+                        ->label('Ask Us Content')
                         ->required(),
                 ]),
             ]);
@@ -46,7 +71,7 @@ class HomeResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label('No')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('aboutus_title')
+                Tables\Columns\TextColumn::make('services_title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime('d-M-Y'),

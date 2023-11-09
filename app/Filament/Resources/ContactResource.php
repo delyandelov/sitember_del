@@ -16,15 +16,11 @@ class ContactResource extends Resource
 {
     protected static ?string $model = Contact::class;
 
-    protected static ?string $modelLabel = 'запитване';
-
-    protected static ?string $pluralModelLabel = 'запитвания';
-
-    protected static ?string $navigationGroup = 'Клиенти';
+    protected static ?string $navigationGroup = 'Clients';
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-oval-left-ellipsis';
 
-    protected static ?string $navigationLabel = 'Запитвания';
+    protected static ?string $navigationLabel = 'Contacts';
 
     public static function form(Form $form): Form
     {

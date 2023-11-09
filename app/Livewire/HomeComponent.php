@@ -7,6 +7,7 @@ use App\Models\FAQ;
 use App\Models\Home;
 use App\Models\Service;
 use App\Models\Slider;
+use App\Models\Testimonial;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
@@ -44,6 +45,7 @@ class HomeComponent extends Component
             'services' => Service::all(),
             'home' => Home::first(),
             'faqs' => FAQ::all(),
+            'testimonials' => Testimonial::all(),
         ]);
     }
 }

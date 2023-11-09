@@ -22,13 +22,9 @@ class SliderResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-m-arrows-right-left';
 
-    protected static ?string $modelLabel = 'слайдер';
+    protected static ?string $navigationGroup = 'Management';
 
-    protected static ?string $pluralModelLabel = 'слайдери';
-
-    protected static ?string $navigationGroup = 'Управление';
-
-    protected static ?string $navigationLabel = 'Слайдер';
+    protected static ?string $navigationLabel = 'Sliders';
 
     public static function form(Form $form): Form
     {
@@ -36,21 +32,21 @@ class SliderResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('title')
-                        ->label('Заглавие')
+                        ->label('Title')
                         ->required(),
                     TinyEditor::make('content')
-                        ->label('Съдържание')
+                        ->label('Content')
                         ->columnSpan('full'),
                     TextInput::make('link')
-                        ->label('Път')
+                        ->label('Path/Link')
                         ->required(),
                     TextInput::make('link_text')
-                        ->label('Заглавие на пътя')
+                        ->label('Link Text')
                         ->required(),
                     Toggle::make('status')
-                        ->label('Активен'),
+                        ->label('Active'),
                     SpatieMediaLibraryFileUpload::make('media')
-                        ->label('Снимка')
+                        ->label('Image')
                         ->collection('sliders')
                         ->image()
                         ->imageResizeMode('cover')
@@ -68,21 +64,17 @@ class SliderResource extends Resource
                     ->label('No')
                     ->sortable(),
                 SpatieMediaLibraryImageColumn::make('media')
-                    ->label('Снимка')
+                    ->label('Image')
                     ->collection('sliders'),
                 TextColumn::make('title')
-                    ->label('Заглавие')
+                    ->label('Title')
                     ->sortable(),
-                // Tables\Columns\TextColumn::make('content')->limit(20)->sortable(),
-                Tables\Columns\TextColumn::make('link')
-                    ->label('Път'),
-                // Tables\Columns\TextColumn::make('link_text'),
                 Tables\Columns\IconColumn::make('status')
-                    ->label('Активен')
+                    ->label('Active')
                     ->toggle()
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Създаден на')
+                    ->label('Created at')
                     ->dateTime('d-M-Y')
                     ->sortable()
                     ->searchable(),

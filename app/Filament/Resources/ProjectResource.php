@@ -20,13 +20,9 @@ class ProjectResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-s-computer-desktop';
 
-    protected static ?string $modelLabel = 'Проект';
+    protected static ?string $navigationGroup = 'Management';
 
-    protected static ?string $pluralModelLabel = 'Проекти';
-
-    protected static ?string $navigationGroup = 'Управление';
-
-    protected static ?string $navigationLabel = 'Проекти';
+    protected static ?string $navigationLabel = 'Projects';
 
     public static function form(Form $form): Form
     {
@@ -34,7 +30,7 @@ class ProjectResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('company_name')
-                        ->label('Име')
+                        ->label('Name')
                         ->required()
                         ->autofocus()
                         ->live(onBlur: true)
@@ -44,9 +40,9 @@ class ProjectResource extends Resource
                         ->disabledOn('edit')
                         ->required(),
                     TextInput::make('type')
-                        ->label('Тип'),
+                        ->label('Type'),
                     TinyEditor::make('description')
-                        ->label('Описание')
+                        ->label('Description')
                         ->columnSpan('full'),
                 ]),
             ]);
@@ -60,17 +56,12 @@ class ProjectResource extends Resource
                     ->label('No')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('company_name')
-                    ->label('Име')
+                    ->label('Name')
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('type')
-                    ->label('Тип')
+                    ->label('Type')
                     ->sortable()
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('description')
-                    ->label('Описание')
-                    ->html()
-                    ->limit(500)
                     ->searchable(),
             ])
             ->filters([

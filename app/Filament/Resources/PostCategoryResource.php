@@ -24,13 +24,9 @@ class PostCategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
-    protected static ?string $modelLabel = 'блог категория';
+    protected static ?string $navigationGroup = 'Blog';
 
-    protected static ?string $pluralModelLabel = 'блог категории';
-
-    protected static ?string $navigationGroup = 'Блог';
-
-    protected static ?string $navigationLabel = 'Блог категории';
+    protected static ?string $navigationLabel = 'Blog Categories';
 
     public static function form(Form $form): Form
     {

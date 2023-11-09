@@ -20,15 +20,11 @@ class PageResource extends Resource
 {
     protected static ?string $model = Page::class;
 
-    protected static ?string $modelLabel = 'страница';
-
-    protected static ?string $pluralModelLabel = 'страници';
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Съдържание';
+    protected static ?string $navigationGroup = 'Content';
 
-    protected static ?string $navigationLabel = 'Допълнителни страници';
+    protected static ?string $navigationLabel = 'System Pages';
 
     public static function form(Form $form): Form
     {
@@ -36,7 +32,7 @@ class PageResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('title')
-                        ->label('Заглавие')
+                        ->label('Title')
                         ->required()
                         ->autofocus()
                         ->live(onBlur: true)
@@ -46,11 +42,11 @@ class PageResource extends Resource
                         ->disabledOn('edit')
                         ->required(),
                     TinyEditor::make('body')
-                        ->label('Съдържание')
+                        ->label('Body')
                         ->required()
                         ->columnSpan('full'),
                     SpatieMediaLibraryFileUpload::make('media')
-                        ->label('Медия')
+                        ->label('Media')
                         ->collection('cms')
                         ->image()
                         ->imageResizeMode('cover')
@@ -68,15 +64,15 @@ class PageResource extends Resource
                     ->label('No')
                     ->sortable(),
                 SpatieMediaLibraryImageColumn::make('media')
-                    ->label('Медия')
+                    ->label('Media')
                     ->collection('cms'),
                 Tables\Columns\TextColumn::make('title')
-                    ->label('Заглавие')
+                    ->label('Title')
                     ->limit(20)
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Създадена на')
+                    ->label('Created at')
                     ->dateTime('d-M-Y')
                     ->sortable()
                     ->searchable(),

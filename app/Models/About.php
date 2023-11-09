@@ -12,18 +12,10 @@ class About extends Model implements HasMedia
     use HasFactory, InteractsWithMedia;
 
     public $translatable = [
+        'heading',
         'title',
-        'section1',
-        'section2',
-        'section3',
-        'box1_title',
-        'box1',
-        'box2_title',
-        'box2',
-        'box3_title',
-        'box3',
-        'box4_title',
-        'box4',
+        'subtitle',
+        'content',
     ];
 
     protected $table = 'about';
@@ -34,18 +26,10 @@ class About extends Model implements HasMedia
      * @var array
      */
     protected $fillable = [
+        'heading',
         'title',
-        'section1',
-        'section2',
-        'section3',
-        'box1_title',
-        'box1',
-        'box2_title',
-        'box2',
-        'box3_title',
-        'box3',
-        'box4_title',
-        'box4',
+        'subtitle',
+        'content',
     ];
 
     /**

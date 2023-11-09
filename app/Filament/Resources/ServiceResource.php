@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Models\Service;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -20,13 +21,9 @@ class ServiceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
 
-    protected static ?string $modelLabel = 'Услуга';
+    protected static ?string $navigationGroup = 'Management';
 
-    protected static ?string $pluralModelLabel = 'Услуги';
-
-    protected static ?string $navigationGroup = 'Управление';
-
-    protected static ?string $navigationLabel = 'Услуги';
+    protected static ?string $navigationLabel = 'Services';
 
     public static function form(Form $form): Form
     {
@@ -34,7 +31,7 @@ class ServiceResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('name')
-                        ->label('Име')
+                        ->label('Name')
                         ->required()
                         ->autofocus()
                         ->live(onBlur: true)
@@ -43,10 +40,15 @@ class ServiceResource extends Resource
                     TextInput::make('slug')
                         ->disabledOn('edit')
                         ->required(),
-                    TextInput::make('short_description')
-                        ->label('Кратко описание'),
+                    TextInput::make('title')
+                        ->label('Title'),
+                    RichEditor::make('short_description')
+                        ->label('Short Description')
+                        ->hint(fn ($state, $component) => 'left: ' . $component->getMaxLength() - strlen($state) . 'characters')
+                        ->maxlength(150)
+                        ->lazy(),
                     TinyEditor::make('long_description')
-                        ->label('Описание')
+                        ->label('Description')
                         ->columnSpan('full'),
                 ]),
             ]);
@@ -60,11 +62,11 @@ class ServiceResource extends Resource
                     ->label('No')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->label('Име')
+                    ->label('Name')
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Създадена на')
+                    ->label('Created at')
                     ->dateTime('d.m.Y')
                     ->sortable()
                     ->searchable(),

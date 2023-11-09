@@ -13,8 +13,17 @@ return new class extends Migration
     {
         Schema::create('homes', function (Blueprint $table) {
             $table->id();
-            $table->string('aboutus_title');
+            $table->text('services_title');
+            $table->text('aboutus_title');
             $table->text('aboutus_content');
+            $table->text('aboutus_button_text');
+            $table->text('projects_title');
+            $table->text('projects_button_text');
+            $table->text('other_button_text');
+            $table->text('join_content');
+            $table->text('testimonials_title');
+            $table->text('askus_title');
+            $table->text('askus_content');
             $table->timestamps();
         });
     }

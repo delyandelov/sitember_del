@@ -32,6 +32,6 @@ class ContactComponent extends Component
 
     public function render()
     {
-        return view('livewire.contact-component');
+        return view('livewire.contact-page-component');
     }
 }

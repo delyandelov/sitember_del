@@ -2,56 +2,57 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AboutResource\Pages;
-use App\Models\About;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Forms;
 use Filament\Tables;
-use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\ContactPage;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\TextInput;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\ContactPageResource\Pages;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use App\Filament\Resources\ContactPageResource\RelationManagers;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
-class AboutResource extends Resource
+class ContactPageResource extends Resource
 {
-    protected static ?string $model = About::class;
+    protected static ?string $model = ContactPage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-identification';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Content';
 
-    protected static ?string $navigationLabel = 'About Us';
+    protected static ?string $navigationLabel = 'Contact Page';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make()->schema([
                     TextInput::make('heading')
                         ->label('Heading')
                         ->required(),
                     TextInput::make('title')
                         ->label('Title')
                         ->required(),
-                    TinyEditor::make('subtitle')
-                        ->label('Subtitle')
+                    TextInput::make('form_heading')
+                        ->label('Form Heading')
                         ->required()
                         ->columnSpan('full'),
-                    TinyEditor::make('content')
-                        ->label('Content')
+                    TinyEditor::make('form_content')
+                        ->label('Form Content')
                         ->required()
                         ->columnSpan('full'),
-                    SpatieMediaLibraryFileUpload::make('about')
-                        ->label('Медия')
-                        ->collection('about')
-                        ->multiple()
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('500')
-                        ->imageResizeTargetWidth('auto'),
-                ]),
+                    //SpatieMediaLibraryFileUpload::make('contact_page')
+                    //    ->label('Медия')
+                    //    ->collection('contact_page')
+                    //    ->multiple()
+                    //    ->image()
+                    //    ->imageResizeMode('cover')
+                    //    ->imageResizeTargetWidth('500')
+                    //    ->imageResizeTargetWidth('auto'),
             ]);
     }
 
@@ -77,10 +78,13 @@ class AboutResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
             ])
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
@@ -97,9 +101,9 @@ class AboutResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAbouts::route('/'),
-            'create' => Pages\CreateAbout::route('/create'),
-            'edit' => Pages\EditAbout::route('/{record}/edit'),
+            'index' => Pages\ListContactPages::route('/'),
+            'create' => Pages\CreateContactPage::route('/create'),
+            'edit' => Pages\EditContactPage::route('/{record}/edit'),
         ];
     }
 }

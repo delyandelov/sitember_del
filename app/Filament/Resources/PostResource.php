@@ -30,13 +30,9 @@ class PostResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
-    protected static ?string $modelLabel = 'публикация';
+    protected static ?string $navigationGroup = 'Blog';
 
-    protected static ?string $pluralModelLabel = 'публикации';
-
-    protected static ?string $navigationGroup = 'Блог';
-
-    protected static ?string $navigationLabel = 'Публикации';
+    protected static ?string $navigationLabel = 'Posts';
 
     public static function form(Form $form): Form
     {
@@ -44,7 +40,7 @@ class PostResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('title')
-                        ->label('Заглавие')
+                        ->label('Title')
                         ->required()
                         ->autofocus()
                         ->live(onBlur: true)
@@ -54,40 +50,40 @@ class PostResource extends Resource
                         ->disabledOn('edit')
                         ->required(),
                     TinyEditor::make('content')
-                        ->label('Съдържание')
+                        ->label('Content')
                         ->columnSpan('full'),
                     TextInput::make('meta_title')
-                        ->label('Мета заглавие'),
+                        ->label('Meta Title'),
                     TextInput::make('meta_content')
-                        ->label('Мета съдържание'),
+                        ->label('Meta Content'),
                     TextInput::make('meta_keywords')
-                        ->label('Мета ключови думи'),
+                        ->label('Meta Keywords'),
                     TextInput::make('time_to_read')
-                        ->label('Време за четене')
+                        ->label('Time to Read')
                         ->default(5)
                         ->integer(),
                     Toggle::make('active')
-                        ->label('Активна')
+                        ->label('Active')
                         ->default(true),
                     Toggle::make('featured')
-                        ->label('Препоръчана')
+                        ->label('Featured')
                         ->default(false),
                     SpatieMediaLibraryFileUpload::make('post')
-                        ->label('Медия')
+                        ->label('Image')
                         ->collection('posts')
                         ->image()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth('1000'),
                     // ->imageResizeTargetHeight('auto'),
                     SpatieMediaLibraryFileUpload::make('small')
-                        ->label('Галерия')
+                        ->label('Gallery')
                         ->collection('post_small')
                         ->image()
                         ->imageResizeMode('cover')
                         ->imageResizeTargetWidth('500'),
                     // ->imageResizeTargetHeight('auto'),
                     Select::make('category_id')
-                        ->label('Категория')
+                        ->label('Category')
                         ->relationship('category', 'title')
                         ->preload()
                         ->required(),
@@ -103,26 +99,26 @@ class PostResource extends Resource
                     ->label('No')
                     ->sortable(),
                 SpatieMediaLibraryImageColumn::make('media')
-                    ->label('Медиа')
+                    ->label('Media')
                     ->collection('posts'),
                 Tables\Columns\TextColumn::make('title')
-                    ->label('Заглавие')
+                    ->label('Title')
                     ->limit(50)
                     ->sortable()
                     ->searchable(),
                 // Tables\Columns\TextColumn::make('content')->label('Post content')->limit(30)->searchable(),
                 Tables\Columns\TextColumn::make('category.title')
-                    ->label('Категория'),
+                    ->label('Category'),
                 IconColumn::make('active')
-                    ->label('Активна')
+                    ->label('Active')
                     ->toggle()
                     ->boolean(),
                 IconColumn::make('featured')
-                    ->label('Нова')
+                    ->label('Featured')
                     ->toggle()
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Създадена на')
+                    ->label('Created at')
                     ->dateTime('d.m.Y')
                     ->sortable()
                     ->searchable(),
