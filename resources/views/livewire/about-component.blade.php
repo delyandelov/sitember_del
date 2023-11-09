@@ -73,7 +73,7 @@
                                 <span class="text">{{ $about->title }}</span>
                             </span>
 
-                            <h5 class="page_header-subtitle">{{ $about->subtitle }}</h5>
+                            <h5 class="page_header-subtitle">{!! $about->subtitle !!}</h5>
                         </div>
                         <p>
                             {!! $about->content !!}

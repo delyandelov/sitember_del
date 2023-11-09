@@ -137,20 +137,20 @@
                 <div class="accordion" id="faq_accordion">
                     <!-- item 1 -->
                     @foreach ($faqs as $key => $faq)
-                    <div class="accordion_item">
-                        <div class="accordion_item-wrapper">
+                    <div class="accordion_item" wire:key='{{ $faq->id }}'>
+                        <div class="accordion_item-wrapper" >
                             <h4
                                 class="title d-flex justify-content-between align-items-center"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#item-{{ $key+1 }}"
+                                data-bs-target="#item{{ $faq->id }}"
                                 aria-expanded="@if ($loop->first) true @else false @endif"
                             >
                             {{ $faq->question }}
-                                <span class="title_icon">
+                                <span class="title_icon @if($loop->first) transform @endif">
                                     <i class="icon-arrow-left icon arrow-rotate"></i>
                                 </span>
                             </h4>
-                            <div id="item-{{ $key+1 }}" class="accordion-collapse collapse @if($loop->first) show @endif">
+                            <div id="item{{ $faq->id }}" class="accordion-collapse collapse @if($loop->first) show @endif" data-bs-parent="#faq_accordion">
                                 <div class="body">
                                     <div class="main">
                                         {!! $faq->answer !!}
