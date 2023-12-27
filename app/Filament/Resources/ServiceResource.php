@@ -42,10 +42,10 @@ class ServiceResource extends Resource
                         ->required(),
                     TextInput::make('title')
                         ->label('Title'),
-                    RichEditor::make('short_description')
+                        TinyEditor::make('short_description')
                         ->label('Short Description')
                         ->hint(fn ($state, $component) => 'left: ' . $component->getMaxLength() - strlen($state) . 'characters')
-                        ->maxlength(150)
+                        ->maxlength(350)
                         ->lazy(),
                     TinyEditor::make('long_description')
                         ->label('Description')

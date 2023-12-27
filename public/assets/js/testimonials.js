@@ -1,38 +1,21 @@
-"use strict";
-
-import { initSwiperSlider } from "./modules/slider";
-import { setEdgePadding } from "./modules/helpers"
-
 document.addEventListener('DOMContentLoaded', () => {
-    initSwiperSlider('.testimonials_slider', '.testimonials_controls', {
+    new Swiper('.testimonials_slider', {
         slidesPerView: 1,
         spaceBetween: 30,
         autoplay: true,
         speed: 1200,
         breakpoints: {
-            767.98: {
+            768: {
                 spaceBetween: 40,
             },
-            991.98: {
+            992: {
                 slidesPerView: 2,
                 spaceBetween: 50,
             },
-            1199.98: {
-                slidesPerView: "auto",
+            1200: {
+                slidesPerView: 3,
                 spaceBetween: 50,
             }
         }
     })
-
-    setEdge();
-    window.addEventListener('resize', setEdge);
 })
-
-function setEdge() {
-    const container = document.querySelector('.testimonials .container');
-    if (window.innerWidth >= 1199.98) {
-        container.style.marginLeft = `${setEdgePadding('.header .container')}px`
-    } else {
-        container.style.marginLeft = "auto";
-    }
-}

@@ -8,7 +8,7 @@
                         <a class="link" href="/">Начало</a>
                     </li>
                     <li class="breadcrumbs_item current">
-                        <span id="currentpage">Контакти</span>
+                        <span id="currentpage">Contact Us</span>
                     </li>
                 </ul>
             </div>
@@ -38,12 +38,9 @@
                         <h5 class="contact_info-item_header" data-aos="fade-up">Office Locations:</h5>
                         <div class="contact_info-item_content" data-aos="fade-up" data-aos-delay="50">
                             <div class="wrapper">
-                                <span>9706 S. Mayfield Lane</span>
-                                <span>Bemidji, MN 56601</span>
-                            </div>
-                            <div class="wrapper">
-                                <span>12 The Copse, Sutton-in-Ashfield, </span>
-                                <span>England United Kingdom</span>
+                                <span>{{ $settings->address }}</span>
+                                <span>{{ $settings->city }}</span>
+                                <span>{{ $settings->country }}</span>
                             </div>
                         </div>
                     </li>
@@ -51,8 +48,7 @@
                         <h5 class="contact_info-item_header" data-aos="fade-up">Phone Numbers:</h5>
                         <div class="contact_info-item_content" data-aos="fade-up" data-aos-delay="50">
                             <div class="wrapper">
-                                <a class="link" href="tel:+1234567890">+1-302-555-0134</a>
-                                <a class="link" href="tel:+1234567890">+1-602-555-0134</a>
+                                <a class="link" href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
                             </div>
                         </div>
                     </li>
@@ -61,32 +57,22 @@
                         <div class="contact_info-item_content" data-aos="fade-up" data-aos-delay="50">
                             <ul class="socials d-flex">
                                 <li class="socials-item">
-                                    <a class="link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <a class="link" href="{{ $settings->facebook }}" target="_blank" rel="noopener noreferrer">
                                         <i class="icon-facebook icon"></i>
                                     </a>
                                 </li>
                                 <li class="socials-item">
-                                    <a class="link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                    <a class="link" href="{{ $settings->instagram }}" target="_blank" rel="noopener noreferrer">
                                         <i class="icon-instagram icon"></i>
                                     </a>
                                 </li>
                                 <li class="socials-item">
-                                    <a class="link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                        <i class="icon-twitter icon"></i>
-                                    </a>
-                                </li>
-                                <li class="socials-item">
-                                    <a class="link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                    <a class="link" href="{{ $settings->linkedin }}" target="_blank" rel="noopener noreferrer">
                                         <i class="icon-linkedin icon"></i>
                                     </a>
                                 </li>
-                                <li class="socials-item">
-                                    <a class="link" href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
-                                        <i class="icon-whatsapp icon"></i>
-                                    </a>
-                                </li>
                             </ul>
-                            <a class="link link--underline" href="mailto:example@domain.com">sitechcompany@email.com</a>
+                            <a class="link link--underline" href="mailto:{{ $settings->email }}">{{ $settings->email }}</a>
                         </div>
                     </li>
                 </ul>
@@ -157,7 +143,6 @@
                             loop
                             autoplay
                         ></lottie-player>
-                        <img class="feedback_img" src="{{ asset('assets/svg/feedback.svg') }}" alt="The Fastest Web Solutions" />
                     </div>
                 </div>
             </div>

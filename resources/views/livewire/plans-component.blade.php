@@ -26,9 +26,6 @@
 
                     <a class="page_main-btn btn btn--white" href="contact.html">Get Free Consultation</a>
                 </div>
-                <div class="page_media">
-                    <img class="page_media-arrow" src="{{ asset('assets/svg/arrow.svg') }}" alt="Solutions for Your business" />
-                </div>
             </div>
         </div>
 
@@ -44,106 +41,61 @@
                 <ul class="pricing_list d-flex flex-column flex-md-row flex-wrap">
                     <li class="pricing_list-item">
                         <div class="pricing_list-item_header">
-                            <h5 class="title">Free</h5>
-                            <span class="price">
-                                <span class="sign">$</span>
-                                <span class="int">0</span>
-                                <span class="float">00</span>
+                            <h5 class="title">Basic</h5>
+                        </div>
+
+                        <div class="pricing_list-item_body">
+                            <p class="label">WordPress website development</p>
+
+                            <ul class="pricing_list-item_list">
+                                <li class="list-item">
+                                    Theme cost included
+                                </li>
+                                <li class="list-item">
+                                    Custom responsive design with 3 different options
+                                </li>
+                                <li class="list-item">
+                                    Installing and configuring all needed plugins
+                                </li>
+                                <li class="list-item">
+                                    Security layer
+                                </li>
+                                <li class="list-item">
+                                    Speed Optimization
+                                </li>
+                                <li class="list-item">
+                                    Speed Optimization
+                                </li>
+                            </ul>
+
+                            <span class="price main">
+                                <span class="sign">€</span>
+                                <span class="int">1500</span>
                             </span>
-                            <p class="label">For the teams wanting to try out services for trial period</p>
                         </div>
-                        <ul class="pricing_list-item_list">
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Planning & Supply Chain
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Guest Posting
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                SEO optimization
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Content tracking
-                            </li>
-                        </ul>
-                        <span class="btn btn--white current">Current Plan</span>
+
+                        <hr/>
+
+                        <div class="pricing_list-item_body">
+                            <p class="label">Additional packages:</p>
+
+                            <ul class="pricing_list-item_list">
+                                <li class="list-item">
+                                    Ecommerce solution
+                                </li>
+                                <li class="list-item">
+                                    Initial Content uploading
+                                </li>
+                                <li class="list-item">
+                                    Installing and configuring all needed plugins
+                                </li>
+                                <li class="list-item">
+                                    Plugin/Theme updating for 1 Year
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="pricing_list-item">
-                        <div class="media">
-                            <img class="media_left" src="{{ asset('assets/svg/Illustration-2') }}.svg" alt="Our Pricing" />
-                            <img class="media_right" src="{{ asset('assets/svg/puzzle.svg') }}" alt="Our Pricing" />
-                        </div>
-                        <div class="pricing_list-item_header">
-                            <h5 class="title">Standard</h5>
-                            <span class="price">
-                                <span class="sign">$</span>
-                                <span class="int">10</span>
-                                <span class="float">50</span>
-                            </span>
-                            <p class="label">one active project per month billed annually</p>
-                        </div>
-                        <ul class="pricing_list-item_list">
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Planning & Supply Chain
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Guest Posting
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                SEO optimization
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Content tracking
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Setup & Reporting
-                            </li>
-                        </ul>
-                        <a class="btn btn--neon signUpTrigger" href="#">Upgrade Plan</a>
-                    </li>
-                    <li class="pricing_list-item">
-                        <div class="pricing_list-item_header">
-                            <h5 class="title">Advanced</h5>
-                            <span class="price">
-                                <span class="sign">$</span>
-                                <span class="int">15</span>
-                                <span class="float">00</span>
-                            </span>
-                            <p class="label">For the teams wanting to try out services for split projects</p>
-                        </div>
-                        <ul class="pricing_list-item_list">
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Planning & Supply Chain
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Real Time Risk Monitoring
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                SEO strategies
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                System Performance Monitoring
-                            </li>
-                            <li class="list-item">
-                                <i class="icon-circle icon"></i>
-                                Technical Support Services
-                            </li>
-                        </ul>
-                        <a class="btn btn--neon signUpTrigger" href="#">Upgrade Plan</a>
-                    </li>
+
                 </ul>
             </div>
         </section>

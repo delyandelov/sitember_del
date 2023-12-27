@@ -1,27 +1,14 @@
-"use strict";
-
-import { initSwiperSlider } from "./modules/slider";
-
 document.addEventListener('DOMContentLoaded', () => {
-    initSwiperSlider('.chart_slider', '.chart_slider', {
-        effect: "coverflow",
-        centeredSlides: false,
+    new Swiper('.projects_slider', {
+        effect: 'fade',
+        centeredSlides: true,
         autoplay: true,
         speed: 700,
-        slidesPerView: 2,
-        spaceBetween: 30,
-        initialSlide: 2,
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2,
-            slideShadows: false,
+        slidesPerView: 1,
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-        breakpoints: {
-            767.98: {
-                spaceBetween: 0
-            }
-        }
     })
 })

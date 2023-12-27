@@ -1,6 +1,6 @@
 // about section
 .about {
-    padding-bottom: 60px;
+    padding-bottom: 120px;
 
     &_shape {
         display: none;
@@ -73,7 +73,7 @@
             width: unset;
             bottom: -20px;
             left: -110px;
-            z-index: -1;
+            z-index: 0;
         }
     }
 }
@@ -121,7 +121,7 @@
 
 @media screen and (min-width: 991.98px) {
     .about {
-        padding-bottom: 120px;
+        padding-bottom: 150px;
         padding-top: 120px;
 
         &_main {
@@ -131,14 +131,13 @@
 
         &_media {
             flex-grow: 1;
+            bottom: -103px;
+            right: -60px;
 
             &-main {
                 position: absolute;
-                max-height: 580px;
                 height: 100%;
-                width: 700px;
-                top: 50%;
-                transform: translateY(-50%);
+                width: 900px;
                 overflow: visible;
             }
 
@@ -176,7 +175,7 @@
             height: 100%;
             width: unset;
             left: -47%;
-            z-index: -1;
+            z-index: 0;
         }
     }
 }
@@ -185,7 +184,7 @@
     .about {
         &_shape {
             left: -35%;
-            top: -60px;
+            top: -480px;
         }
 
         &_media {
@@ -212,7 +211,8 @@
 @media screen and (min-width: 1999.98px) {
     .about {
         &_shape {
-            left: -14%;
+            left: -15%;
+            transform: rotate(-20deg);
         }
     }
 }
