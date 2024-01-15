@@ -26,6 +26,14 @@ p {
 
 .maxWidth-none { max-width: none !important;}
 
+hr {
+    width: 100%;
+    height: 1px;
+    background: rgba($grey, 0.3);
+    border: none;
+    margin: 2rem auto;
+}
+
 //Distance utilities
 .m-xs { margin: $margin-xs !important;}
 .m-s { margin: $margin-s !important;}
@@ -71,9 +79,24 @@ p {
 .pt-l { padding-top: $margin-l !important;}
 .pt-xl { padding-top: $margin-xl !important;}
 
+.pl-xs { padding-left: $margin-xs !important;}
+.pl-s { padding-left: $margin-s !important;}
+.pl-m { padding-left: $margin-m !important;}
+.pl-l { padding-left: $margin-l !important;}
+.pl-xl { padding-left: $margin-xl !important;}
+
+.pr-xs { padding-right: $margin-xs !important;}
+.pr-s { padding-right: $margin-s !important;}
+.pr-m { padding-right: $margin-m !important;}
+.pr-l { padding-right: $margin-l !important;}
+.pr-xl { padding-right: $margin-xl !important;}
+
 .top-auto { top: auto !important;}
 
 // global template styles
+
+.w-100 { width: 100%;}
+.h-100 { height: 100%;}
 
 html {
     &.fixed, &.swal2-shown {
@@ -125,7 +148,44 @@ h6, .h6 {
     line-height: 1.3;
 }
 
+.row {
+    > [class^="col"] {
+        padding: 0 18px;
+    }
+}
+
+main ul {
+    li {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px;
+
+        &:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: $primary;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            box-shadow: 2px 2px 0 $bodyText;
+            display: block;
+        }
+    }
+
+    &.no-styled {
+        li {
+            padding-left: 0;
+            margin-bottom: 5px;
+    
+            &:before { content: none;}
+        }
+    }
+}
+
 .text-white {color:$white;}
+.text-center { text-align: center;}
+.text-red-500 { color: $red; }
 
 .title-wrapper {
     position: relative;
@@ -349,6 +409,9 @@ input {
 
     &_item {
         position: relative;
+        padding-left: 0;
+
+        &::before { content: none;}
 
         &:after {
             content: '/';

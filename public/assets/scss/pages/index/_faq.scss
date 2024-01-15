@@ -18,6 +18,13 @@
             }
         }
     }
+
+    .main_list-item {
+        padding-left: 0;
+        margin-bottom: 5px;
+
+        &:before { content: none;}
+    }
 }
 
 // media queries

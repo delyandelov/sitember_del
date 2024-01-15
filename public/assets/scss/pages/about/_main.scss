@@ -16,17 +16,116 @@
                 }
             }
         }
-
-        &-video {
-            height: 320px;
-            margin: 60px 0;
-        }
     }
 
     &_list {
         display: flex;
         flex-direction: column;
         gap: 30px 0;
+
+        li {
+            padding-left: 0;
+            margin: 0;
+
+            &::before { content: none;}
+        }
+    }
+}
+
+.page {
+    padding-top: 100px;
+
+    .main {
+        padding: 80px 0 40px;
+
+        h2, h3, h4, h5, h6 {
+            color: $white;
+            margin-bottom: 20px;
+            padding-top: 25px;
+        }
+    }
+}
+
+.process {
+    padding: 120px 0;
+
+    .title-wrapper {
+        margin-bottom: 70px;
+
+        &::before { bottom: -30px;}
+    }
+
+    &_boxes {
+        gap: 30px;
+        flex-grow: 1;
+        padding-top: 250px;
+        padding-left: 50px;
+    
+        .wrapper {
+            background: $white;
+            padding: 30px;
+            border-radius: 2px;
+            border: 1px solid #1b2129;
+            gap: 10px 0;
+            overflow: visible;
+            position: relative;
+            z-index: 1;
+            min-width: 290px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .number {
+                position: absolute;
+                left: -80px;
+                top: 0;
+                font-size: 110px;
+                color: #fcd03c;
+                font-weight: 900;
+                text-shadow: 3px 3px 0 #000;
+            }
+
+            &:nth-child(2n+1) {
+                margin-top: -220px;
+            }
+
+            &:nth-child(2n) .number {
+                top: auto;
+                bottom: 0;
+            }
+
+            &:after {
+                content: "";
+                width: calc(100% + 4px);
+                height: calc(100% + 2px);
+                position: absolute;
+                top: -1px;
+                left: -3px;
+                box-shadow: 3px 3px 0 #fcd03c;
+                z-index: 1;
+                transition: opacity .3s ease-in-out;
+            }
+
+            ul {
+                margin-left: 20px;
+                padding-top: 15px;
+                text-align: left;
+
+                li { 
+                    list-style: disc;
+                    padding-left: 0;
+                    margin-bottom: 5px;
+                    
+                    &::before { content: none;}
+                }
+            }
+
+            h5 {
+                font-size: 20px;
+            }
+        }
     }
 }
 

@@ -1,14 +1,14 @@
 "use strict";
 
-import { Collapse } from "bootstrap";
+import {Collapse} from "bootstrap";
 import AOS from 'aos';
 import svg4everybody from "svg4everybody";
 import LazyLoad from "vanilla-lazyload";
-import { drawNav, scrollToTop } from "./modules/nav";
-import { preventDefault, setCurrentYear, hideCover } from "./modules/helpers";
-import { initType, initCounterAnimation, animateUnderline } from "./modules/effects";
+import {drawNav, scrollToTop} from "./modules/nav";
+import {preventDefault, setCurrentYear, hideCover} from "./modules/helpers";
+import {initType, initCounterAnimation, animateUnderline} from "./modules/effects";
 import drawAccordion from "./modules/accordion";
-import { validate } from "./modules/forms";
+import {validate} from "./modules/forms";
 import setYTFrame from "./modules/video";
 
 document.addEventListener("DOMContentLoaded", () => {
