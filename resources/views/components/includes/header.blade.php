@@ -138,7 +138,7 @@
                 </li>
                 <li class="header_nav-list_item">
                     <a class="nav-item nav-link @if(Request::url()== url('/prices')) current @endif" href="{{ route('plans') }}" data-page="plans" data-single="true" wire:navigate>
-                        <span class="nav-item_text">Prices</span>
+                        <span class="nav-item_text">Plans</span>
                     </a>
                 </li>
                 <li class="header_nav-list_item">

@@ -26,6 +26,14 @@ p {
 
 .maxWidth-none { max-width: none !important;}
 
+hr {
+    width: 100%;
+    height: 1px;
+    background: rgba($grey, 0.3);
+    border: none;
+    margin: 2rem auto;
+}
+
 //Distance utilities
 .m-xs { margin: $margin-xs !important;}
 .m-s { margin: $margin-s !important;}
@@ -87,6 +95,9 @@ p {
 
 // global template styles
 
+.w-100 { width: 100%;}
+.h-100 { height: 100%;}
+
 html {
     &.fixed, &.swal2-shown {
         overflow: hidden;
@@ -147,16 +158,18 @@ main ul {
     li {
         margin-bottom: 15px;
         position: relative;
-        padding-left: 30px;
+        padding-left: 20px;
 
-        &::before {
-            content: "\e908";
-            font-family: 'icomoon';
+        &:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: $primary;
             position: absolute;
-            top: 0;
+            top: 6px;
             left: 0;
-            color: $primary;
-            font-size: 15px;
+            box-shadow: 2px 2px 0 $bodyText;
+            display: block;
         }
     }
 

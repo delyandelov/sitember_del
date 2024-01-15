@@ -5,26 +5,26 @@
             <div class="container">
                 <ul class="breadcrumbs d-flex flex-wrap">
                     <li class="breadcrumbs_item">
-                        <a class="link" href="/">Начало</a>
+                        <a class="link" href="/">Home</a>
                     </li>
 
                     <li class="breadcrumbs_item current">
-                        <span id="currentpage">Цени</span>
+                        <span id="currentpage">Prices</span>
                     </li>
                 </ul>
             </div>
             <div class="container d-md-flex">
-                <div class="page_main">
-                    <div class="wrapper">
-                        <span class="tw-height h2">
-                            <span class="text">Solutions for Your business</span>
-                        </span>
-                        <h2 class="page_main-title type" data-text="Solutions for Your business">Solutions for Your business</h2>
+                <div class="page_main w-100">
+                    <div class="d-flex align-items-end justify-content-between">
+                        <div class="wrapper">
+                            <span class="tw-height h2">
+                                <span class="text">Solutions for Your business</span>
+                            </span>
+                            <h2 class="page_main-title type" data-text="Solutions for Your business">Solutions for Your business</h2>
+                        </div>
+        
+                        <a class="page_main-btn btn btn--white" href="contact.html">Get Free Consultation</a>
                     </div>
-
-                    <p>Taking your business to new markets is easier than ever</p>
-
-                    <a class="page_main-btn btn btn--white" href="contact.html">Get Free Consultation</a>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                             <h5 class="title">Basic</h5>
                         </div>
 
-                        <div class="pricing_list-item_body">
+                        <div class="pricing_list-item_body pt-xl">
                             <p class="label">WordPress website development</p>
 
                             <ul class="pricing_list-item_list">
@@ -76,26 +76,188 @@
 
                         <hr/>
 
-                        <div class="pricing_list-item_body">
+                        <div class="pricing_list-item_body pt-m additional">
                             <p class="label">Additional packages:</p>
 
                             <ul class="pricing_list-item_list">
                                 <li class="list-item">
-                                    Ecommerce solution
+                                    <span>Ecommerce solution</span>
+                                    <span class="price">€500</span>
                                 </li>
                                 <li class="list-item">
-                                    Initial Content uploading
+                                    <span>Initial Content uploading</span>
+                                    <span class="price">Free</span>
                                 </li>
                                 <li class="list-item">
-                                    Installing and configuring all needed plugins
-                                </li>
-                                <li class="list-item">
-                                    Plugin/Theme updating for 1 Year
+                                    <span>Plugin/Theme updating for 1 Year</span>
+                                    <span class="price">Free</span>
                                 </li>
                             </ul>
                         </div>
                     </li>
 
+                    <li class="pricing_list-item">
+                        <div class="pricing_list-item_header">
+                            <h5 class="title">Advanced</h5>
+                        </div>
+
+                        <div class="pricing_list-item_body pt-xl">
+                            <p class="label">Custom website with Laravel</p>
+
+                            <ul class="pricing_list-item_list">
+                                <li class="list-item">
+                                    Theme cost included
+                                </li>
+                                <li class="list-item">
+                                    Custom responsive design with 3 different options
+                                </li>
+                                <li class="list-item">
+                                    Easy and clean dashboard manager
+                                </li>
+                                <li class="list-item">
+                                    Easy content management
+                                </li>
+                                <li class="list-item">
+                                    Easy and fast corrections
+                                </li>
+                                <li class="list-item">
+                                    No further support needed
+                                </li>
+                                <li class="list-item">
+                                    No additional cost for paid extensions
+                                </li>
+                                <li class="list-item">
+                                    Security layer
+                                </li>
+                                <li class="list-item">
+                                    Speed Optimization
+                                </li>
+                                <li class="list-item">
+                                    Completed functional site
+                                </li>
+                            </ul>
+
+                            <span class="price main">
+                                <span class="sign">€</span>
+                                <span class="int">2500</span>
+                            </span>
+                        </div>
+
+                        <hr/>
+
+                        <div class="pricing_list-item_body pt-m additional">
+                            <p class="label">Additional packages:</p>
+
+                            <ul class="pricing_list-item_list">
+                                <li class="list-item">
+                                    <span>Custom Ecommerce solution</span>
+                                    <span class="price">€500</span>
+                                </li>
+                                <li class="list-item">
+                                    <span>Initial Content uploading</span>
+                                    <span class="price">Free</span>
+                                </li>
+                                <li class="list-item">
+                                    <span>Design/Functional corrections for first 3 months</span>
+                                    <span class="price">Free</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="pricing_list-item">
+                        <div class="pricing_list-item_header">
+                            <h5 class="title">Expert</h5>
+                        </div>
+
+                        <div class="pricing_list-item_body pt-xl">
+                            <p class="label">Custom Website + Support</p>
+
+                            <ul class="pricing_list-item_list">
+                                <li class="list-item">
+                                    Theme cost included
+                                </li>
+                                <li class="list-item">
+                                    Custom responsive design with 3 different options
+                                </li>
+                                <li class="list-item">
+                                    Easy and clean dashboard manager
+                                </li>
+                                <li class="list-item">
+                                    Easy content management
+                                </li>
+                                <li class="list-item">
+                                    Easy and fast corrections
+                                </li>
+                                <li class="list-item">
+                                    No further support needed
+                                </li>
+                                <li class="list-item">
+                                    No additional cost for paid extensions
+                                </li>
+                                <li class="list-item">
+                                    Security layer
+                                </li>
+                                <li class="list-item">
+                                    Speed Optimization
+                                </li>
+                                <li class="list-item">
+                                    Completed functional site
+                                </li>
+                                <li class="list-item">
+                                    * 24/7 Support including:
+
+                                    <ul>
+                                        <li>Design changes</li>
+                                        <li>Add/Edit Functionalities</li>
+                                        <li>Resolving Functional issues</li>
+                                        <li>Front/Back-end Errors fixing</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <span class="price main">
+                                <span class="sign">€</span>
+                                <span class="int">4000</span>
+                            </span>
+                        </div>
+
+                        <p><span>*</span>renewal price - <span>1000E/year</span></p>
+                    </li>
+
+                    <li class="pricing_list-item">
+                        <div class="pricing_list-item_header">
+                            <h5 class="title">Extra</h5>
+                        </div>
+
+                        <div class="pricing_list-item_body pt-xl">
+                            <p class="label">Hosting + Domain</p>
+
+                            <ul class="pricing_list-item_list">
+                                <li class="list-item">
+                                    Free Domain for the first year
+                                </li>
+                                <li class="list-item">
+                                    Hosting for your site including:
+
+                                    <ul>
+                                        <li>Control Panel access</li>
+                                        <li><b>Daily Backups</b></li>
+                                        <li>Email accounts</li>
+                                        <li>SSL</li>
+                                        <li>Caching solution</li>
+                                        <li>Security layer</li>
+                                        <li>Support for any hosting related issues</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <span class="price main">
+                                <span class="sign">€</span>
+                                <span class="int">150</span>
+                            </span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
