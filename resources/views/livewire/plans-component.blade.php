@@ -1,3 +1,4 @@
+@section('title', 'Plans - Sitember.com')
 <div>
     <!-- plans content start -->
     <main>
@@ -22,7 +23,7 @@
                             </span>
                             <h2 class="page_main-title type" data-text="Solutions for Your business">Solutions for Your business</h2>
                         </div>
-        
+
                         <a class="page_main-btn btn btn--white" href="contact.html">Get Free Consultation</a>
                     </div>
                 </div>

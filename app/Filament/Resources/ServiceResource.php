@@ -4,7 +4,6 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Models\Service;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -42,9 +41,9 @@ class ServiceResource extends Resource
                         ->required(),
                     TextInput::make('title')
                         ->label('Title'),
-                        TinyEditor::make('short_description')
+                    TinyEditor::make('short_description')
                         ->label('Short Description')
-                        ->hint(fn ($state, $component) => 'left: ' . $component->getMaxLength() - strlen($state) . 'characters')
+                        ->hint(fn ($state, $component) => 'left: '.$component->getMaxLength() - strlen($state).'characters')
                         ->maxlength(350)
                         ->lazy(),
                     TinyEditor::make('long_description')

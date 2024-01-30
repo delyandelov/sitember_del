@@ -1,3 +1,6 @@
+@section('title', 'Sitember.com | SITEMBER: Elevating Digital Horizons with Innovative Web Solutions')
+@section('metatitle', 'Sitember.com | SITEMBER: Elevating Digital Horizons with Innovative Web Solutions')
+@section('metadescription', 'Discover the essence of SITEMBER - a leading website development company committed to crafting digital experiences that transcend expectations. Uncover our journey, values, and the passion driving our team to redefine the online landscape. Explore our About page for a glimpse into the innovation, expertise, and collaborative spirit that sets SITEMBER apart in the world of web development.')
 <div>
     <!-- homepage content start -->
     <main>
@@ -17,7 +20,7 @@
                 </div>
                 <div class="hero_media">
                     <lottie-player
-                        class="lottie" src="{{ asset('assets/lottie/herohome.json') }}" 
+                        class="lottie" src="{{ asset('assets/lottie/herohome.json') }}"
                         background="transparent" speed=".5" style="width: 100%; height: 100%" loop="" autoplay=""
                     >
 

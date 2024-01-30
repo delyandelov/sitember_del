@@ -8,20 +8,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Translatable\HasTranslations;
 
 class Post extends Model implements HasMedia
 {
-    use HasFactory, SoftDeletes, InteractsWithMedia, HasTranslations;
+    use HasFactory, SoftDeletes, InteractsWithMedia;
 
     protected $table = 'posts';
 
     protected $primaryKey = 'id';
-
-    public $translatable = [
-        'title',
-        'content',
-    ];
 
     /**
      * The attributes that are mass assignable.
@@ -60,10 +54,10 @@ class Post extends Model implements HasMedia
      *
      * @return string
      */
-    // public function getRouteKeyName()
-    // {
-    //     return 'slug';
-    // }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     public function category(): BelongsTo
     {

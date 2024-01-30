@@ -22,7 +22,7 @@
     </div>
 
     <div class="error_content container d-flex flex-column align-items-center">
-        <a class="error_btn btn btn--neon" href="index.html">Back to Home Page</a>
+        <a class="error_btn btn btn--neon" href="/">Back to Home Page</a>
         <img class="error_media" src="{{ asset('assets/svg/joinman.svg') }}" alt="Page Not Found" />
     </div>
 </main>
