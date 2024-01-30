@@ -1,3 +1,4 @@
+@section('title', 'Contact - Sitember.com')
 <div>
     <!-- contact content start -->
     <main>

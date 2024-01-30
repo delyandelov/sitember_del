@@ -2,17 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Tables;
-use App\Models\Member;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Group;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 use App\Filament\Resources\MemberResource\Pages;
-use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+use App\Models\Member;
+use Filament\Forms\Components\Group;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class MemberResource extends Resource

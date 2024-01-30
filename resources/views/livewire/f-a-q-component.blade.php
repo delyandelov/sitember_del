@@ -1,3 +1,4 @@
+@section('title', 'FAQ - Sitember.com')
 <div>
      <!-- FAQ content start -->
      <main>

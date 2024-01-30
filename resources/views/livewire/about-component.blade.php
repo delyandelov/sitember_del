@@ -1,3 +1,6 @@
+@section('title', 'About - Sitember.com')
+@section('metatitle', 'About - Sitember.com')
+@section('metadescription', 'Discover the essence of SITEMBER - a leading website development company committed to crafting digital experiences that transcend expectations. Uncover our journey, values, and the passion driving our team to redefine the online landscape. Explore our About page for a glimpse into the innovation, expertise, and collaborative spirit that sets SITEMBER apart in the world of web development.')
 <div>
     <!-- about page content start -->
     <main>

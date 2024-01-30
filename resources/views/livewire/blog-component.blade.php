@@ -1,3 +1,6 @@
+@section('title', 'Blog - Sitember.com')
+@section('metatitle', 'Blog - Sitember.com')
+@section('metadescription', 'Recent Blog Posts from Sitember.com')
 <div>
     <!-- blog boxes content start -->
         <main class="blog">
