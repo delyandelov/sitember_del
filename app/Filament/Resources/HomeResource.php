@@ -74,7 +74,7 @@ class HomeResource extends Resource
                 Tables\Columns\TextColumn::make('services_title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime('d-M-Y'),
+                    ->dateTime('d M Y'),
             ])
             ->filters([
                 //

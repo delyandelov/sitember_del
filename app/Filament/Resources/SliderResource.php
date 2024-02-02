@@ -75,7 +75,7 @@ class SliderResource extends Resource
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created at')
-                    ->dateTime('d-M-Y')
+                    ->dateTime('d M Y')
                     ->sortable()
                     ->searchable(),
             ])

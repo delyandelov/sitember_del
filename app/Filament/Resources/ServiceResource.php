@@ -66,7 +66,7 @@ class ServiceResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created at')
-                    ->dateTime('d.m.Y')
+                    ->dateTime('d M Y')
                     ->sortable()
                     ->searchable(),
             ])

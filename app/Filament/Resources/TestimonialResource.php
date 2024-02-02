@@ -66,7 +66,7 @@ class TestimonialResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Created at')
-                    ->dateTime('d-M-Y')
+                    ->dateTime('d M Y')
                     ->sortable()
                     ->searchable(),
             ])

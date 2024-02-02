@@ -44,7 +44,7 @@ class FAQResource extends Resource
                 Tables\Columns\TextColumn::make('question')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime('d-M-Y')
+                    ->dateTime('d M Y')
                     ->sortable()
                     ->searchable(),
             ])
