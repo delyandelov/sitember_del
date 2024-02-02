@@ -9,8 +9,6 @@ class EditPostCategory extends EditRecord
 {
     protected static string $resource = PostCategoryResource::class;
 
-    protected static ?string $title = 'Редактирай категория';
-
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

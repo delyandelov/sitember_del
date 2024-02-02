@@ -34,7 +34,6 @@ class PostCategoryResource extends Resource
             ->schema([
                 Section::make()->schema([
                     TextInput::make('title')
-                        ->label('Заглавие')
                         ->required()
                         ->autofocus()
                         ->live(onBlur: true)
@@ -62,19 +61,15 @@ class PostCategoryResource extends Resource
                     ->label('No')
                     ->sortable(),
                 SpatieMediaLibraryImageColumn::make('media')
-                    ->collection('postcategories')
-                    ->label('Медия'),
+                    ->collection('postcategories'),
                 Tables\Columns\TextColumn::make('title')
-                    ->label('Име на категория')
                     ->limit(20)
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('posts_count')
-                    ->label('Брой публикации')
                     ->counts('posts'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label('Създадена')
-                    ->dateTime('d-M-Y')
+                    ->dateTime('d M Y')
                     ->sortable()
                     ->searchable(),
             ])

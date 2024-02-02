@@ -65,7 +65,7 @@ class MemberResource extends Resource
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime('d-M-Y')
+                    ->dateTime('d M Y')
                     ->sortable()
                     ->searchable(),
             ])
