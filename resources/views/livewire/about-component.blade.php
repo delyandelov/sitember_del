@@ -6,15 +6,6 @@
     <main>
         <div class="services">
             <div class="container section">
-                <ul class="breadcrumbs d-flex flex-wrap mb-xl">
-                    <li class="breadcrumbs_item">
-                        <a class="link" href="/">Home</a>
-                    </li>
-
-                    <li class="breadcrumbs_item current">
-                        <span id="currentpage">About Us</span>
-                    </li>
-                </ul>
 
                 <div class="title-wrapper">
                     <span class="tw-height h4">
@@ -70,12 +61,6 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-6">
-                        <div class="page_header">
-                            <h2 class="page_header-title type" data-text="{{ $about->title }}">{{ $about->title }}</h2>
-                            <span class="tw-height h2">
-                                <span class="text">{{ $about->title }}</span>
-                            </span>
-                        </div>
                         <div class="main">
                             {!! $about->content !!}
                         </div>
@@ -152,33 +137,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- TODO: WE MUST DECIDE IF THESE NUMBERS SHOULD BE ON THE ABOUT PAGE
-        <div class="services">
-            <div class="container section">
-                <div class="services_content d-lg-flex align-items-center">
-                    <ul class="services_content-numbers d-flex flex-row justify-content-center">
-                        <li class="block">
-                            <h6 class="label">Advanced Solutions for Startups</h6>
-                            <span class="countNum h1" data-value="240" data-suffix="+">0</span>
-                        </li>
-                        <li class="block">
-                            <h6 class="label">Investors on-boarded on the platform</h6>
-                            <span class="countNum h1" data-value="1720">0</span>
-                        </li>
-                        <li class="block">
-                            <h6 class="label">Promotion cases and new products</h6>
-                            <span class="countNum h1" data-value="8100" data-suffix="+">0</span>
-                        </li>
-                        <li class="block">
-                            <h6 class="label">Promotion cases and new products</h6>
-                            <span class="countNum h1" data-value="8100" data-suffix="+">0</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        --}}
     </main>
     <!-- about page content end -->
 </div>
