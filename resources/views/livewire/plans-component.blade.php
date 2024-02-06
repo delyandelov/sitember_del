@@ -3,25 +3,14 @@
     <!-- plans content start -->
     <main>
         <div class="page">
-            <div class="container">
-                <ul class="breadcrumbs d-flex flex-wrap">
-                    <li class="breadcrumbs_item">
-                        <a class="link" href="/">Home</a>
-                    </li>
-
-                    <li class="breadcrumbs_item current">
-                        <span id="currentpage">Prices</span>
-                    </li>
-                </ul>
-            </div>
             <div class="container d-md-flex">
                 <div class="page_main w-100">
                     <div class="d-flex align-items-end justify-content-between">
                         <div class="wrapper">
                             <span class="tw-height h2">
-                                <span class="text">Solutions for Your business</span>
+                                <span class="text">Solutions for <br/> Your Business</span>
                             </span>
-                            <h2 class="page_main-title type" data-text="Solutions for Your business">Solutions for Your business</h2>
+                            <h2 class="page_main-title type" data-text="Solutions for Your business">Solutions for <br/> Your Business</h2>
                         </div>
 
                         <a class="page_main-btn btn btn--white" href="contact.html">Get Free Consultation</a>
@@ -267,10 +256,6 @@
         <!-- challenges section start -->
         <section class="challenges section">
             <div class="challenges_shapes">
-                <div class="half half--left">
-                    <span class="circle"></span>
-                    <img class="shape" src="{{ asset('assets/svg/barshape.svg') }}" alt="Your Challenges" />
-                </div>
                 <div class="half half--right">
                     <img class="shape" src="{{ asset('assets/svg/speaker.svg') }}" alt="Your Challenges" />
                     <span class="circle circle--big"></span>

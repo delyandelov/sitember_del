@@ -10,7 +10,7 @@
 
     &_header {
         position: relative;
-        margin-top: 63px;
+        margin-top: 0;
 
         &-title {
             color: $white;
@@ -173,14 +173,7 @@
             }
         }
 
-        &_header {
-            .wrapper {
-                margin-top: 120px;
-            }
-        }
-
         &_main {
-            // max-width: 725px;
 
             &-subtitle {
                 margin-top: 50px;

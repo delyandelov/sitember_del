@@ -34,10 +34,10 @@ class AboutResource extends Resource
                     TextInput::make('title')
                         ->label('Title')
                         ->required(),
-                    // TinyEditor::make('subtitle')
-                    //     ->label('Subtitle')
-                    //     ->required()
-                    //     ->columnSpan('full'),
+                    TinyEditor::make('subtitle')
+                        ->label('Subtitle')
+                        ->required()
+                        ->columnSpan('full'),
                     TinyEditor::make('content')
                         ->label('Content')
                         ->required()

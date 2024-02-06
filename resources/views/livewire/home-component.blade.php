@@ -30,9 +30,35 @@
             </div>
         </section>
         <!-- hero section end -->
+         <!-- about section start -->
+         <section class="about">
+            <img class="about_shape" src="{{ asset('assets/svg/bg%202.svg') }}" alt="{{ $home->aboutus_title }}" />
+            <div class="container d-lg-flex">
+                <div class="about_main">
+                    <div class="wrapper">
+                        <span class="tw-height h4">
+                            <span class="text">{{ $home->aboutus_title }}</span>
+                        </span>
+                        <h4 class="about_main-title type" data-text="{{ $home->aboutus_title }}">
+                            {{ $home->aboutus_title }}
+                        </h4>
+                    </div>
+                    <p class="about_main-text">{!! $home->aboutus_content !!}</p>
+
+                    <div class="about_main-action d-flex flex-column flex-sm-row">
+                        <a class="about_main-action_btn btn btn--white signUpTrigger" href="{{ route('about') }}">{{ $home->aboutus_button_text }}</a>
+                    </div>
+                </div>
+                <div class="about_media">
+                    <img class="about_media-main" src="{{ asset('assets/svg/illustartion%203.svg') }}" alt="The Right Digital Tools for Business" />
+                    <!-- <img class="about_media-shape" src="{{ asset('assets/svg/shapes_bg3.svg') }}" alt="The Right Digital Tools for Business" /> -->
+                </div>
+            </div>
+        </section>
+        <!-- about section end -->
         <!-- features section start -->
         <div class="index-services">
-            <img class="index-services_shape" src="{{ asset('assets/svg/blueshape1.svg') }}" alt="Services" />
+            <!-- <img class="index-services_shape" src="{{ asset('assets/svg/blueshape1.svg') }}" alt="Services" /> -->
 
             <div class="container d-flex flex-column-reverse flex-xl-row">
                 <ul class="index-services_list no-styled">
@@ -60,32 +86,7 @@
             </div>
         </div>
         <!-- features section end -->
-        <!-- about section start -->
-        <section class="about">
-            <img class="about_shape" src="{{ asset('assets/svg/bg%202.svg') }}" alt="{{ $home->aboutus_title }}" />
-            <div class="container d-lg-flex">
-                <div class="about_main">
-                    <div class="wrapper">
-                        <span class="tw-height h4">
-                            <span class="text">{{ $home->aboutus_title }}</span>
-                        </span>
-                        <h4 class="about_main-title type" data-text="{{ $home->aboutus_title }}">
-                            {{ $home->aboutus_title }}
-                        </h4>
-                    </div>
-                    <p class="about_main-text">{!! $home->aboutus_content !!}</p>
-
-                    <div class="about_main-action d-flex flex-column flex-sm-row">
-                        <a class="about_main-action_btn btn btn--white signUpTrigger" href="{{ route('about') }}">{{ $home->aboutus_button_text }}</a>
-                    </div>
-                </div>
-                <div class="about_media">
-                    <img class="about_media-main" src="{{ asset('assets/svg/illustartion%203.svg') }}" alt="The Right Digital Tools for Business" />
-                    <!-- <img class="about_media-shape" src="{{ asset('assets/svg/shapes_bg3.svg') }}" alt="The Right Digital Tools for Business" /> -->
-                </div>
-            </div>
-        </section>
-        <!-- about section end -->
+    
         <!-- projects section start -->
         <section class="projects">
             <div class="container">
@@ -236,14 +237,6 @@
         <!-- testimonials section end -->
         <!-- feedback section start -->
         <section class="feedback section index">
-            <div class="feedback_shapes">
-                <div class="shape shape--left">
-                    <img src="{{ asset('assets/svg/bgshape_white2.svg') }}" alt="shape" />
-                </div>
-                <div class="shape shape--right">
-                    <img src="{{ asset('assets/svg/bgshape_white.svg') }}" alt="shape" />
-                </div>
-            </div>
             <div class="container d-lg-flex align-items-center justify-content-between">
                 <div class="feedback_main">
                     <div class="feedback_main-header">
