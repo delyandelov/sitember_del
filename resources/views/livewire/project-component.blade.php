@@ -20,7 +20,7 @@
         <!-- Porfolio section start -->
         <section class="section">
             <div class="container">
-
+               <dir><p>YOUR CONTENT HERE</p></dir>
             </div>
         </section>
         <!-- Porfolio section end -->
