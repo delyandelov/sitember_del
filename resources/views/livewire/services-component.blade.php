@@ -59,10 +59,6 @@
                                     User experience is at the forefront of our design philosophy. 
                                 </li>
                                 <li class="main_list-item">
-                                    <b>User-Centric Approach:</b> 
-                                    User experience is at the forefront of our design philosophy. 
-                                </li>
-                                <li class="main_list-item">
                                     <b>Scalability:</b> 
                                     Your business is dynamic, and your website should be too. 
                                 </li>
