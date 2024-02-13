@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
 
      <!-- Javascript -->
-     <script src="{{ asset('assets/js/common.min.js') }}"></script>
-     <script src="{{ asset('assets/js/common_navigated.min.js') }}" defer></script>
+     <script src="{{ asset('assets/js/jquery-2.1.3.min.js') }}"></script>
+     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+     <!-- <script src="{{ asset('assets/js/common.min.js') }}"></script>
+     <script src="{{ asset('assets/js/common_navigated.min.js') }}" defer></script> -->
      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
      <!-- loaded only on the index page-->
