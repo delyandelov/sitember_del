@@ -4,7 +4,7 @@
             <span class="logo_icon">
                 <img src="{{ asset('assets/svg/logo.png') }}" alt="Sitember" />
             </span>
-            <span class="logo_text h5">sitember</span>
+            <span class="logo_text h2">itember</span>
         </a>
         <nav class="header_nav collapse" id="headerMenu">
             <ul class="header_nav-list">

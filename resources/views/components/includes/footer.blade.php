@@ -3,9 +3,9 @@
         <div class="footer_top">
             <a class="logo footer_top-logo d-inline-flex align-items-center" href="/">
                 <span class="logo_icon">
-                    <img src="{{ asset('assets/svg/logo.svg') }}" alt="Sitech" />
+                    <img src="{{ asset('assets/svg/logo.png') }}" alt="Logo" />
                 </span>
-                <span class="logo_text h2">{{ $settings->app_name }}</span>
+                <span class="logo_text h2">itember</span>
             </a>
             <ul class="footer_top-nav d-flex flex-wrap">
                 <li class="footer_top-nav_link">
