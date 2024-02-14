@@ -4,24 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Translatable\HasTranslations;
 
 class Post extends Model implements HasMedia
 {
-    use HasFactory, SoftDeletes, InteractsWithMedia, HasTranslations;
+    use HasFactory, InteractsWithMedia;
 
     protected $table = 'posts';
 
     protected $primaryKey = 'id';
-
-    public $translatable = [
-        'title',
-        'content',
-    ];
 
     /**
      * The attributes that are mass assignable.
@@ -32,13 +25,7 @@ class Post extends Model implements HasMedia
         'title',
         'slug',
         'content',
-        'meta_title',
-        'meta_content',
-        'meta_keywords',
         'time_to_read',
-        'active',
-        'featured',
-        'published_at',
         'category_id',
     ];
 
@@ -49,9 +36,6 @@ class Post extends Model implements HasMedia
      */
     protected $casts = [
         'id' => 'integer',
-        'active' => 'boolean',
-        'featured' => 'boolean',
-        'published_at' => 'timestamp',
         'category_id' => 'integer',
     ];
 
@@ -60,13 +44,13 @@ class Post extends Model implements HasMedia
      *
      * @return string
      */
-    // public function getRouteKeyName()
-    // {
-    //     return 'slug';
-    // }
-
-    public function category(): BelongsTo
+    public function getRouteKeyName()
     {
-        return $this->belongsTo(PostCategory::class);
+        return 'slug';
+    }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(PostCategory::class, 'post_category', 'post_id', 'post_category_id');
     }
 }

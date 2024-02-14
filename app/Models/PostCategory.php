@@ -4,18 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\Translatable\HasTranslations;
 
 class PostCategory extends Model implements HasMedia
 {
-    use HasFactory, InteractsWithMedia, HasTranslations;
-
-    public $translatable = [
-        'title',
-    ];
+    use HasFactory, InteractsWithMedia;
 
     protected $table = 'post_categories';
 
@@ -50,8 +45,8 @@ class PostCategory extends Model implements HasMedia
         'id' => 'integer',
     ];
 
-    public function posts(): HasMany
+    public function posts(): BelongsToMany
     {
-        return $this->hasMany(Post::class, 'category_id');
+        return $this->belongsToMany(Post::class, 'post_category', 'post_category_id', 'post_id');
     }
 }

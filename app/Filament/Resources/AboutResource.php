@@ -10,7 +10,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
@@ -44,7 +43,7 @@ class AboutResource extends Resource
                         ->required()
                         ->columnSpan('full'),
                     SpatieMediaLibraryFileUpload::make('about')
-                        ->label('Медия')
+                        ->label('Media')
                         ->collection('about')
                         ->multiple()
                         ->image()

@@ -2,19 +2,14 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use Filament\Tables;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use App\Models\ContactPage;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\Group;
-use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ContactPageResource\Pages;
+use App\Models\ContactPage;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use App\Filament\Resources\ContactPageResource\RelationManagers;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class ContactPageResource extends Resource
@@ -31,28 +26,28 @@ class ContactPageResource extends Resource
     {
         return $form
             ->schema([
-                    TextInput::make('heading')
-                        ->label('Heading')
-                        ->required(),
-                    TextInput::make('title')
-                        ->label('Title')
-                        ->required(),
-                    TextInput::make('form_heading')
-                        ->label('Form Heading')
-                        ->required()
-                        ->columnSpan('full'),
-                    TinyEditor::make('form_content')
-                        ->label('Form Content')
-                        ->required()
-                        ->columnSpan('full'),
-                    //SpatieMediaLibraryFileUpload::make('contact_page')
-                    //    ->label('Медия')
-                    //    ->collection('contact_page')
-                    //    ->multiple()
-                    //    ->image()
-                    //    ->imageResizeMode('cover')
-                    //    ->imageResizeTargetWidth('500')
-                    //    ->imageResizeTargetWidth('auto'),
+                TextInput::make('heading')
+                    ->label('Heading')
+                    ->required(),
+                TextInput::make('title')
+                    ->label('Title')
+                    ->required(),
+                TextInput::make('form_heading')
+                    ->label('Form Heading')
+                    ->required()
+                    ->columnSpan('full'),
+                TinyEditor::make('form_content')
+                    ->label('Form Content')
+                    ->required()
+                    ->columnSpan('full'),
+                //SpatieMediaLibraryFileUpload::make('contact_page')
+                //    ->label('Медия')
+                //    ->collection('contact_page')
+                //    ->multiple()
+                //    ->image()
+                //    ->imageResizeMode('cover')
+                //    ->imageResizeTargetWidth('500')
+                //    ->imageResizeTargetWidth('auto'),
             ]);
     }
 

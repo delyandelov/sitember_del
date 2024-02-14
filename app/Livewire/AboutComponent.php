@@ -9,8 +9,8 @@ class AboutComponent extends Component
 {
     public function render()
     {
-        return view('livewire.about-component',[
-           'about' => About::first(),
+        return view('livewire.about-component', [
+            'about' => About::first(),
         ]);
     }
 }

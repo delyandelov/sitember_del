@@ -9,8 +9,6 @@ class CreatePostCategory extends CreateRecord
 {
     protected static string $resource = PostCategoryResource::class;
 
-    protected static ?string $title = 'Създай категория';
-
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

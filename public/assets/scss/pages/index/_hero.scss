@@ -2,27 +2,21 @@
 
 .hero {
     position: relative;
-    min-height: 100vh;
     padding: 60px 0 0;
+    min-height: 980px;
 
     &_bg {
         position: absolute;
         top: 0;
         left: 0;
         z-index: 10;
-        width: 100vw;
-        height: 100vh;
+        width: 110%;
+        height: 100%;
 
         &-blue {
             height: 100%;
             position: relative;
             z-index: 1;
-        }
-
-        &-line {
-            position: absolute;
-            top: 0;
-            z-index: 2;
         }
     }
 
@@ -35,13 +29,6 @@
         .oval {
             display: none;
         }
-
-        .hero_img {
-            position: absolute;
-            right: 500px;
-            width: 800px;
-            top: 62px;
-        }
     }
 
     &_main {
@@ -50,7 +37,7 @@
 
         .tw-height {
             display: block;
-            max-width: 660px;
+            max-width: 850px;
             opacity: 0;
         }
 
@@ -60,9 +47,9 @@
 
         &-text {
             position: relative;
-            margin: 25px 0 30px;
-            padding-top: 25px;
-            font-weight: 600;
+            margin: 25px 0 50px;
+            padding-top: 65px;
+            font-weight: normal;
 
             &:before {
                 content: '';
@@ -88,11 +75,11 @@
 
 @media screen and (min-width: 767.98px) {
     .hero {
-        padding-top: 100px;
+        padding-top: 50px;
 
         &_main {
             &-text {
-                max-width: 640px;
+                max-width: 650px;
             }
         }
     }
@@ -100,16 +87,15 @@
 
 @media screen and (min-width: 991.98px) {
     .hero {
-        padding-top: 190px;
 
         &_media {
-            max-width: 760px;
+            max-width: 860px;
             margin: 0 auto;
         }
 
         &_main {
             &-title {
-                max-width: 600px;
+                max-width: 810px;
             }
         }
     }
@@ -117,9 +103,7 @@
 
 @media screen and (min-width: 1199.98px) {
     .hero {
-        padding-top: 190px;
-        min-height: unset;
-        height: 830px;
+        padding: 140px 0;
 
         &_main {
             margin-bottom: 0;
@@ -128,23 +112,8 @@
 
         &_media {
             position: absolute;
-            top: -165px;
-            right: -37%;
-            max-height: 700px;
-            width: auto;
-        }
-    }
-}
-
-@media screen and (min-width: 1399.98px) {
-    .hero {
-        &_bg {
-            max-height: 830px;
-
-            &-blue {
-                max-height: 960px;
-                width: auto;
-            }
+            top:0;
+            right:0;
         }
     }
 }

@@ -61,11 +61,11 @@ class MainSettings extends SettingsPage
                     ->translateLabel()
                     ->url()
                     ->required(),
-                TextInput::make('twitter')
-                    ->label('Twitter profile')
-                    ->translateLabel()
-                    ->url()
-                    ->required(),
+                // TextInput::make('twitter')
+                //     ->label('Twitter profile')
+                //     ->translateLabel()
+                //     ->url()
+                //     ->required(),
             ]);
     }
 }

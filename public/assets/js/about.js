@@ -1,9 +1,9 @@
 "use strict";
 
 import initGallery from "./modules/gallery";
-import { initDestroySwiper, initSwiperSlider } from "modules/slider";
+import {initDestroySwiper, initSwiperSlider} from "./modules/slider";
 
-document.addEventListener('livewire:navigated', () => {
+document.addEventListener('DOMContentLoaded', () => {
     initGallery();
     initSwiperSlider('.page_slider', '.page_slider-controls', {
         slidesPerView: 1,
@@ -25,5 +25,5 @@ document.addEventListener('livewire:navigated', () => {
             }
         }
     })
-    initDestroySwiper('.recent_posts', '.recent_controls');
+    initDestroySwiper('.recent_posts','.recent_controls');
 })

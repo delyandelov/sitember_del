@@ -48,8 +48,8 @@ class HomeResource extends Resource
                     TextInput::make('other_button_text')
                         ->label('Other Questions Button Text')
                         ->required(),
-                    TinyEditor::make('join_content')
-                        ->label('Join Content')
+                    TextInput::make('join_content')
+                        ->label('Customers count')
                         ->required(),
                     TextInput::make('testimonials_title')
                         ->label('Testimonials Title')
@@ -74,7 +74,7 @@ class HomeResource extends Resource
                 Tables\Columns\TextColumn::make('services_title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime('d-M-Y'),
+                    ->dateTime('d M Y'),
             ])
             ->filters([
                 //

@@ -33,10 +33,6 @@
             .field {
                 margin-bottom: 20px;
                 width: 100%;
-
-                 &[name="feedbackEmail"] {
-                    width: 99%;
-                 }
             }
 
             textarea.field {
@@ -81,7 +77,8 @@
 
         &_main {
             margin-bottom: 0;
-            max-width: 540px;
+            width: 100%;
+            max-width: 640px;
         }
 
         &_media {

@@ -1,23 +1,17 @@
+@section('title', 'About - Sitember.com')
+@section('metatitle', 'About - Sitember.com')
+@section('metadescription', 'Discover the essence of SITEMBER - a leading website development company committed to crafting digital experiences that transcend expectations. Uncover our journey, values, and the passion driving our team to redefine the online landscape. Explore our About page for a glimpse into the innovation, expertise, and collaborative spirit that sets SITEMBER apart in the world of web development.')
 <div>
     <!-- about page content start -->
     <main>
         <div class="services">
             <div class="container section">
-                <ul class="breadcrumbs d-flex flex-wrap mb-xl">
-                    <li class="breadcrumbs_item">
-                        <a class="link" href="/">Home</a>
-                    </li>
-
-                    <li class="breadcrumbs_item current">
-                        <span id="currentpage">About Us</span>
-                    </li>
-                </ul>
 
                 <div class="title-wrapper">
                     <span class="tw-height h4">
                         <span class="text">{{ $about->heading }}</span>
                     </span>
-                    <h4 class="about_main-title type" data-text="Кои сме ние?">
+                    <h4 class="about_main-title type" data-text="{{ $about->heading }}">
                         {{ $about->heading }}
                     </h4>
                 </div>
@@ -29,7 +23,7 @@
                                 <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" />
                                 <img class="lazy doge" data-src="{{ asset('assets/img/placeholder.jpg') }}" src="{{ asset('assets/img/placeholder.jpg') }}" alt="Site Member" />
                             </picture>
-                            <span class="title h5">Site Member</span>
+                            <span class="title h5">Rumen Angelov</span>
                             <p class="text">
                                 CEO
                             </p>
@@ -41,7 +35,7 @@
                                 <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" />
                                 <img class="lazy doge" data-src="{{ asset('assets/img/placeholder.jpg') }}" src="{{ asset('assets/img/placeholder.jpg') }}" alt="Петя Димитрова" />
                             </picture>
-                            <span class="title h5">Петя Димитрова</span>
+                            <span class="title h5">Petya Dimitrova</span>
                             <p class="text">
                             CTO
                             </p>
@@ -53,7 +47,7 @@
                                 <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" />
                                 <img class="lazy doge" data-src="{{ asset('assets/img/placeholder.jpg') }}" src="{{ asset('assets/img/placeholder.jpg') }}" alt="Делян Делов" />
                             </picture>
-                            <span class="title h5">Делян Делов</span>
+                            <span class="title h5">Delyan Delov</span>
                             <p class="text">
                                 Manager
                             </p>
@@ -63,62 +57,86 @@
             </div>
         </div>
 
-        <div class="page">
+        <div class="page about-page">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-6">
-                        <div class="page_header">
-                            <h2 class="page_header-title type" data-text="About Us">{{ $about->title }}</h2>
-                            <span class="tw-height h2">
-                                <span class="text">{{ $about->title }}</span>
-                            </span>
-
-                            <h5 class="page_header-subtitle">{!! $about->subtitle !!}</h5>
-                        </div>
-                        <p>
+                        <div class="main">
                             {!! $about->content !!}
-                        </p>
+                        </div>
                     </div>
                     <div class="col-6">
-                        <picture>
-                            <source data-srcset="{{ asset('assets/svg/Illustartion1.svg') }}" srcset="{{ asset('assets/svg/Illustartion1.svg') }}" />
-                            <img class="lazy doge" data-src="{{ asset('assets/svg/Illustartion1.svg') }}" src="{{ asset('assets/svg/Illustartion1.svg') }}" alt="doge" />
-                        </picture>
+                        <div class="main">
+                            <h4>What Sets Us Apart:</h4>
+                            <ul>
+                            <li><strong>Innovation Unleashed: </strong>We're not just imitators; we create trends. Our team lives for getting the edge, always hunting out new technologies and methods of design to create digital products that aren't merely up-to-date but also state of the art.</li>
+                            <li><strong>Client-Centric Approach:</strong> Your success is our success. The relationships we build with our clients are strong and collaborative. Starting with the initial consultation through project delivery and beyond, we stress open dialogues and transparency.</li>
+                            <li><strong>Craftsmanship in Every Line of Code:</strong> Developers don't simply write code, they carve digital experiences. Every line of code is carefully crafted for maximum performance, security and scalability.</li>
+                            <li><strong>Design with Purpose:</strong> Our design philosophy: Aesthetics, meeting functionality.&nbsp;We hold that good design should perfectly match the user's experience, to produce a pleasant digital environment.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        {{-- TODO: WE MUST DECIDE IF THESE NUMBERS SHOULD BE ON THE ABOUT PAGE
-        <div class="services">
-            <div class="container section">
-                <div class="services_content d-lg-flex align-items-center">
-                    <ul class="services_content-numbers d-flex flex-row justify-content-center">
-                        <li class="block">
-                            <h6 class="label">Advanced Solutions for Startups</h6>
-                            <span class="countNum h1" data-value="240" data-suffix="+">0</span>
-                        </li>
-                        <li class="block">
-                            <h6 class="label">Investors on-boarded on the platform</h6>
-                            <span class="countNum h1" data-value="1720">0</span>
-                        </li>
-                        <li class="block">
-                            <h6 class="label">Promotion cases and new products</h6>
-                            <span class="countNum h1" data-value="8100" data-suffix="+">0</span>
-                        </li>
-                        <li class="block">
-                            <h6 class="label">Promotion cases and new products</h6>
-                            <span class="countNum h1" data-value="8100" data-suffix="+">0</span>
-                        </li>
-                    </ul>
+        <div class="process">
+            <div class="container d-flex flex-column-reverse flex-xl-row">
+                <div class="process_list">
+                    <div class="title-wrapper container text-right">
+                        <span class="tw-height h4">
+                            <span class="text">Our Process</span>
+                        </span>
+                        <h4 class="about_main-title type" data-text="Our Process">
+                            Our Process
+                        </h4>
+                    </div>
+
+                    <div class="process_boxes d-flex">
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="50">
+                            <span class="number">1</span>
+                            <div class="main">
+                                <h5>Initial discussion on the:</h5>
+                                <ul>
+                                    <li>Idea</li>
+                                    <li>Concept</li>
+                                    <li>Branding</li>
+                                    <li>Requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="200">
+                            <span class="number">2</span>
+                            <div class="main">
+                                <h5>Working on the design with 3 different visions</h5>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="350">
+                            <span class="number">3</span>
+                            <div class="main">
+                                <h5>Choosing the design and finalizing the details</h5>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="500">
+                            <span class="number">4</span>
+                            <div class="main">
+                                <h5>Backend development and design revival</h5>
+                            </div>
+                        </div>
+
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="650">
+                            <span class="number">5</span>
+                            <div class="main">
+                                <h5>Final meeting with presentation of the completed site</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        --}}
     </main>
     <!-- about page content end -->
-    {{-- @push('headScripts')
-        <script src="{{ asset('assets/js/common.min.js') }}"></script>
-    @endpush --}}
-
 </div>
