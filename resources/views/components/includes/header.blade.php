@@ -2,9 +2,9 @@
     <div class="container d-flex align-items-center flex-wrap flex-lg-nowrap">
         <a class="logo header_logo d-inline-flex align-items-center" href="/">
             <span class="logo_icon">
-                <img src="{{ asset('assets/svg/logo.svg') }}" alt="Sitember" />
+                <img src="{{ asset('assets/svg/logo.png') }}" alt="Sitember" />
             </span>
-            <span class="logo_text h5">Sitember</span>
+            <span class="logo_text h2">itember</span>
         </a>
         <nav class="header_nav collapse" id="headerMenu">
             <ul class="header_nav-list">

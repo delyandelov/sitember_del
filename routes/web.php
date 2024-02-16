@@ -7,6 +7,7 @@ use App\Livewire\ContactComponent;
 use App\Livewire\FAQComponent;
 use App\Livewire\HomeComponent;
 use App\Livewire\PlansComponent;
+use App\Livewire\PostComponent;
 use App\Livewire\ProjectComponent;
 use App\Livewire\ProjectsComponent;
 use App\Livewire\ServiceComponent;
@@ -20,10 +21,11 @@ Route::get('/services', ServicesComponent::class)->name('services');
 Route::get('/services/{service}', ServiceComponent::class)->name('service');
 Route::get('/prices', PlansComponent::class)->name('plans');
 Route::get('/projects', ProjectsComponent::class)->name('projects');
-Route::get('/project/{project}', ProjectComponent::class)->name('project');
+Route::get('/projects/{project}', ProjectComponent::class)->name('project');
 Route::get('/contact', ContactComponent::class)->name('contact');
 Route::get('/FAQ', FAQComponent::class)->name('faq');
 Route::get('/blog', BlogComponent::class)->name('blog');
+Route::get('/blog/{post}', PostComponent::class)->name('post');
 
 //Sitemaps
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
