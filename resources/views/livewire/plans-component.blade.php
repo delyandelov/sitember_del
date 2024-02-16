@@ -28,7 +28,7 @@
                         Simple and flexible. Only pay for what you use. For your small-to medium-sized companies
                     </p>
                 </div>
-                <ul class="pricing_list d-flex flex-column flex-md-row flex-wrap">
+                <ul class="pricing_list unstyled d-flex flex-column flex-md-row flex-wrap">
                     <li class="pricing_list-item">
                         <div class="pricing_list-item_header">
                             <h5 class="title">Basic</h5>

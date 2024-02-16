@@ -34,6 +34,10 @@ hr {
     margin: 2rem auto;
 }
 
+.section {
+    padding: 100px 0;
+}
+
 //Distance utilities
 .m-xs { margin: $margin-xs !important;}
 .m-s { margin: $margin-s !important;}
@@ -154,7 +158,7 @@ h6, .h6 {
     }
 }
 
-main ul {
+main ul:not(.unstyled) {
     li {
         margin-bottom: 15px;
         position: relative;
