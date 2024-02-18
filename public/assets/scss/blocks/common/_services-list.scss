@@ -4,7 +4,7 @@
         &-item {
             background: $white;
             padding: 30px;
-            border-radius: 2px;
+            border-radius: $border-radius;
             border: $border;
             gap: 10px 0;
             overflow: visible;
@@ -21,6 +21,7 @@
                 z-index: 1;
                 transition: opacity .3s ease-in-out;
                 opacity: 0;
+                border-radius: $border-radius;
             }
 
             .icon {

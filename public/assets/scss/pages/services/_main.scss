@@ -136,7 +136,7 @@
             &-item {
                 .media {
                     width: 100%;
-                    max-width: 475px;
+                    max-width: 575px;
                     position: relative;
                     overflow: visible;
 
@@ -183,7 +183,7 @@
                 }
 
                 .main {
-                    width: calc(100% - 60px - 475px);
+                    width: calc(100% - 60px - 575px);
                     display: flex;
                     flex-direction: column;
                     &_list {

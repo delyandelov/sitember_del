@@ -1,94 +1,81 @@
 // accordion component
-
-.faq {
-    &_wrapper {
-        background: $lightgray;
-        border: 2px solid $headerColor;
-        box-shadow: $shadow;
-        padding: 20px 20px 0;
-
-        .accordion_item:last-of-type {
-            border-bottom: 0;
-        }
-    }
-}
-
 .accordion {
-    &_item {
+    margin: 0 auto;
+
+    .accordion-item {
         border-bottom: 2px solid $bodyText;
 
-        &:first-of-type {
-            .accordion_item-wrapper .title {
-                padding-top: 0;
+        &:last-child {
+            border-bottom: none;
+        }
+        &.active {
+            .accordion-header .icon {
+                transform: rotate(270deg);
+            }
+            .accordion-content {
+                display: block;
             }
         }
+    }
+    .accordion-header {
+        padding: 25px 0;
+        transition: .4s ease-in-out;
+        cursor: pointer;
 
-        &-wrapper {
-            .title {
-                padding: 25px 0;
-                transition: .4s ease-in-out;
-                cursor: pointer;
+        &_icon {
+            margin-left: 30px;
+            font-size: 24px;
+        }
 
-                &[aria-expanded="true"] {
-                    padding-bottom: 15px;
-                }
+        &:hover {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .accordion-content {
+        display: none;
+        margin-bottom: 30px;
+        padding-top: 20px;
 
-                &_icon {
-                    margin-left: 30px;
-                    font-size: 24px;
-
-                    &.transform {
-                        .icon {
-                            transform: rotate(180deg);
-                        }
-                    }
-                }
+        .main {
+            &_text {
+                margin-left: -50px;
             }
 
-            .body {
-                margin-bottom: 30px;
-                padding-top: 20px;
+            &_general {
+                margin-bottom: 16px;
+            }
 
-                .main {
-                    &_text {
-                        margin-left: -50px;
-                    }
+            &_list {
+                display: flex;
+                flex-direction: column;
+                gap: 20px 0;
 
-                    &_general {
-                        margin-bottom: 16px;
-                    }
+                &-item {
+                    display: flex;
+                    align-items: flex-start;
 
-                    &_list {
+                    .number {
+                        background: $accent;
+                        margin-right: 15px;
+                        width: 35px;
+                        height: 30px;
                         display: flex;
-                        flex-direction: column;
-                        gap: 20px 0;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 14px;
+                        line-height: 1;
+                        font-weight: 700;
+                        font-family: $headerFont;
+                        color: $headerColor;
+                    }
 
-                        &-item {
-                            display: flex;
-                            align-items: flex-start;
+                    .main {
+                        width: calc(100% - 35px - 15px);
 
-                            .number {
-                                background: $accent;
-                                margin-right: 15px;
-                                width: 35px;
-                                height: 30px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                font-size: 14px;
-                                line-height: 1;
-                                font-weight: 700;
-                                font-family: $headerFont;
-                                color: $headerColor;
-                            }
-
-                            .main {
-                                width: calc(100% - 35px - 15px);
-
-                                &_title {
-                                    margin-bottom: 10px;
-                                }
-                            }
+                        &_title {
+                            margin-bottom: 10px;
                         }
                     }
                 }
@@ -97,26 +84,13 @@
     }
 }
 
-// media queries
 
+// media queries
 @media screen and (min-width: 413.98px) {
-    .accordion_item-wrapper .body .main_text {
-        margin-left: 0;
-    }
 }
 
 @media screen and (min-width: 767.98px) {
-    .faq {
-        &_wrapper {
-            padding: 40px 40px 10px;
-        }
-    }
 }
 
 @media screen and (min-width: 991.98px) {
-    .faq {
-        &_wrapper {
-            padding: 80px 80px 55px;
-        }
-    }
 }

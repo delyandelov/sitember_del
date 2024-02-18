@@ -85,12 +85,16 @@
     }
 }
 
-@media screen and (min-width: 991.98px) {
+@media screen and (min-width: 991px) {
     .hero {
+        padding: 300px 0 100px;
+        min-height: 800px;
 
         &_media {
+            position: absolute;
             max-width: 860px;
-            margin: 0 auto;
+            right:0;
+            top: -130px;
         }
 
         &_main {
@@ -101,9 +105,9 @@
     }
 }
 
-@media screen and (min-width: 1199.98px) {
+@media screen and (min-width: 1800px) {
     .hero {
-        padding: 140px 0;
+        min-height: 980px;
 
         &_main {
             margin-bottom: 0;
@@ -111,9 +115,7 @@
         }
 
         &_media {
-            position: absolute;
             top:0;
-            right:0;
         }
     }
 }

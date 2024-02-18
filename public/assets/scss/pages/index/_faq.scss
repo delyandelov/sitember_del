@@ -8,7 +8,7 @@
         padding: 30px;
         box-shadow: $shadow;
         border: $border;
-        border-radius: 2px;
+        border-radius: $border-radius;
 
         &_item:last-of-type {
             border-bottom: 0;

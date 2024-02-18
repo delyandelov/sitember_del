@@ -26,7 +26,7 @@
         margin-bottom: 60px;
 
         &-slide {
-            border-radius: 2px;
+            border-radius: $border-radius;
             background: #fff;
             border: $border;
             box-shadow: $shadow;

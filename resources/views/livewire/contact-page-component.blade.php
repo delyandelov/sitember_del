@@ -5,12 +5,12 @@
         <div class="page">
             <div class="container d-md-flex">
                 <div class="page_main">
-                    <h5 class="page_main-subtitle">Contact Us</h5>
+                    <span class="page_main-subtitle">Contact Us</span>
                     <div class="wrapper mt-0">
-                        <span class="tw-height h2">
+                        <span class="tw-height h1">
                             <span class="text">We'd love to help you</span>
                         </span>
-                        <h2 class="page_main-title type" data-text="We'd love to help you">We'd love to help you</h2>
+                        <h1 class="page_main-title type" data-text="We'd love to help you">We'd love to help you</h1>
                     </div>
                 </div>
             </div>

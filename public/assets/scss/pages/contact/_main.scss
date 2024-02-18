@@ -6,7 +6,7 @@
         height: 480px;
         border: $border;
         box-shadow: 8px 8px 0 $teritary;
-        border-radius: 2px;
+        border-radius: $border-radius;
         overflow: hidden;
         backface-visibility: hidden;
         margin-bottom: 40px;

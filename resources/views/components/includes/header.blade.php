@@ -25,13 +25,7 @@
                     <a
                         class="nav-link nav-item dropdown-toggle d-flex align-items-center justify-content-between @if(Request::url()== url('/services')) current @endif"
                         href="{{ route('services') }}"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#servicesMenu"
-                        data-trigger="dropdown"
-                        data-page-parent="services"
-                        data-main-link="true"
-                        aria-expanded="false"
-                        aria-controls="servicesMenu"
+                        data-single="true"
                         data-page="services"
                         wire:navigate
                     >
