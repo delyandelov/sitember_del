@@ -21,7 +21,7 @@
                             <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Delyan Delov" />
                             <span class="title h4 text-center">Delyan Delov</span>
                             <p class="text-center">
-                                CEO & DevOps
+                                Founder & DevOps
                             </p>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                             <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Petya Dimitrova" />
                             <span class="title h4 text-center">Petya Dimitrova</span>
                             <p class="text-center">
-                            PM & Design
+                                Co Founder & Design
                             </p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Rumen Angelov" />
                             <span class="title h4 text-center">Rumen Angelov</span>
                             <p class="text-center">
-                               CTO & Development
+                                Co Founder & CTO
                             </p>
                         </div>
                     </div>

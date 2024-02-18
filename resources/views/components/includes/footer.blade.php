@@ -37,7 +37,7 @@
         <div class="footer_bottom">
             <div class="footer_bottom-contacts d-flex flex-column">
                 <a class="link" href="mailto:{{ $settings->email }}">{{ $settings->email }}</a>
-                <a class="link" href="tel:{!! $settings->phone !!}">{{ $settings->phone }}</a>
+                <a class="link" href="mailto:{{ $settings->email }}">{{ $settings->email }}</a>
             </div>
             <div class="footer_bottom-socials">
                 <ul class="footer_bottom-socials_list socials d-flex flex-wrap">

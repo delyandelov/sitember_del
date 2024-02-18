@@ -1,15 +1,3 @@
-/**
- * Sitech
- * HTML template with high-quality content and latest design trends that fit product market for SaaS, App Solutions Promo Campaigns, Development Studios, Digital Marketing Agencies, Startups and other rising internet technology services
- * Exclusively on https://1.envato.market/sitech-html
- *
- * @encoding        UTF-8
- * @version         1.0.0
- * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
- * @license         Envato License https://1.envato.market/KYbje
- * @contributors    Lilith Lamber (winter.rituel@gmail.com)
- * @support         help@merkulov.design
- **/
 // model section
 
 .model {
@@ -20,7 +8,7 @@
 
         &-subtitle {
             margin: 10px 0;
-            color: #595B5E;
+            color: $grey;
             font-weight: 700;
         }
 
@@ -31,45 +19,22 @@
 
     &_table {
         border: 1px solid #DCDCDC;
+        margin-bottom: 15px;
 
-        &-header {
-            display: none;
+        .cell-collapse {
+            align-items: center;
         }
 
         .cell {
             display: flex;
             flex-direction: column;
             width: 100%;
-
-            &--trigger {
-                align-items: center;
-                flex-direction: row;
-                justify-content: space-between;
-                font-family: $headerFont;
-                color: $primary;
-                font-weight: 700;
-                padding: 15px 20px;
-
-                .icon {
-                    transition: .4s ease-in-out;
-                    transform: rotate(-90deg);
-                }
-
-                &[aria-expanded="true"] {
-                    .icon {
-                        transform: rotate(90deg);
-                    }
-                }
-            }
-
-            &-label, &-content {
-                padding: 15px 20px;
-                background: $lightgray;
-            }
+            padding: 15px 20px;
 
             &-label {
                 font-weight: 700;
-                border-bottom: 2px solid #fff;
+                display: block;
+                margin-bottom: 5px;
             }
         }
     }
@@ -96,10 +61,10 @@
                 display: flex;
 
                 &_label {
-                    width: calc(100% / 3);
-                    color: $primary;
+                    width: calc(100% / 2);
+                    color: $teritary;
                     padding: 25px 15px;
-                    font-size: 16px;
+                    font-size: 18px;
                 }
             }
 
@@ -109,7 +74,7 @@
 
                 &:nth-of-type(odd) {
                     * {
-                        background: #fff;
+                        background: $white;
                     }
                 }
 
@@ -119,33 +84,10 @@
 
                 .cell {
                     width: 50%;
-                    border-right: 2px solid #fff;
+                    border-right: 2px solid $white;
 
                     &:last-of-type {
                         border: none;
-                    }
-
-                    &--trigger {
-                        width: calc(100% / 3);
-                        color: $bodyText;
-                        padding: 15px;
-                        border-right: 2px solid #fff !important;
-
-                        .icon {
-                            display: none;
-                        }
-                    }
-
-                    &-label {
-                        display: none;
-                    }
-
-                    &-content {
-                        flex-grow: 1;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        padding: 15px 25px 15px 15px;
                     }
 
                     &-collapse {
@@ -167,12 +109,10 @@
 @media screen and (min-width: 1199.98px) {
     .model {
         &_header {
-            max-width: 430px;
             margin-bottom: 0;
         }
         &_table {
             flex-grow: 1;
-            margin-left: 35px;
         }
     }
 }

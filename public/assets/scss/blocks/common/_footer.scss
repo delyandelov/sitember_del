@@ -103,7 +103,8 @@
 
     &_copyright {
         font-weight: 600;
-        font-size: 12px;
+        font-size: 14px;
+        text-align: center;
     }
 }
 
@@ -208,11 +209,6 @@
         &_scroll {
             font-size: 64px;
             bottom: 20px;
-        }
-
-        &_copyright {
-            text-align: right;
-            max-width: 1105px;
         }
 
         &_bottom {
