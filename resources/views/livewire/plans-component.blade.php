@@ -53,9 +53,6 @@
                                 <li class="list-item">
                                     Speed Optimization
                                 </li>
-                                <li class="list-item">
-                                    Speed Optimization
-                                </li>
                             </ul>
 
                             <span class="price main">
@@ -266,44 +263,44 @@
             <div class="container d-lg-flex align-items-center">
                 <div class="challenges_header">
                     <h3 class="challenges_header-title d-flex align-items-end">
-                        <span class="text">Your Challenges</span>
+                        <span class="text">Phases</span>
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </h3>
                     <p class="challenges_header-text">
-                        Nullam elementum, magna at suscipit lobortis, dui nibh molestie enim, sed scelerisque ex odio sit amet purus.
-                        Pellentesque fermentum mauris
+                        <b>Don't know where to start?</b> <br/>
+                        Don't worry, we're here to assist you and provide the details you're interested in. Feel free to reach out to us without hesitation!
                     </p>
                 </div>
                 <ul class="challenges_list d-flex flex-column flex-sm-row flex-wrap unstyled">
                     <li class="challenges_list-item">
                         <span class="number countNum" data-prefix="0" data-value="1">01</span>
                         <span class="separator"></span>
-                        <h5 class="title">How and Where to Start</h5>
+                        <h5 class="title">Getting Started</h5>
                     </li>
                     <li class="challenges_list-item">
                         <span class="number countNum" data-prefix="0" data-value="2">02</span>
                         <span class="separator"></span>
-                        <h5 class="title">Time to Get New Strategy</h5>
+                        <h5 class="title">Receiving a Proposal</h5>
                     </li>
                     <li class="challenges_list-item">
                         <span class="number countNum" data-prefix="0" data-value="3">03</span>
                         <span class="separator"></span>
-                        <h5 class="title">Tool Selection</h5>
+                        <h5 class="title">Sketching, Presenting, and Approving the Design</h5>
                     </li>
                     <li class="challenges_list-item">
                         <span class="number countNum" data-prefix="0" data-value="4">04</span>
                         <span class="separator"></span>
-                        <h5 class="title">Find the Right Place Market</h5>
+                        <h5 class="title">Project Construction</h5>
                     </li>
                     <li class="challenges_list-item">
                         <span class="number countNum" data-prefix="0" data-value="5">05</span>
                         <span class="separator"></span>
-                        <h5 class="title">New System Support</h5>
+                        <h5 class="title">Demonstration, Training & Finalization</h5>
                     </li>
                     <li class="challenges_list-item">
                         <span class="number countNum" data-prefix="0" data-value="6">06</span>
                         <span class="separator"></span>
-                        <h5 class="title">Take New Level of Management</h5>
+                        <h5 class="title">Completion!</h5>
                     </li>
                 </ul>
             </div>
@@ -312,111 +309,47 @@
 
         <!-- model section start -->
         <section class="model section">
-            <div class="container d-xl-flex align-items-center justify-content-between">
-                <div class="model_header">
-                    <h4 class="model_header-title">Fine-Tuned Model Prices Updates</h4>
-                    <p class="model_header-subtitle">
-                        Create your own custom models by fine-tuning our base models with your own data.
-                    </p>
-                    <p class="model_header-text">
-                        Nunc quis tellus leo. Vivamus lorem magna, tempus at suscipit quis, viverra ut dolor. Suspendisse in urna id
-                        urna facilisis dapibus ut at enim. Sed tempus tincidunt neque nec tincidunt. Nam imperdiet felis nulla
-                    </p>
-                    <a class="model_header-btn btn btn--neon" href="contact.html">Talk to Specialist</a>
-                </div>
-                <div class="model_table">
-                    <div class="model_table-header">
-                        <h6 class="model_table-header_label">Model</h6>
-                        <h6 class="model_table-header_label">Service</h6>
-                        <h6 class="model_table-header_label">Plan Advanced bills</h6>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 model_header">
+                        <h4 class="model_header-title"> Technical Support</h4>
+                    
+                        <p class="model_header-subtitle">
+                            We will ensure that your website functions correctly and remains at its best!
+                        </p>
+                        <p class="model_header-text">
+                            For every website created by us, we provide a 1-month complimentary warranty support, starting from the project's publication on the internet. This includes addressing issues with the website's functionality or display.
+                        </p>
+                        <p class="model_header-text">After the expiration of this period, our clients can take advantage of our offers for monthly, yearly subscriptions for technical support, or opt for module-based payment.</p>
+                        <p class="model_header-text">You will receive the complete terms of support in an offer after contacting us.</p>
+                        <a class="model_header-btn btn btn--neon" href="contact.html">Get an offer</a>
                     </div>
-                    <div class="model_table-col">
-                        <span
-                            class="cell cell--trigger"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#workshops"
-                            aria-expanded="true"
-                            role="button"
-                        >
-                            <span class="label">Workshops</span>
-                            <i class="icon-angle-left icon"></i>
-                        </span>
-                        <div class="cell-collapse collapse show" id="workshops">
-                            <span class="cell">
-                                <span class="cell-label">Service</span>
-                                <span class="cell-content">LoDDoS - DDOS Testing Tool</span>
-                            </span>
-                            <span class="cell">
-                                <span class="cell-label">Plan Advanced bills</span>
-                                <span class="cell-content">$0.20/billed</span>
-                            </span>
+                    <div class="col-md-7">
+                        <div class=" model_table">
+                            <div class="model_table-header">
+                                <h6 class="model_table-header_label">Description</h6>
+                                <h6 class="model_table-header_label">Monthly Price</h6>
+                            </div>
+                            <div class="model_table-col">
+                                <div class="cell-collapse" id="workshops">
+                                    <span class="cell">
+                                        <span class="cell-label">Option 1</span>
+                                        The price is on a monthly basis for a contract term of <b>6 months</b>.
+                                    </span>
+                                    <span class="cell">300 €</span>
+                                </div>
+                            </div>
+                            <div class="model_table-col">
+                                <div class="cell-collapse collapse" id="dev">
+                                    <span class="cell">
+                                        <span class="cell-label">Option 2</span>
+                                        The price is on a monthly basis for a contract term of <b>12 months</b>.
+                                    </span>
+                                    <span class="cell">250 €</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="model_table-col">
-                        <span
-                            class="cell cell--trigger"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#dev"
-                            aria-expanded="false"
-                            role="button"
-                        >
-                            <span class="label">Model Development</span>
-                            <i class="icon-angle-left icon"></i>
-                        </span>
-                        <div class="cell-collapse collapse" id="dev">
-                            <span class="cell">
-                                <span class="cell-label">Service</span>
-                                <span class="cell-content">System Performance Monitoring</span>
-                            </span>
-                            <span class="cell">
-                                <span class="cell-label">Plan Advanced bills</span>
-                                <span class="cell-content">$2.60/billed</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="model_table-col">
-                        <span
-                            class="cell cell--trigger"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#consulting"
-                            aria-expanded="false"
-                            role="button"
-                        >
-                            <span class="label">Ongoing Consulting</span>
-                            <i class="icon-angle-left icon"></i>
-                        </span>
-                        <div class="cell-collapse collapse" id="consulting">
-                            <span class="cell">
-                                <span class="cell-label">Service</span>
-                                <span class="cell-content">Technical Support Services</span>
-                            </span>
-                            <span class="cell">
-                                <span class="cell-label">Plan Advanced bills</span>
-                                <span class="cell-content">$12/billed</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="model_table-col">
-                        <span
-                            class="cell cell--trigger"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#startup"
-                            aria-expanded="false"
-                            role="button"
-                        >
-                            <span class="label">For Startups</span>
-                            <i class="icon-angle-left icon"></i>
-                        </span>
-                        <div class="cell-collapse collapse" id="startup">
-                            <span class="cell">
-                                <span class="cell-label">Service</span>
-                                <span class="cell-content">Bug Monitoring and realtime fixes</span>
-                            </span>
-                            <span class="cell">
-                                <span class="cell-label">Plan Advanced bills</span>
-                                <span class="cell-content">$18/billed</span>
-                            </span>
-                        </div>
+                        <p><em>* The prices are approximate. Additional terms apply to each project. For precise conditions, please get in touch with us, and you will receive a final offer with the ultimate service price.</em></p>
                     </div>
                 </div>
             </div>

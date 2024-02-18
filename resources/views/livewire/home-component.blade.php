@@ -28,6 +28,7 @@
             </div>
         </section>
         <!-- hero section end -->
+        
          <!-- about section start -->
          <section class="about">
             <img class="about_shape" src="{{ asset('assets/svg/bg%202.svg') }}" alt="{{ $home->aboutus_title }}" />
@@ -54,6 +55,7 @@
             </div>
         </section>
         <!-- about section end -->
+
         <!-- features section start -->
         <div class="index-services">
             <div class="container d-flex flex-column-reverse flex-xl-row">
@@ -135,6 +137,7 @@
             </div>
         </section>
         <!-- projects section end -->
+        
         <!-- accordion section start -->
         <div class="faq">
             <div class="container">
@@ -159,11 +162,12 @@
                     @endforeach
                 </div>
                 <div class="d-md-flex flex-column align-items-center">
-                    <a class="join_btn btn btn--neon signUpTrigger" href="#">{{ $home->other_button_text }}</a>
+                    <a class="join_btn btn btn--neon signUpTrigger" href="{{ route('faq') }}">{{ $home->other_button_text }}</a>
                 </div>
             </div>
         </div>
         <!-- accordion section end -->
+
         <!-- join section start -->
         <section class="join section index">
             <div class="join_media">
@@ -185,6 +189,7 @@
             </div>
         </section>
         <!-- join section end -->
+
         <!-- testimonials section start -->
         <section class="testimonials section">
             <div class="container">
@@ -224,6 +229,7 @@
             </div>
         </section>
         <!-- testimonials section end -->
+
         <!-- feedback section start -->
         <section class="feedback section index">
             <div class="container d-lg-flex align-items-center justify-content-between">

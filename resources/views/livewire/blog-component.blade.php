@@ -213,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "market"]'>
+                    <div class="blog_posts-item post-item col-md-6 data-groups='["advices", "market"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -264,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <ul class="pagination d-flex flex-wrap align-items-center justify-content-end unstyled">
+                <ul class="pagination d-flex flex-wrap align-items-center justify-content-end">
                     <li class="pagination_item">
                         <a class="link current" href="#">1</a>
                     </li>
