@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 // text
 $bodyFont: "Open Sans", sans-serif;
 $bodyText: #28313D;
-$headerFont: "Roboto Mono", monospace;
+$headerFont: "Exo 2", sans-serif;
 $headerColor: #1B2129;
 
 // template colors
@@ -11,6 +13,7 @@ $teritary: #a9b971;
 $accent: #86a1bb;
 $lightgray: #F8F8FF;
 $white: #fff;
+$black: #000;
 $red: #c00;
 $grey: #777;
 
@@ -18,6 +21,7 @@ $grey: #777;
 $shadow: 3px 3px 0 $accent;
 $shadow-primary: 3px 3px 0 $primary;
 $border: 1px solid $headerColor;
+$border-radius: 7px;
 
 //units
 $margin-xs: 4px;

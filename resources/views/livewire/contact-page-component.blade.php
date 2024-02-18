@@ -3,28 +3,15 @@
     <!-- contact content start -->
     <main>
         <div class="page">
-            <div class="container">
-                <ul class="breadcrumbs d-flex flex-wrap">
-                    <li class="breadcrumbs_item">
-                        <a class="link" href="/">Начало</a>
-                    </li>
-                    <li class="breadcrumbs_item current">
-                        <span id="currentpage">Contact Us</span>
-                    </li>
-                </ul>
-            </div>
             <div class="container d-md-flex">
                 <div class="page_main">
-                    <h5 class="page_main-subtitle">Contact Us</h5>
+                    <span class="page_main-subtitle">Contact Us</span>
                     <div class="wrapper mt-0">
-                        <span class="tw-height h2">
+                        <span class="tw-height h1">
                             <span class="text">We'd love to help you</span>
                         </span>
-                        <h2 class="page_main-title type" data-text="We'd love to help you">We'd love to help you</h2>
+                        <h1 class="page_main-title type" data-text="We'd love to help you">We'd love to help you</h1>
                     </div>
-                </div>
-                <div class="page_media">
-                    <img class="page_media-img" src="{{ asset('assets/svg/herocontact.svg') }}" alt="Contact Us" />
                 </div>
             </div>
         </div>
@@ -32,31 +19,33 @@
         <div class="contact section">
             <div class="container d-lg-flex align-items-stretch">
                 <div class="contact_map">
-                    <div id="map"></div>
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94665.26395253466!2d24.658473838981458!3d42.144091420868136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd108a248763d%3A0x6470d1fa6f1338a0!2z0J_Qu9C-0LLQtNC40LI!5e0!3m2!1sbg!2sbg!4v1707834036190!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
-                <ul class="contact_info d-flex flex-column flex-md-row flex-lg-column flex-wrap">
+                <ul class="contact_info unstyled d-flex flex-column flex-md-row flex-lg-column flex-wrap">
                     <li class="contact_info-item">
-                        <h5 class="contact_info-item_header" data-aos="fade-up">Office Locations:</h5>
-                        <div class="contact_info-item_content" data-aos="fade-up" data-aos-delay="50">
+                        <h5 class="contact_info-item_header">Address:</h5>
+                        <div class="contact_info-item_content">
                             <div class="wrapper">
                                 <span>{{ $settings->address }}</span>
-                                <span>{{ $settings->city }}</span>
-                                <span>{{ $settings->country }}</span>
+                                <span>{{ $settings->city }}, {{ $settings->country }}</span>
                             </div>
                         </div>
                     </li>
                     <li class="contact_info-item">
-                        <h5 class="contact_info-item_header" data-aos="fade-up">Phone Numbers:</h5>
-                        <div class="contact_info-item_content" data-aos="fade-up" data-aos-delay="50">
+                        <h5 class="contact_info-item_header">Contact Info:</h5>
+                        <div class="contact_info-item_content">
                             <div class="wrapper">
                                 <a class="link" href="tel:{{ $settings->phone }}">{{ $settings->phone }}</a>
+                                <a class="link link--underline" href="mailto:{{ $settings->email }}">{{ $settings->email }}</a>
                             </div>
                         </div>
                     </li>
                     <li class="contact_info-item">
-                        <h5 class="contact_info-item_header" data-aos="fade-up">Send Us a Message:</h5>
-                        <div class="contact_info-item_content" data-aos="fade-up" data-aos-delay="50">
-                            <ul class="socials d-flex">
+                        <h5 class="contact_info-item_header">Social:</h5>
+                        <div class="contact_info-item_content">
+                            <ul class="socials unstyled d-flex">
                                 <li class="socials-item">
                                     <a class="link" href="{{ $settings->facebook }}" target="_blank" rel="noopener noreferrer">
                                         <i class="icon-facebook icon"></i>
@@ -73,7 +62,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <a class="link link--underline" href="mailto:{{ $settings->email }}">{{ $settings->email }}</a>
+                            
                         </div>
                     </li>
                 </ul>
@@ -82,14 +71,6 @@
 
         <!-- feedback section start -->
         <section class="feedback section">
-            <div class="feedback_shapes">
-                <div class="shape shape--left">
-                    <img src="{{ asset('assets/svg/bgshape_white2.svg') }}" alt="shape" />
-                </div>
-                <div class="shape shape--right">
-                    <img src="{{ asset('assets/svg/bgshape_white.svg') }}" alt="shape" />
-                </div>
-            </div>
             <div class="container d-lg-flex align-items-center justify-content-between">
                 <div class="feedback_main">
                     <div class="feedback_main-header">

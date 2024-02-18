@@ -4,14 +4,13 @@
     <main>
         <div class="page">
             <div class="container d-md-flex">
-                <div class="page_main w-100">
-                    <div class="d-flex align-items-end justify-content-between">
-                        <div class="wrapper">
-                            <span class="tw-height h2">
-                                <span class="text">We would like to present<br/> some of Our Work</span>
-                            </span>
-                            <h2 class="page_main-title type" data-text="Solutions for Your business">We would like to present<br/> some of Our Work</h2>
-                        </div>
+                <div class="page_main">
+                    <span class="page_main-subtitle">Projects</span>
+                    <div class="wrapper mt-0">
+                        <span class="tw-height h1">
+                            <span class="text">We would like to present<br/> some of Our Work</span>
+                        </span>
+                        <h1 class="page_main-title type" data-text="Solutions for Your business">We would like to present<br/> some of Our Work</h1>
                     </div>
                 </div>
             </div>
@@ -21,16 +20,16 @@
         <section class="section">
             <div class="container">
                     <ul class="tabs d-flex justify-content-center">
-                        <li class="tab join_btn btn btn--neon active" rel="tab1">Website Development & Ecommerce</li>
-                        <li class="tab join_btn btn btn--neon" rel="tab2">Graphic Design & Brand Identity</li>
-                        <li class="tab join_btn btn btn--neon" rel="tab3">Prototyping Projects</li>
+                        <li class="tab join_btn btn btn--white active" rel="tab1">Website Development & Ecommerce</li>
+                        <li class="tab join_btn btn btn--white" rel="tab2">Graphic Design & Brand Identity</li>
+                        <li class="tab join_btn btn btn--white" rel="tab3">Prototyping Projects</li>
                     </ul>
 
                     <div class="tab_container">
                         <div id="tab1" class="tab_content">
                             <div class="row">
                                 <div class="col-md-4 box">
-                                    <a href="#" title="Biohub Group" class="project-box">
+                                    <a href="http://127.0.0.1:8000/projects/biohub" title="Biohub Group" class="project-box">
                                         <picture>
                                             <source data-srcset="{{ asset('assets/img/projects/websites/biohub-cover.jpg') }}" srcset="{{ asset('assets/img/projects/websites/biohub-cover.jpg') }}" type="image/webp" />
                                             <img

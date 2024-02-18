@@ -21,8 +21,14 @@
                     </a>
                 </li>
                 <li class="footer_top-nav_link">
-                    <a class="link h5 @if(Request::url()== url('/blog')) current @endif" href="#">
-                        Terms And Conditions
+                    <a class="link h5 @if(Request::url()== url('/gdpr')) current @endif" href="#">
+                       GDPR
+                        <i class="icon-arrow-left icon arrow-rotate"></i>
+                    </a>
+                </li>
+                <li class="footer_top-nav_link">
+                    <a class="link h5 @if(Request::url()== url('/privacy-policy')) current @endif" href="#">
+                        Privacy Policy
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </a>
                 </li>

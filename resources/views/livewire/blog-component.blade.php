@@ -6,29 +6,20 @@
         <main class="blog">
             <div class="page">
                 <div class="container">
-                    <ul class="breadcrumbs d-flex flex-wrap">
-                        <li class="breadcrumbs_item">
-                            <a class="link" href="index.html">Начало</a>
-                        </li>
-                        <li class="breadcrumbs_item current">
-                            <span id="currentpage">Новини и статии</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="container">
-                    <div class="page_main maxWidth-none">
-                        <div class="wrapper">
-                            <span class="tw-height h2">
-                                <span class="text">Интересни статии</span>
+                    <div class="page_main">
+                        <span class="page_main-subtitle">Blog</span>
+                        <div class="wrapper mt-0">
+                            <span class="tw-height h1">
+                                <span class="text">Recent News & Articles</span>
                             </span>
-                            <h2 class="page_main-title type" data-text="Интересни статии">Интересни статии</h2>
+                            <h1 class="page_main-title type" data-text="Recent News & Articles">Recent News & Articles</h1>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="container pt-xl">
-                <ul class="blog_filters d-flex flex-wrap">
+                <ul class="blog_filters d-flex flex-wrap unstyled">
                     <li class="list-item">
                         <a class="blog_filters-item current" data-target="all" href="#">all</a>
                     </li>
@@ -48,8 +39,8 @@
                         <a class="blog_filters-item" data-target="maintenance" href="#">maintenance</a>
                     </li>
                 </ul>
-                <div class="blog_posts">
-                    <div class="blog_posts-item post-item" data-groups='["advices", "startups"]'>
+                <div class="blog_posts row">
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "startups"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -74,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["market", "startups", "top"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["market", "startups", "top"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html"> Customer Success 101: How to Power Up Your Startup’s Growth </a>
@@ -97,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["market", "startups", "top", "maintenance"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["market", "startups", "top", "maintenance"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -122,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["market", "advices", "top", "maintenance"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["market", "advices", "top", "maintenance"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -147,7 +138,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["advices", "maintenance"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "maintenance"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -172,7 +163,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["startups", "top", "maintenance"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["startups", "top", "maintenance"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -197,7 +188,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["startups", "advices", "maintenance"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["startups", "advices", "maintenance"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -222,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["advices", "market"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "market"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -247,7 +238,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item" data-groups='["advices", "market"]'>
+                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "market"]'>
                         <div class="wrapper">
                             <div class="main">
                                 <a class="main_title h5" href="post.html">
@@ -273,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <ul class="pagination d-flex flex-wrap align-items-center justify-content-end">
+                <ul class="pagination d-flex flex-wrap align-items-center justify-content-end unstyled">
                     <li class="pagination_item">
                         <a class="link current" href="#">1</a>
                     </li>

@@ -4,62 +4,52 @@
 <div>
     <!-- about page content start -->
     <main>
-        <div class="services">
+        <section class="section team">
             <div class="container section">
-
                 <div class="title-wrapper">
                     <span class="tw-height h4">
                         <span class="text">{{ $about->heading }}</span>
                     </span>
-                    <h4 class="about_main-title type" data-text="{{ $about->heading }}">
+                    <h2 class="about_main-title type" data-text="{{ $about->heading }}">
                         {{ $about->heading }}
-                    </h4>
+                    </h2>
                 </div>
 
-                <ul class="services_list justify-content-between">
-                    <li class="wrapper" data-aos="fade-up">
-                        <div class="services_list-item d-flex flex-column">
-                            <picture class="mb-m">
-                                <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" />
-                                <img class="lazy doge" data-src="{{ asset('assets/img/placeholder.jpg') }}" src="{{ asset('assets/img/placeholder.jpg') }}" alt="Site Member" />
-                            </picture>
-                            <span class="title h5">Rumen Angelov</span>
-                            <p class="text">
-                                CEO
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="d-flex flex-column">
+                            <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Delyan Delov" />
+                            <span class="title h4 text-center">Delyan Delov</span>
+                            <p class="text-center">
+                                CEO & DevOps
                             </p>
                         </div>
-                    </li>
-                    <li class="wrapper" data-aos="fade-up" data-aos-delay="50">
-                        <div class="services_list-item d-flex flex-column">
-                            <picture class="mb-m">
-                                <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" />
-                                <img class="lazy doge" data-src="{{ asset('assets/img/placeholder.jpg') }}" src="{{ asset('assets/img/placeholder.jpg') }}" alt="Петя Димитрова" />
-                            </picture>
-                            <span class="title h5">Petya Dimitrova</span>
-                            <p class="text">
-                            CTO
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex flex-column">
+                            <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Petya Dimitrova" />
+                            <span class="title h4 text-center">Petya Dimitrova</span>
+                            <p class="text-center">
+                            PM & Design
                             </p>
                         </div>
-                    </li>
-                    <li class="wrapper" data-aos="fade-up" data-aos-delay="100">
-                        <div class="services_list-item d-flex flex-column">
-                            <picture class="mb-m">
-                                <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" />
-                                <img class="lazy doge" data-src="{{ asset('assets/img/placeholder.jpg') }}" src="{{ asset('assets/img/placeholder.jpg') }}" alt="Делян Делов" />
-                            </picture>
-                            <span class="title h5">Delyan Delov</span>
-                            <p class="text">
-                                Manager
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex flex-column">
+                            <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Rumen Angelov" />
+                            <span class="title h4 text-center">Rumen Angelov</span>
+                            <p class="text-center">
+                               CTO & Development
                             </p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="page about-page">
+        <section class="page about-page">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row d-flex align-items-center">
                     <div class="col-6">
                         <div class="main">
                             {!! $about->content !!}
@@ -67,7 +57,7 @@
                     </div>
                     <div class="col-6">
                         <div class="main">
-                            <h4>What Sets Us Apart:</h4>
+                            <h3>What Sets Us Apart:</h3>
                             <ul>
                             <li><strong>Innovation Unleashed: </strong>We're not just imitators; we create trends. Our team lives for getting the edge, always hunting out new technologies and methods of design to create digital products that aren't merely up-to-date but also state of the art.</li>
                             <li><strong>Client-Centric Approach:</strong> Your success is our success. The relationships we build with our clients are strong and collaborative. Starting with the initial consultation through project delivery and beyond, we stress open dialogues and transparency.</li>
@@ -78,22 +68,22 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="process">
+        <section class="process">
             <div class="container d-flex flex-column-reverse flex-xl-row">
                 <div class="process_list">
                     <div class="title-wrapper container text-right">
                         <span class="tw-height h4">
                             <span class="text">Our Process</span>
                         </span>
-                        <h4 class="about_main-title type" data-text="Our Process">
+                        <h3 class="about_main-title type" data-text="Our Process">
                             Our Process
-                        </h4>
+                        </h3>
                     </div>
 
                     <div class="process_boxes d-flex">
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="50">
+                        <div class="wrapper">
                             <span class="number">1</span>
                             <div class="main">
                                 <h5>Initial discussion on the:</h5>
@@ -106,28 +96,28 @@
                             </div>
                         </div>
 
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="200">
+                        <div class="wrapper">
                             <span class="number">2</span>
                             <div class="main">
                                 <h5>Working on the design with 3 different visions</h5>
                             </div>
                         </div>
 
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="350">
+                        <div class="wrapper">
                             <span class="number">3</span>
                             <div class="main">
                                 <h5>Choosing the design and finalizing the details</h5>
                             </div>
                         </div>
 
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="500">
+                        <div class="wrapper">
                             <span class="number">4</span>
                             <div class="main">
                                 <h5>Backend development and design revival</h5>
                             </div>
                         </div>
 
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="650">
+                        <div class="wrapper">
                             <span class="number">5</span>
                             <div class="main">
                                 <h5>Final meeting with presentation of the completed site</h5>
@@ -136,7 +126,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <!-- about page content end -->
 </div>

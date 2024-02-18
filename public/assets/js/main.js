@@ -1,21 +1,23 @@
 $( document ).ready(function() {
 
-    /* Portfolio -> Tab */
-    $(".tab_content").hide();
-    $(".tab_content:first").show();
+    // Portfolio -> Tab 
 
-    $("ul.tabs li").click(function() {
-		
-      $(".tab_content").hide();
-      var activeTab = $(this).attr("rel"); 
-      $("#"+activeTab).fadeIn();		
-		
-      $("ul.tabs li").removeClass("active");
-      $(this).addClass("active");
 
-	  $(".tab_drawer_heading").removeClass("d_active");
-	  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
-	  
+    //Accordion
+    $('.accordion-header').click(function() {
+      var accordionItem = $(this).parent();
+      accordionItem.toggleClass('active').siblings('.accordion-item').removeClass('active');
     });
-
+    
+    // Single Project -> Image hover effect
+    $('.website-scroll').on('mouseenter', function(){
+      var containerHeight = $(this).height();
+      var imageHeight = $(this).find('.scroll-img img').height();
+      if(imageHeight > containerHeight) {
+          var animationDuration = (imageHeight / containerHeight) * 3; // Adjust the scrolling speed
+          $(this).find('.scroll-img').css('animation', 'scrollImage ' + animationDuration + 's linear infinite');
+      }
+    }).on('mouseleave', function(){
+        $(this).find('.scroll-img').css('animation', 'none');
+    });
 });

@@ -15,7 +15,18 @@
     color: $headerColor;
     border: $border;
     box-shadow: 3px 3px 0 $primary;
-    border-radius: 2px;
+    border-radius: $border-radius;
+    &:hover, &:focus {
+        box-shadow: 6px 6px 0 $headerColor;
+    }
+}
+
+@mixin greenEl() {
+    background: $teritary;
+    color: $headerColor;
+    border: $border;
+    box-shadow: 3px 3px 0 $teritary;
+    border-radius: $border-radius;
     &:hover, &:focus {
         box-shadow: 6px 6px 0 $headerColor;
     }

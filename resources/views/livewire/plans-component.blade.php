@@ -7,10 +7,10 @@
                 <div class="page_main w-100">
                     <div class="d-flex align-items-end justify-content-between">
                         <div class="wrapper">
-                            <span class="tw-height h2">
-                                <span class="text">Solutions for <br/> Your Business</span>
+                            <span class="tw-height h1">
+                                <span class="text">Solutions for your business</span>
                             </span>
-                            <h2 class="page_main-title type" data-text="Solutions for Your business">Solutions for <br/> Your Business</h2>
+                            <h1 class="page_main-title type" data-text="Solutions for your business">Solutions for your business</h1>
                         </div>
 
                         <a class="page_main-btn btn btn--white" href="contact.html">Get Free Consultation</a>
@@ -23,12 +23,12 @@
         <section class="pricing section">
             <div class="container">
                 <div class="pricing_header">
-                    <h4 class="pricing_header-title">Base Model Prices</h4>
+                    <h2 class="pricing_header-title mb-m">Base Model Prices</h2>
                     <p class="pricing_header-text">
                         Simple and flexible. Only pay for what you use. For your small-to medium-sized companies
                     </p>
                 </div>
-                <ul class="pricing_list d-flex flex-column flex-md-row flex-wrap">
+                <ul class="pricing_list unstyled d-flex flex-column flex-md-row flex-wrap">
                     <li class="pricing_list-item">
                         <div class="pricing_list-item_header">
                             <h5 class="title">Basic</h5>
@@ -274,7 +274,7 @@
                         Pellentesque fermentum mauris
                     </p>
                 </div>
-                <ul class="challenges_list d-flex flex-column flex-sm-row flex-wrap">
+                <ul class="challenges_list d-flex flex-column flex-sm-row flex-wrap unstyled">
                     <li class="challenges_list-item">
                         <span class="number countNum" data-prefix="0" data-value="1">01</span>
                         <span class="separator"></span>
