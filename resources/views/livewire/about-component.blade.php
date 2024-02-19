@@ -17,7 +17,7 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
                             <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Delyan Delov" />
                             <span class="title h4 text-center">Delyan Delov</span>
                             <p class="text-center">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
                             <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Petya Dimitrova" />
                             <span class="title h4 text-center">Petya Dimitrova</span>
                             <p class="text-center">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
                             <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Rumen Angelov" />
                             <span class="title h4 text-center">Rumen Angelov</span>
                             <p class="text-center">
@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="process_boxes d-flex">
-                        <div class="wrapper">
+                        <div class="wrapper" data-aos="fade-up">
                             <span class="number">1</span>
                             <div class="main">
                                 <h5>Initial discussion on the:</h5>
@@ -96,28 +96,28 @@
                             </div>
                         </div>
 
-                        <div class="wrapper">
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                             <span class="number">2</span>
                             <div class="main">
                                 <h5>Working on the design with 3 different visions</h5>
                             </div>
                         </div>
 
-                        <div class="wrapper">
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                             <span class="number">3</span>
                             <div class="main">
                                 <h5>Choosing the design and finalizing the details</h5>
                             </div>
                         </div>
 
-                        <div class="wrapper">
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
                             <span class="number">4</span>
                             <div class="main">
                                 <h5>Backend development and design revival</h5>
                             </div>
                         </div>
 
-                        <div class="wrapper">
+                        <div class="wrapper" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
                             <span class="number">5</span>
                             <div class="main">
                                 <h5>Final meeting with presentation of the completed site</h5>

@@ -26,7 +26,7 @@
                     </ul>
 
                     <div class="tab_container">
-                        <div id="tab1" class="tab_content">
+                        <div id="tab1" class="tab_content" data-aos="fade-up" data-aos-duration="800">
                             <div class="row">
                                 <div class="col-md-4 box">
                                     <a href="http://127.0.0.1:8000/projects/biohub" title="Biohub Group" class="project-box">
@@ -228,7 +228,7 @@
                             </div>
                         </div>
 
-                        <div id="tab2" class="tab_content">
+                        <div id="tab2" class="tab_content" data-aos="fade-up" data-aos-duration="800">
                             <div class="row">
                                 <div class="col-md-4 box">
                                     <a href="#" title="Biohub Group" class="project-box">
@@ -286,7 +286,7 @@
                             </div>
                         </div>
 
-                        <div id="tab3" class="tab_content">
+                        <div id="tab3" class="tab_content" data-aos="fade-up" data-aos-duration="800">
                             <div class="row">
                                 <div class="col-md-4 box">
                                     <a href="#" title="Biohub Group" class="project-box">

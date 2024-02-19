@@ -17,7 +17,7 @@
 
         <div class="container">
             <ul class="services_list d-flex flex-column no-styled">
-                <li class="services_list-item" id="service0">
+                <li class="services_list-item" id="service0" data-aos="fade-right" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/web-development.jpg') }}" srcset="{{ asset('assets/img/services/web-development.jpg') }}" type="image/webp" />
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="services_list-item" id="service1">
+                <li class="services_list-item" id="service1" data-aos="fade-left" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/ux-ui.png') }}" srcset="{{ asset('assets/img/services/ux-ui.png') }}" type="image/webp" />
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="services_list-item" id="service2">
+                <li class="services_list-item" id="service2" data-aos="fade-right" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/brand.jpg') }}" srcset="{{ asset('assets/img/services/brand.jpg') }}" type="image/webp" />
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="services_list-item" id="service3">
+                <li class="services_list-item" id="service3" data-aos="fade-left" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/ecommerce.png') }}" srcset="{{ asset('assets/img/services/ecommerce.png') }}" type="image/webp" />
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="services_list-item" id="service4">
+                <li class="services_list-item" id="service4" data-aos="fade-right" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/responsive.png') }}" srcset="{{ asset('assets/img/services/responsive.png') }}" type="image/webp" />
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="services_list-item" id="service5">
+                <li class="services_list-item" id="service5" data-aos="fade-left" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/seo.png') }}" srcset="{{ asset('assets/img/services/seo.png') }}" type="image/webp" />
@@ -262,7 +262,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="services_list-item" id="service6">
+                <li class="services_list-item" id="service6" data-aos="fade-right" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/user-testing.jpg') }}" srcset="{{ asset('assets/img/services/user-testing.jpg') }}" type="image/webp" />
@@ -306,7 +306,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="services_list-item" id="service7">
+                <li class="services_list-item" id="service7" data-aos="fade-left" data-aos-duration="800">
                     <div class="media">
                         <picture>
                             <source data-srcset="{{ asset('assets/img/services/prototyping.png') }}" srcset="{{ asset('assets/img/services/prototyping.png') }}" type="image/webp" />

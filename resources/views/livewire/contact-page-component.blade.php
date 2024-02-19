@@ -95,6 +95,10 @@
                         @method('POST')
                         <input class="field required" type="text" placeholder="Name" wire:model='name'/>
                         @error('name')<p class="text-red-500">{{ $message }}</p>@enderror
+
+                        <input class="field required" type="text" placeholder="Phone" wire:model='phone'/>
+                        @error('name')<p class="text-red-500">{{ $message }}</p>@enderror
+
                         <input
                             class="field required"
                             type="text"

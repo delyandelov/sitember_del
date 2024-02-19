@@ -3,12 +3,19 @@
 
 @include('components.includes.head')
 
-<body>
+<body class="bs-effect-scroll">
+    <!-- Scroll Smoother -->
+    <div class="has-smooth" id="has_smooth"></div>
+
     @include('components.includes.header')
 
-    {{ $slot }}
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            {{ $slot }}
 
-    @include('components.includes.footer')
+            @include('components.includes.footer')
+        </div>
+    </div>
 
     @include('cookie-consent::index')
 
