@@ -46,7 +46,7 @@
     &_controls {
         display: flex;
 
-        &-control {
+        .swiper-btn {
             width: 25px;
             height: 25px;
             display: flex;
@@ -55,6 +55,7 @@
             text-align: center;
             transition: color 0.3s ease;
             font-size: 25px;
+            cursor: pointer;
 
             &:hover {
                 color: $teritary;

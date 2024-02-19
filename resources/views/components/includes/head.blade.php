@@ -8,12 +8,18 @@
     <title>@yield('title')</title>
 
     <link rel="stylesheet" href="{{ asset('assets/css/icomoon.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/libs.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}" />
 
      <!-- Javascript -->
-     <script src="{{ asset('assets/js/jquery-2.1.3.min.js') }}"></script>
-     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-2.1.3.min.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ScrollSmoother.min.js') }}"></script>
+    <script src="{{ asset('assets/js/aos.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 

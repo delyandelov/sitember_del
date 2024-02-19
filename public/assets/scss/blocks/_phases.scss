@@ -1,4 +1,4 @@
-.challenges {
+.phases {
     padding: 60px 0;
 
     &_shapes {
@@ -38,6 +38,7 @@
                 justify-content: center;
                 font-family: $headerFont;
                 color: $headerColor;
+                font-weight: 600;
             }
 
             .separator {
@@ -53,7 +54,7 @@
 // media queries
 
 @media screen and (min-width: 575.98px) {
-    .challenges {
+    .phases {
         &_header {
             &-title {
                 justify-content: flex-start;
@@ -70,13 +71,13 @@
 }
 
 @media screen and (min-width: 767.98px) {
-    .challenges {
+    .phases {
         padding: 100px 0;
     }
 }
 
 @media screen and (min-width: 991.98px) {
-    .challenges {
+    .phases {
         padding: 120px 0;
 
         &_header {
@@ -93,7 +94,7 @@
 }
 
 @media screen and (min-width: 1199.98px) {
-    .challenges {
+    .phases {
         &_header {
             margin-right: 100px;
 
@@ -107,7 +108,7 @@
 }
 
 @media screen and (min-width: 1399.98px) {
-    .challenges {
+    .phases {
         position: relative;
 
         &_shapes {

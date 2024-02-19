@@ -19,14 +19,14 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <ul class="project-details mb-m">
+                        <ul class="project-details mb-m" data-aos="fade-left" data-aos-duration="800">
                             <li><span>Client:</span> BioHub Group©</li>
                             <li>Web Catalog for healthcare supplies</li>
                             <li><span>Date:</span> 15 December 2023</li>
                             <li><span>Services:</span> Bespoke Website Solution - Design & Development</li>
                         </ul>
 
-                        <a class="btn btn--green" href="https://biohubgroup.com/" target="_blank">biohubgroup.com</a>
+                        <a class="btn btn--green" href="https://biohubgroup.com/" target="_blank" data-aos="fade-right" data-aos-duration="800">biohubgroup.com</a>
                         
                     </div>
                 </div>
@@ -68,9 +68,9 @@
                         The magic is unfolding right before your eyes!</p>
                     </div>
                     <div class="col-12">
-                        <img class="lazy" data-src="{{ asset('assets/img/work7.png') }}" src="{{ asset('assets/img/work7.png') }}" alt="Project Responsive View" />
+                        <img class="lazy" data-src="{{ asset('assets/img/work5.png') }}" src="{{ asset('assets/img/work5.png') }}" alt="Project Responsive View" />
                         <div class="text-center">
-                            <a class="btn btn--neon" href="{{ route('projects') }}">Check more projects</a>
+                            <a class="btn btn--neon" href="{{ route('projects') }}" data-aos="flip-left" data-aos-duration="800">Check more projects</a>
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,17 @@
 .model {
     padding: 60px 0;
 
+    .small-txt {
+        font-style: italic;
+        font-size: 14px;
+        color: $grey;
+
+        .asterics {
+            color: $teritary;
+            font-weight: 700;
+        }
+    }
+
     &_header {
         margin-bottom: 40px;
 
@@ -18,7 +29,7 @@
     }
 
     &_table {
-        border: 1px solid #DCDCDC;
+        border: 1px solid $borderColor;
         margin-bottom: 15px;
 
         .cell-collapse {

@@ -29,7 +29,7 @@
                     </p>
                 </div>
                 <ul class="pricing_list unstyled d-flex flex-column flex-md-row flex-wrap">
-                    <li class="pricing_list-item">
+                    <li class="pricing_list-item" data-aos="fade-up" data-aos-duration="800">
                         <div class="pricing_list-item_header">
                             <h5 class="title">Basic</h5>
                         </div>
@@ -83,7 +83,7 @@
                         </div>
                     </li>
 
-                    <li class="pricing_list-item">
+                    <li class="pricing_list-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <div class="pricing_list-item_header">
                             <h5 class="title">Advanced</h5>
                         </div>
@@ -152,7 +152,7 @@
                         </div>
                     </li>
 
-                    <li class="pricing_list-item">
+                    <li class="pricing_list-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <div class="pricing_list-item_header">
                             <h5 class="title">Expert</h5>
                         </div>
@@ -212,7 +212,7 @@
                         <p><span>*</span>renewal price - <span>1000E/year</span></p>
                     </li>
 
-                    <li class="pricing_list-item">
+                    <li class="pricing_list-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                         <div class="pricing_list-item_header">
                             <h5 class="title">Extra</h5>
                         </div>
@@ -250,54 +250,54 @@
         </section>
         <!-- pricing section end -->
 
-        <!-- challenges section start -->
-        <section class="challenges section">
-            <div class="challenges_shapes">
+        <!-- phases section start -->
+        <section class="phases section">
+            <div class="phases_shapes">
                 <div class="half half--right">
-                    <img class="shape" src="{{ asset('assets/svg/speaker.svg') }}" alt="Your Challenges" />
+                    <img class="shape" src="{{ asset('assets/svg/speaker.svg') }}" alt="phases" />
                     <span class="circle circle--big"></span>
                     <span class="circle circle--small"></span>
                 </div>
             </div>
 
             <div class="container d-lg-flex align-items-center">
-                <div class="challenges_header">
-                    <h3 class="challenges_header-title d-flex align-items-end">
+                <div class="phases_header">
+                    <h3 class="phases_header-title d-flex align-items-end">
                         <span class="text">Phases</span>
                         <i class="icon-arrow-left icon arrow-rotate"></i>
                     </h3>
-                    <p class="challenges_header-text">
+                    <p class="phases_header-text">
                         <b>Don't know where to start?</b> <br/>
                         Don't worry, we're here to assist you and provide the details you're interested in. Feel free to reach out to us without hesitation!
                     </p>
                 </div>
-                <ul class="challenges_list d-flex flex-column flex-sm-row flex-wrap unstyled">
-                    <li class="challenges_list-item">
+                <ul class="phases_list d-flex flex-column flex-sm-row flex-wrap unstyled">
+                    <li class="phases_list-item">
                         <span class="number countNum" data-prefix="0" data-value="1">01</span>
                         <span class="separator"></span>
                         <h5 class="title">Getting Started</h5>
                     </li>
-                    <li class="challenges_list-item">
+                    <li class="phases_list-item">
                         <span class="number countNum" data-prefix="0" data-value="2">02</span>
                         <span class="separator"></span>
                         <h5 class="title">Receiving a Proposal</h5>
                     </li>
-                    <li class="challenges_list-item">
+                    <li class="phases_list-item">
                         <span class="number countNum" data-prefix="0" data-value="3">03</span>
                         <span class="separator"></span>
                         <h5 class="title">Sketching, Presenting, and Approving the Design</h5>
                     </li>
-                    <li class="challenges_list-item">
+                    <li class="phases_list-item">
                         <span class="number countNum" data-prefix="0" data-value="4">04</span>
                         <span class="separator"></span>
                         <h5 class="title">Project Construction</h5>
                     </li>
-                    <li class="challenges_list-item">
+                    <li class="phases_list-item">
                         <span class="number countNum" data-prefix="0" data-value="5">05</span>
                         <span class="separator"></span>
                         <h5 class="title">Demonstration, Training & Finalization</h5>
                     </li>
-                    <li class="challenges_list-item">
+                    <li class="phases_list-item">
                         <span class="number countNum" data-prefix="0" data-value="6">06</span>
                         <span class="separator"></span>
                         <h5 class="title">Completion!</h5>
@@ -305,7 +305,7 @@
                 </ul>
             </div>
         </section>
-        <!-- challenges section end -->
+        <!-- phases section end -->
 
         <!-- model section start -->
         <section class="model section">
@@ -322,10 +322,10 @@
                         </p>
                         <p class="model_header-text">After the expiration of this period, our clients can take advantage of our offers for monthly, yearly subscriptions for technical support, or opt for module-based payment.</p>
                         <p class="model_header-text">You will receive the complete terms of support in an offer after contacting us.</p>
-                        <a class="model_header-btn btn btn--neon" href="contact.html">Get an offer</a>
+                        <a class="model_header-btn btn btn--neon" href="#" data-aos="flip-left" data-aos-duration="800">Get an offer</a>
                     </div>
                     <div class="col-md-7">
-                        <div class=" model_table">
+                        <div class="model_table">
                             <div class="model_table-header">
                                 <h6 class="model_table-header_label">Description</h6>
                                 <h6 class="model_table-header_label">Monthly Price</h6>
@@ -334,7 +334,7 @@
                                 <div class="cell-collapse" id="workshops">
                                     <span class="cell">
                                         <span class="cell-label">Option 1</span>
-                                        The price is on a monthly basis for a contract term of <b>6 months</b>.
+                                        The price is on a monthly basis for a contract term of <b>6 months.</b>
                                     </span>
                                     <span class="cell">300 €</span>
                                 </div>
@@ -343,13 +343,16 @@
                                 <div class="cell-collapse collapse" id="dev">
                                     <span class="cell">
                                         <span class="cell-label">Option 2</span>
-                                        The price is on a monthly basis for a contract term of <b>12 months</b>.
+                                        The price is on a monthly basis for a contract term of <b>12 months.</b>
                                     </span>
                                     <span class="cell">250 €</span>
                                 </div>
                             </div>
                         </div>
-                        <p><em>* The prices are approximate. Additional terms apply to each project. For precise conditions, please get in touch with us, and you will receive a final offer with the ultimate service price.</em></p>
+                        <p class="small-txt">
+                            <span class="asterics">*</span> The prices are approximate. Additional terms apply to each project. 
+                            For precise conditions, please get in touch with us, and you will receive a final offer with the ultimate service price.
+                        </p>
                     </div>
                 </div>
             </div>

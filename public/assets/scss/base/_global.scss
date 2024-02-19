@@ -399,7 +399,7 @@ input {
     }
 
     &:focus {
-        box-shadow: $shadow;
+        box-shadow: $shadow-primary;
 
         &::placeholder {
             opacity: 0;
