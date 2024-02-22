@@ -2,11 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ServiceResource\Pages;
-use App\Models\Service;
-use Filament\Forms\Components\Group;
+use App\Filament\Resources\ProcessResource\Pages;
+use App\Models\Process;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Section;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,42 +13,37 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
-class ServiceResource extends Resource
+class ProcessResource extends Resource
 {
-    protected static ?string $model = Service::class;
+    protected static ?string $model = Process::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-paper-airplane';
+    protected static ?string $navigationIcon = 'heroicon-s-arrow-path';
 
     protected static ?string $navigationGroup = 'WEBSITE MODULES';
 
-    protected static ?int $navigationSort = 7;
+    protected static ?int $navigationSort = 10;
 
-    protected static ?string $navigationLabel = 'Services';
+    protected static ?string $navigationLabel = 'Process Phases';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make('Service')
+                TextInput::make('process_title')
+		    ->label('Title')
+                    ->required(),
+                Section::make('Process Phases')
                     ->schema([
-                        Group::make()
+                        Repeater::make('process_phases')
                             ->schema([
-                                TextInput::make('name')
+                                TextInput::make('title')
                                     ->required()
-                                    ->unique(ignoreRecord: true),
-                                TextInput::make('icon_name')
+                                    ->columns(2),
+                                TextInput::make('icon_name'),
+                                TinyEditor::make('description')
+                                    ->columnSpan('full')
                                     ->required(),
-                        ])->columns(2),
-                    TinyEditor::make('description')
-                        ->columnSpan('full'),
-                    SpatieMediaLibraryFileUpload::make('media')
-                        ->label('Media')
-                        ->collection('services')
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('554')
-                        ->imageResizeTargetHeight('706')
-                        ->columnSpan('full'),
+                            ])->columns(2),
                     ]),
             ]);
     }
@@ -61,9 +55,8 @@ class ServiceResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label('No')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('name')
-                    ->sortable()
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('process_title')
+                    ->label('Title'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime('d-M-Y')
                     ->sortable()
@@ -96,9 +89,14 @@ class ServiceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListServices::route('/'),
-            'create' => Pages\CreateService::route('/create'),
-            'edit' => Pages\EditService::route('/{record}/edit'),
+            'index' => Pages\ListProcesses::route('/'),
+            'create' => Pages\CreateProcess::route('/create'),
+            'edit' => Pages\EditProcess::route('/{record}/edit'),
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::$model::count();
     }
 }

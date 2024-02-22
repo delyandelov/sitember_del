@@ -18,9 +18,11 @@ class MemberResource extends Resource
 {
     protected static ?string $model = Member::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
-    protected static ?string $navigationGroup = 'Content';
+    protected static ?string $navigationGroup = 'WEBSITE MODULES';
+
+    protected static ?int $navigationSort = 8;
 
     protected static ?string $navigationLabel = 'SitemBeer Team';
 
@@ -39,15 +41,12 @@ class MemberResource extends Resource
                         TextInput::make('position')
                             ->required(),
                     ])->columns(3),
-                TinyEditor::make('description')
-                    ->columnSpan('full')
-                    ->required(),
                 SpatieMediaLibraryFileUpload::make('Member Photo')
                     ->collection('member')
                     ->image()
-                    // ->imageResizeMode('cover')
-                    ->imageResizeTargetWidth('422')
-                    ->imageResizeTargetHeight('475')
+                    ->imageResizeMode('cover')
+                    //->imageResizeTargetWidth('422')
+                    //->imageResizeTargetHeight('475')
                     ->columnSpan('full'),
             ]);
     }

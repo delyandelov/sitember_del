@@ -22,11 +22,12 @@ class Post extends Model implements HasMedia
      * @var array
      */
     protected $fillable = [
+        'seo_title',
+        'seo_description',
         'title',
         'slug',
         'content',
-        'time_to_read',
-        'category_id',
+        'active',
     ];
 
     /**
@@ -36,7 +37,7 @@ class Post extends Model implements HasMedia
      */
     protected $casts = [
         'id' => 'integer',
-        'category_id' => 'integer',
+        'active' => 'boolean',
     ];
 
     /**
@@ -51,6 +52,6 @@ class Post extends Model implements HasMedia
 
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany(PostCategory::class, 'post_category', 'post_id', 'post_category_id');
+        return $this->belongsToMany(PostCategory::class, 'post_category', 'post_id', 'post_category_id')->withTimestamps();;
     }
 }

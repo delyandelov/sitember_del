@@ -23,246 +23,39 @@
                     <li class="list-item">
                         <a class="blog_filters-item current" data-target="all" href="#">all</a>
                     </li>
-                    <li class="list-item">
-                        <a class="blog_filters-item" data-target="top" href="#">top</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="blog_filters-item" data-target="advices" href="#">advices</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="blog_filters-item" data-target="market" href="#">Market reporter</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="blog_filters-item" data-target="startups" href="#">Startups</a>
-                    </li>
-                    <li class="list-item">
-                        <a class="blog_filters-item" data-target="maintenance" href="#">maintenance</a>
-                    </li>
+                    @foreach ($categories as $key => $category)
+                        <li class="list-item">
+                            <a class="blog_filters-item"  data-target="{{ $category->title }}" href="#">{{ $category->title }}</a>
+                        </li>
+                    @endforeach
                 </ul>
                 <div class="blog_posts row">
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "startups"]'>
+                    @foreach ($posts as $keyP => $post)
+                    {{--  <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "startups"]'> --}}
+                    <div class="blog_posts-item post-item col-md-6" data-groups='{{ $post->categories }}'>
                         <div class="wrapper">
                             <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    Amazing VR App Turns Any Room Into A Mixed Reality Stargazing Lounge
+                                <a class="main_title h5" href="{{ route('post', $post->slug) }}">
+                                    {{ $post->title }}
                                 </a>
                                 <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">2 Comments</p>
+                                    <p class="main_meta-item">{{ $post->created_at }}</p>
                                 </div>
                             </div>
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
+                                    <source data-srcset="{{ $post->getFirstMediaURL('posts_head') }}" srcset="{{ $post->getFirstMediaURL('posts_head') }}" type="image/webp" />
                                     <img
                                         class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="Amazing VR App Turns Any Room Into A Mixed Reality Stargazing Lounge"
+                                        data-src="{{ $post->getFirstMediaURL('posts_head') }}"
+                                        src="{{ $post->getFirstMediaURL('posts_head') }}"
+                                        alt="{{ $post->title }}"
                                     />
                                 </picture>
                             </div>
                         </div>
                     </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["market", "startups", "top"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html"> Customer Success 101: How to Power Up Your Startup’s Growth </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">No Comments</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="Customer Success 101: How to Power Up Your Startup’s Growth in New 2022 Season"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["market", "startups", "top", "maintenance"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    How to Build, Improve and Pivot a Minimum Viable Saas Product for Marketing
-                                </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">3 Comments</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="How to Build, Improve and Pivot a Minimum Viable Saas Product for Marketing"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["market", "advices", "top", "maintenance"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    We Share Research and Inspiration of Physical and Online Spaces
-                                </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">no Comments</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="We Share Research and Inspiration of Physical and Online Spaces That Are Public-friendly"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "maintenance"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    The Ultimate Guide to Saas Pricing Models, Strategies & Psychological Hacks
-                                </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">no Comments</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="The Ultimate Guide to Saas Pricing Models, Strategies & Psychological Hacks"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["startups", "top", "maintenance"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    How to Implement and Operate Asset Performance Management Efficiently
-                                </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">no Comments</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="How to Implement and Operate Asset Performance Management Efficiently"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["startups", "advices", "maintenance"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    Amazing VR App Turns Any Room Into A Mixed Reality Stargazing Lounge
-                                </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">1 Comment</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="Amazing VR App Turns Any Room Into A Mixed Reality Stargazing Lounge"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_posts-item post-item col-md-6 data-groups='["advices", "market"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    Customer Success 101: How to Power Up Your Startup’s Growth and Investments
-                                </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">200 Comments</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="Customer Success 101: How to Power Up Your Startup’s Growth and Investments"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog_posts-item post-item col-md-6" data-groups='["advices", "market"]'>
-                        <div class="wrapper">
-                            <div class="main">
-                                <a class="main_title h5" href="post.html">
-                                    Sitech is Tech’s Latest Unicorn: We Raised $150M in Investment
-                                </a>
-                                <div class="main_meta d-flex flex-wrap align-items-center">
-                                    <p class="main_meta-item">02 Jan 2022</p>
-                                    <p class="main_meta-item">by Emily Smith</p>
-                                    <p class="main_meta-item">no Comments</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <picture>
-                                    <source data-srcset="{{ asset('assets/img/placeholder.jpg') }}" srcset="{{ asset('assets/img/placeholder.jpg') }}" type="image/webp" />
-                                    <img
-                                        class="lazy"
-                                        data-src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        src="{{ asset('assets/img/placeholder.jpg') }}"
-                                        alt="Sitech is Tech’s Latest Unicorn: We Raised $150M in Investment to Find Prove Stocks"
-                                    />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <ul class="pagination d-flex flex-wrap align-items-center justify-content-end">
                     <li class="pagination_item">

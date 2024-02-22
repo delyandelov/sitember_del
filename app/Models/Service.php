@@ -2,25 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Service extends Model
+class Service extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia;
 
     protected $table = 'services';
 
     protected $fillable = [
         'name',
-        'slug',
-        'title',
-        'short_description',
-        'long_description',
+        'icon_name',
+        'description',
     ];
-
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
 }

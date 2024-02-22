@@ -32,8 +32,11 @@ class PostCategory extends Model implements HasMedia
      * @var array
      */
     protected $fillable = [
+        'seo_title',
+        'seo_description',
         'title',
         'slug',
+        'description',
     ];
 
     /**
@@ -47,6 +50,6 @@ class PostCategory extends Model implements HasMedia
 
     public function posts(): BelongsToMany
     {
-        return $this->belongsToMany(Post::class, 'post_category', 'post_category_id', 'post_id');
+        return $this->belongsToMany(Post::class, 'post_category', 'post_category_id', 'post_id')->withTimestamps();
     }
 }

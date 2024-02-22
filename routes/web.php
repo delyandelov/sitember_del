@@ -25,7 +25,7 @@ Route::get('/projects/{project}', ProjectComponent::class)->name('project');
 Route::get('/contact', ContactComponent::class)->name('contact');
 Route::get('/FAQ', FAQComponent::class)->name('faq');
 Route::get('/blog', BlogComponent::class)->name('blog');
-Route::get('/blog/{post}', PostComponent::class)->name('post');
+Route::get('/post/{slug}', PostComponent::class)->name('post');
 
 //Sitemaps
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);

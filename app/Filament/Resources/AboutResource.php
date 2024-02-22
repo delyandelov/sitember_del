@@ -17,39 +17,37 @@ class AboutResource extends Resource
 {
     protected static ?string $model = About::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-identification';
-
-    protected static ?string $navigationGroup = 'Content';
+    protected static ?string $navigationIcon = 'heroicon-o-information-circle';
 
     protected static ?string $navigationLabel = 'About Us';
+
+    protected static ?string $navigationGroup = 'WEBSITE PAGES';
+
+    protected static ?int $navigationSort = 2;
+
+    protected static ?string $title = 'About Us';
+
+    protected static ?string $pluralModelLabel = 'About Us';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Section::make()->schema([
-                    TextInput::make('heading')
-                        ->label('Heading')
-                        ->required(),
                     TextInput::make('title')
                         ->label('Title')
                         ->required(),
-                    TinyEditor::make('subtitle')
-                        ->label('Subtitle')
+                    TextInput::make('process_title')
+                        ->label('Process Title')
+                        ->required(),
+                    TinyEditor::make('content_1')
+                        ->label('Coontent Column 1')
                         ->required()
                         ->columnSpan('full'),
-                    TinyEditor::make('content')
-                        ->label('Content')
+                    TinyEditor::make('content_2')
+                        ->label('Content Column 2')
                         ->required()
                         ->columnSpan('full'),
-                    SpatieMediaLibraryFileUpload::make('about')
-                        ->label('Media')
-                        ->collection('about')
-                        ->multiple()
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('500')
-                        ->imageResizeTargetWidth('auto'),
                 ]),
             ]);
     }

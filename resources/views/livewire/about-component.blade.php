@@ -8,41 +8,25 @@
             <div class="container section">
                 <div class="title-wrapper">
                     <span class="tw-height h4">
-                        <span class="text">{{ $about->heading }}</span>
+                        <span class="text">{{ $about->title }}</span>
                     </span>
-                    <h2 class="about_main-title type" data-text="{{ $about->heading }}">
-                        {{ $about->heading }}
+                    <h2 class="about_main-title type" data-text="{{ $about->title }}">
+                        {{ $about->title }}
                     </h2>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="d-flex flex-column" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
-                            <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Delyan Delov" />
-                            <span class="title h4 text-center">Delyan Delov</span>
-                            <p class="text-center">
-                                Founder & DevOps
-                            </p>
+                    @foreach ($members as $member)
+                        <div class="col-md-4">
+                            <div class="d-flex flex-column" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+                                <img src="{{ $member->getFirstMediaURL('member') }}" class="mb-m" alt="{{ $member->name }}" />
+                                <span class="title h4 text-center">{{ $member->name }}</span>
+                                <p class="text-center">
+                                    {{ $member->position }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex flex-column" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
-                            <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Petya Dimitrova" />
-                            <span class="title h4 text-center">Petya Dimitrova</span>
-                            <p class="text-center">
-                                Co Founder & Design
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex flex-column" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
-                            <img src="{{ asset('assets/img/placeholder.jpg') }}" class="mb-m" alt="Rumen Angelov" />
-                            <span class="title h4 text-center">Rumen Angelov</span>
-                            <p class="text-center">
-                                Co Founder & CTO
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -52,18 +36,12 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-6">
                         <div class="main">
-                            {!! $about->content !!}
+                            {!! $about->content_1 !!}
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="main">
-                            <h3>What Sets Us Apart:</h3>
-                            <ul>
-                            <li><strong>Innovation Unleashed: </strong>We're not just imitators; we create trends. Our team lives for getting the edge, always hunting out new technologies and methods of design to create digital products that aren't merely up-to-date but also state of the art.</li>
-                            <li><strong>Client-Centric Approach:</strong> Your success is our success. The relationships we build with our clients are strong and collaborative. Starting with the initial consultation through project delivery and beyond, we stress open dialogues and transparency.</li>
-                            <li><strong>Craftsmanship in Every Line of Code:</strong> Developers don't simply write code, they carve digital experiences. Every line of code is carefully crafted for maximum performance, security and scalability.</li>
-                            <li><strong>Design with Purpose:</strong> Our design philosophy: Aesthetics, meeting functionality.&nbsp;We hold that good design should perfectly match the user's experience, to produce a pleasant digital environment.</li>
-                            </ul>
+                            {!! $about->content_2 !!}
                         </div>
                     </div>
                 </div>
@@ -75,54 +53,23 @@
                 <div class="process_list">
                     <div class="title-wrapper container text-right">
                         <span class="tw-height h4">
-                            <span class="text">Our Process</span>
+                            <span class="text">{{ $about->process_title }}</span>
                         </span>
-                        <h3 class="about_main-title type" data-text="Our Process">
-                            Our Process
+                        <h3 class="about_main-title type" data-text="{{ $about->process_title }}">
+                            {{ $about->process_title }}
                         </h3>
                     </div>
 
                     <div class="process_boxes d-flex">
-                        <div class="wrapper" data-aos="fade-up">
-                            <span class="number">1</span>
-                            <div class="main">
-                                <h5>Initial discussion on the:</h5>
-                                <ul>
-                                    <li>Idea</li>
-                                    <li>Concept</li>
-                                    <li>Branding</li>
-                                    <li>Requirements</li>
-                                </ul>
+                        @foreach ($process->process_phases as $key => $phase )
+                            <div class="wrapper" data-aos="fade-up" @if(!$loop->first) data-aos-delay="200" data-aos-duration="800" @endif>
+                                <span class="number">{{ $key + 1}}</span>
+                                <div class="main">
+                                    <h5>{!! $phase['title'] !!}</h5>
+                                    {!! $phase['description'] !!}
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-                            <span class="number">2</span>
-                            <div class="main">
-                                <h5>Working on the design with 3 different visions</h5>
-                            </div>
-                        </div>
-
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
-                            <span class="number">3</span>
-                            <div class="main">
-                                <h5>Choosing the design and finalizing the details</h5>
-                            </div>
-                        </div>
-
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
-                            <span class="number">4</span>
-                            <div class="main">
-                                <h5>Backend development and design revival</h5>
-                            </div>
-                        </div>
-
-                        <div class="wrapper" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
-                            <span class="number">5</span>
-                            <div class="main">
-                                <h5>Final meeting with presentation of the completed site</h5>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

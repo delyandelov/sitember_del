@@ -7,16 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Page extends Model implements HasMedia
+class ServicesPage extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
-    public $translatable = [
-        'title',
-        'body',
-    ];
-
-    protected $table = 'pages';
+    protected $table = 'services_pages';
 
     /**
      * The attributes that are mass assignable.
@@ -24,13 +19,8 @@ class Page extends Model implements HasMedia
      * @var array
      */
     protected $fillable = [
-        'title',
-        'slug',
-        'body',
+        'seo_title',
+        'seo_description',
+        'page_title',
     ];
-
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
 }

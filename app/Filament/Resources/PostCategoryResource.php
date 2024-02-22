@@ -14,42 +14,58 @@ use Filament\Forms\Form;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class PostCategoryResource extends Resource
 {
     protected static ?string $model = PostCategory::class;
 
+    protected static ?string $modelLabel = 'Blog Category';
+
+    protected static ?string $pluralModelLabel = 'Blog Categories';
+
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
-    protected static ?string $navigationGroup = 'Blog';
+    protected static ?string $navigationGroup = 'BLOG';
 
-    protected static ?string $navigationLabel = 'Blog Categories';
+    protected static ?int $navigationSort = 11;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Section::make()->schema([
-                    TextInput::make('title')
-                        ->required()
-                        ->autofocus()
-                        ->live(onBlur: true)
-                        ->unique(ignoreRecord: true)
-                        ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
-                    TextInput::make('slug')
-                        ->disabledOn('edit')
-                        ->required(),
-                    SpatieMediaLibraryFileUpload::make('media')
-                        ->label('Медия')
-                        ->collection('postcategories')
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('1200')
-                        ->imageResizeTargetWidth('auto'),
-                ]),
+                Section::make('SEO Section')
+                    ->schema([
+                        TextInput::make('seo_title')
+                            ->label('SEO Title'),
+                        TextInput::make('seo_description')
+                            ->label('SEO Description'),
+                    ]),
+                Section::make('Category Section')
+                    ->schema([
+                        TextInput::make('title')
+                            ->label('Title')
+                            ->required()
+                            ->autofocus()
+                            ->live(onBlur: true)
+                            ->unique(ignoreRecord: true)
+                            ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                        TextInput::make('slug')
+                            ->disabledOn('edit')
+                            ->required(),
+                        TinyEditor::make('description')
+                            ->label('Description')
+                            ->columnSpan('full'),
+                        SpatieMediaLibraryFileUpload::make('media')
+                            ->label('Image')
+                            ->collection('postcategories')
+                            ->image()
+                            ->imageResizeMode('cover')
+                            ->imageResizeTargetWidth('1200')
+                            ->imageResizeTargetWidth('auto'),
+                    ]),
             ]);
     }
 
@@ -60,16 +76,17 @@ class PostCategoryResource extends Resource
                 Tables\Columns\TextColumn::make('id')
                     ->label('No')
                     ->sortable(),
-                SpatieMediaLibraryImageColumn::make('media')
-                    ->collection('postcategories'),
                 Tables\Columns\TextColumn::make('title')
+                    ->label('Category')
                     ->limit(20)
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('posts_count')
+                    ->label('Posts Count')
                     ->counts('posts'),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime('d M Y')
+                    ->label('Created at')
+                    ->dateTime('d-M-Y')
                     ->sortable()
                     ->searchable(),
             ])
@@ -99,6 +116,11 @@ class PostCategoryResource extends Resource
             'create' => CreatePostCategory::route('/create'),
             'edit' => EditPostCategory::route('/{record}/edit'),
         ];
+    }
+
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['title'];
     }
 
     public static function getNavigationBadge(): ?string
